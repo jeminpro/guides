@@ -1,0 +1,168 @@
+<div>
+        <h1>Factors, multiples &amp; primes</h1>
+        <p class="lead">Factors divide exactly; multiples belong to a times table; a prime has exactly two factors.</p>
+      </div>
+
+      <div class="grid-3">
+        <section class="panel filled tight">
+          <h3>Factors</h3>
+          <p style="font-size:9.5pt;margin:0">Numbers that divide exactly into another.</p>
+          <span class="ex" style="display:block;margin-top:1.5mm;white-space:normal">Factors of 12: 1, 2, 3, 4, 6, 12</span>
+        </section>
+        <section class="panel tight">
+          <h3>Multiples</h3>
+          <p style="font-size:9.5pt;margin:0">The times-table answers of a number.</p>
+          <span class="ex" style="display:block;margin-top:1.5mm;white-space:normal">Multiples of 4: 4, 8, 12, 16…</span>
+        </section>
+        <section class="panel warm tight">
+          <h3>Primes</h3>
+          <p style="font-size:9.5pt;margin:0">Exactly <strong>two</strong> factors: 1 and itself.</p>
+          <span class="ex" style="display:block;margin-top:1.5mm;white-space:normal">2, 3, 5, 7, 11, 13, 17…</span>
+          <p class="note" style="margin-top:1mm">1 is <strong>not</strong> prime. 2 is the only even prime.</p>
+        </section>
+      </div>
+
+      <div class="word-strip">
+        <div class="word-card">
+          <b>Composite number</b>
+          More than two factors, so it splits into smaller pieces.
+          <span class="ex">4, 6, 8, 9, 10, 12…</span>
+          Every whole number above 1 is prime <em>or</em> composite. 1 is neither.
+        </div>
+        <div class="word-card">
+          <b>Index notation</b>
+          The small raised number counts how many of that factor you multiply.
+          <span class="ex">2³ = 2 × 2 × 2 = 8</span>
+          Read 2³ as “2 to the power 3”. 3² is “3 squared”.
+        </div>
+        <div class="word-card">
+          <b>Square numbers are special</b>
+          They have an <strong>odd</strong> number of factors, because one pair is a number times itself.
+          <span class="ex">36 → 1, 2, 3, 4, 6, 9, 12, 18, 36 = 9 factors</span>
+          6 × 6 only counts once. Every other number has factors in pairs, so an even count.
+        </div>
+      </div>
+
+      <section>
+        <h2>Prime factors</h2>
+        <div class="panel tight prime-factors">
+          <svg class="factor-tree" viewBox="0 0 112 98" aria-label="Factor tree for 30: 30 splits into 5 and 6; 6 splits into 2 and 3">
+            <line class="ft-line" x1="52" y1="16" x2="24" y2="36" />
+            <line class="ft-line" x1="52" y1="16" x2="80" y2="36" />
+            <line class="ft-line" x1="80" y1="48" x2="62" y2="70" />
+            <line class="ft-line" x1="80" y1="48" x2="96" y2="70" />
+
+            <text class="ft-comp" x="52" y="12" text-anchor="middle">30</text>
+
+            <circle class="ft-prime-ring" cx="22" cy="46" r="10" />
+            <text class="ft-prime" x="22" y="46" text-anchor="middle" dominant-baseline="central">5</text>
+
+            <text class="ft-comp" x="80" y="46" text-anchor="middle">6</text>
+
+            <circle class="ft-prime-ring" cx="60" cy="82" r="10" />
+            <text class="ft-prime" x="60" y="82" text-anchor="middle" dominant-baseline="central">2</text>
+
+            <circle class="ft-prime-ring" cx="98" cy="82" r="10" />
+            <text class="ft-prime" x="98" y="82" text-anchor="middle" dominant-baseline="central">3</text>
+          </svg>
+          <div class="prime-factors-copy">
+            <p>To find the prime factors, draw a <strong>factor tree</strong> (circle primes, keep splitting composites), or keep dividing by 2, 3, 5, 7… until you reach 1.</p>
+            <span class="ex">30 = 2 × 3 × 5</span>
+            <span class="ex">84 → 2×42 → 2×2×21 → 2² × 3 × 7</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid-2 hcf-lcm">
+        <section class="panel filled tight">
+          <h3>HCF — Highest Common Factor</h3>
+          <p style="font-size:9.5pt">Biggest number that divides into <em>both</em>. Two ways — same answer.</p>
+          <p class="step">Way 1 · list the factors, ring the biggest shared one</p>
+          <p class="mono" style="font-size:8.5pt;margin:0 0 1.5mm">
+            18 → 1, 2, 3, 6, 9, 18<br />
+            24 → 1, 2, 3, 4, 6, 8, 12, 24<br />
+            Shared: 1, 2, 3, 6 → <strong>HCF = 6</strong>
+          </p>
+          <p class="step">Way 2 · prime factors</p>
+          <p class="mono" style="font-size:8.5pt;margin:0">
+            18 = 2 × 3² &nbsp;·&nbsp; 24 = 2³ × 3<br />
+            Shared primes, <em>lowest</em> power → <strong>2 × 3 = 6</strong>
+          </p>
+        </section>
+        <section class="panel warm tight">
+          <h3>LCM — Lowest Common Multiple</h3>
+          <p style="font-size:9.5pt">Smallest number that is a multiple of <em>both</em>. Two ways — same answer.</p>
+          <p class="step">Way 1 · list the multiples, stop at the first match</p>
+          <p class="mono" style="font-size:8.5pt;margin:0 0 1.5mm">
+            18 → 18, 36, 54, <strong>72</strong><br />
+            24 → 24, 48, <strong>72</strong><br />
+            First one in both lists → <strong>LCM = 72</strong>
+          </p>
+          <p class="step">Way 2 · prime factors</p>
+          <p class="mono" style="font-size:8.5pt;margin:0">
+            18 = 2 × 3² &nbsp;·&nbsp; 24 = 2³ × 3<br />
+            Every prime, <em>highest</em> power → <strong>2³ × 3² = 72</strong>
+          </p>
+        </section>
+      </div>
+
+      <div class="callout">
+        <strong>Exam tip:</strong>
+        Listing is quickest for small numbers; prime factors win for big ones.
+        Check your pair with <span class="mono">HCF × LCM = a × b</span>
+        (6 × 72 = 432 = 18 × 24).
+      </div>
+
+      <section>
+        <h2>The 25 primes under 100 — learn these</h2>
+        <table class="primes-table table-compact">
+          <thead>
+            <tr>
+              <th>Tens</th>
+              <th colspan="4">Primes in this ten</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tens">1–9</td>
+              <td class="mono">2</td><td class="mono">3</td><td class="mono">5</td><td class="mono">7</td>
+            </tr>
+            <tr>
+              <td class="tens">10s</td>
+              <td class="mono">11</td><td class="mono">13</td><td class="mono">17</td><td class="mono">19</td>
+            </tr>
+            <tr>
+              <td class="tens">20s</td>
+              <td class="mono">23</td><td class="mono">29</td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="tens">30s</td>
+              <td class="mono">31</td><td class="mono">37</td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="tens">40s</td>
+              <td class="mono">41</td><td class="mono">43</td><td class="mono">47</td><td></td>
+            </tr>
+            <tr>
+              <td class="tens">50s</td>
+              <td class="mono">53</td><td class="mono">59</td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="tens">60s</td>
+              <td class="mono">61</td><td class="mono">67</td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="tens">70s</td>
+              <td class="mono">71</td><td class="mono">73</td><td class="mono">79</td><td></td>
+            </tr>
+            <tr>
+              <td class="tens">80s</td>
+              <td class="mono">83</td><td class="mono">89</td><td></td><td></td>
+            </tr>
+            <tr>
+              <td class="tens">90s</td>
+              <td class="mono">97</td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>

@@ -1,0 +1,543 @@
+---
+import AuthControl from "../components/AuthControl.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { withBase } from "../lib/base";
+import { guides } from "../guides/registry";
+
+const guideCount = guides.length;
+const notesHref = withBase("notes/");
+---
+
+<SiteLayout
+  title="Guides"
+  description="Choose a maths guide to view and print."
+>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,750&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </Fragment>
+
+  <main class="home">
+    <div class="atmosphere" aria-hidden="true">
+      <div class="atmosphere-glow"></div>
+      <div class="atmosphere-grid"></div>
+    </div>
+
+    <div class="home-inner">
+      <header class="hero">
+        <div class="hero-top">
+          <AuthControl />
+        </div>
+        <h1 class="brand">Guides</h1>
+        <p class="lead">
+          Pick a guide, browse the A4 sheets, then print the pages you need.
+        </p>
+      </header>
+
+      <section class="catalog" aria-label="Available guides">
+        <div class="catalog-head">
+          <h2 class="catalog-title">
+            <span>Guides</span>
+            <span class="catalog-count">{guideCount}</span>
+          </h2>
+          <a class="notes-link" href={notesHref}>
+            <span>Notes</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <ul class="catalog-list">
+          {
+            guides.map((guide) => (
+              <li>
+                <div class="card" data-guide-id={guide.id}>
+                  <a
+                    class="card-main"
+                    href={guide.href}
+                    aria-label={`${guide.title} guide`}
+                  ></a>
+                  <span class="card-icon" aria-hidden="true">
+                    {guide.icon}
+                  </span>
+                  <span class="card-body">
+                    <span class="card-title-row">
+                      <strong>{guide.title}</strong>
+                    </span>
+                    <span class="card-meta">
+                      {guide.pageCount} {guide.pageCount === 1 ? "page" : "pages"}
+                    </span>
+                    <span class="card-desc">{guide.description}</span>
+                  </span>
+                  <span class="card-arrow" aria-hidden="true">
+                    →
+                  </span>
+                  <button
+                    class="card-note"
+                    type="button"
+                    data-workbook-note
+                    data-workbook-title={guide.title}
+                    data-has-note="false"
+                    aria-label="Add note"
+                    title="Add a note for this guide"
+                  >
+                    <span class="note-label">Add note</span>
+                  </button>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+  </main>
+</SiteLayout>
+
+<script>
+  import { bindNoteButton, updateNoteButton } from "../lib/note-modal";
+  import { startNotesSync, subscribeNotesChanges } from "../lib/notes-sync";
+
+  startNotesSync();
+
+  const noteButtons = new Map<string, HTMLElement>();
+
+  document.querySelectorAll(".card[data-guide-id]").forEach((card) => {
+    if (!(card instanceof HTMLElement)) return;
+    const guideId = card.dataset.guideId;
+    if (!guideId) return;
+
+    const noteButton = card.querySelector("[data-workbook-note]");
+    if (noteButton instanceof HTMLElement) {
+      noteButtons.set(guideId, noteButton);
+      bindNoteButton(noteButton, {
+        workbookId: guideId,
+        workbookTitle: noteButton.dataset.workbookTitle
+      });
+    }
+  });
+
+  subscribeNotesChanges((notes) => {
+    for (const [guideId, button] of noteButtons) {
+      updateNoteButton(button, notes[guideId]);
+    }
+  });
+</script>
+
+<style>
+  .home {
+    position: relative;
+    isolation: isolate;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #e8f4fb 0%, var(--viewer) 55%, #e4ebf0 100%);
+    font-family: "Source Sans 3", "Trebuchet MS", "Segoe UI", sans-serif;
+  }
+
+  .atmosphere {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .atmosphere-glow {
+    position: absolute;
+    inset: -20% -10% 0;
+    background:
+      radial-gradient(ellipse 70% 55% at 18% 20%, rgb(43 131 184 / 22%), transparent 70%),
+      radial-gradient(ellipse 55% 45% at 88% 8%, rgb(224 122 63 / 14%), transparent 65%);
+  }
+
+  .atmosphere-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.45;
+    background-image:
+      linear-gradient(rgb(43 131 184 / 7%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(43 131 184 / 7%) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: linear-gradient(180deg, rgb(0 0 0 / 55%) 0%, transparent 78%);
+  }
+
+  .home-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: clamp(40px, 8vh, 72px) 20px 56px;
+    min-width: 0;
+  }
+
+  .hero {
+    margin-bottom: clamp(36px, 6vh, 52px);
+  }
+
+  .hero-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+
+  .brand {
+    margin: 0 0 14px;
+    max-width: 12ch;
+    color: var(--ink);
+    font-family: Fraunces, Georgia, serif;
+    font-size: clamp(42px, 8vw, 64px);
+    font-weight: 750;
+    font-optical-sizing: auto;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    margin: 0;
+    max-width: 40rem;
+    color: var(--muted);
+    font-size: clamp(16px, 2.4vw, 18px);
+    font-weight: 400;
+    line-height: 1.55;
+  }
+
+  .catalog-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding: 0 4px;
+  }
+
+  .catalog-title {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    margin: 0;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .catalog-count {
+    display: inline-grid;
+    min-width: 22px;
+    padding: 2px 8px;
+    place-items: center;
+    border-radius: 999px;
+    color: var(--blue-strong);
+    background: rgb(43 131 184 / 12%);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .notes-link {
+    display: inline-flex;
+    gap: 6px;
+    align-items: center;
+    color: var(--blue-strong);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.15s ease;
+  }
+
+  .notes-link:hover,
+  .notes-link:focus-visible {
+    color: var(--ink);
+    outline: none;
+  }
+
+  .notes-link:focus-visible {
+    outline: 2px solid var(--blue-strong);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  .catalog-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 0;
+  }
+
+  .catalog-list > li {
+    min-width: 0;
+  }
+
+  .card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    grid-template-rows: auto;
+    column-gap: 12px;
+    row-gap: 4px;
+    align-items: center;
+    height: 100%;
+    padding: 14px 14px 14px 12px;
+    border: 1px solid rgb(43 131 184 / 18%);
+    border-radius: 16px;
+    background: rgb(255 255 255 / 82%);
+    color: inherit;
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 80%) inset,
+      0 10px 28px rgb(23 50 77 / 6%);
+    backdrop-filter: blur(8px);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .card:has(.card-main:hover),
+  .card:has(.card-main:focus-visible) {
+    border-color: var(--blue-strong);
+    background: var(--paper);
+    box-shadow:
+      0 1px 0 rgb(255 255 255 / 90%) inset,
+      0 14px 32px rgb(43 131 184 / 14%);
+  }
+
+  .card-main {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  .card-main:focus-visible {
+    outline: 2px solid var(--blue-strong);
+    outline-offset: 3px;
+  }
+
+  .card-icon {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(145deg, #3a96c9 0%, var(--blue-strong) 100%);
+    font-family: Fraunces, Georgia, serif;
+    font-size: 22px;
+    font-weight: 650;
+    line-height: 1;
+    box-shadow: 0 6px 14px rgb(43 131 184 / 28%);
+    pointer-events: none;
+  }
+
+  .card-body {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    gap: 4px;
+    min-width: 0;
+    pointer-events: none;
+  }
+
+  .card-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .card-title-row strong {
+    min-width: 0;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card-meta {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .card-desc {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .card-note {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    grid-column: 3;
+    grid-row: 1;
+    gap: 6px;
+    align-items: center;
+    justify-self: end;
+    align-self: center;
+    box-sizing: border-box;
+    width: max-content;
+    max-width: min(9rem, 28%);
+    min-width: 0;
+    margin: 0;
+    padding: 6px 10px;
+    overflow: hidden;
+    border: 1px solid rgb(23 50 77 / 10%);
+    border-radius: 999px;
+    color: var(--muted);
+    background: rgb(237 242 245 / 90%);
+    box-shadow: none;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: left;
+    cursor: pointer;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease;
+  }
+
+  .card-note :global(.note-glyph) {
+    flex: 0 0 auto;
+    display: block;
+  }
+
+  .card-note :global(.note-label) {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .card-note[data-has-note="true"] {
+    color: var(--ink);
+  }
+
+  .card-note[data-has-note="true"] :global(.note-glyph) {
+    color: var(--blue-strong);
+  }
+
+  .card-note:hover,
+  .card-note:focus-visible {
+    outline: none;
+    color: var(--ink);
+    background: #e4ebf0;
+    border-color: rgb(43 131 184 / 28%);
+  }
+
+  .card-note:focus-visible {
+    outline: 2px solid var(--blue-strong);
+    outline-offset: 2px;
+  }
+
+  .card-arrow {
+    grid-column: 4;
+    grid-row: 1;
+    color: var(--blue-strong);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.55;
+    pointer-events: none;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .card:has(.card-main:hover) .card-arrow,
+  .card:has(.card-main:focus-visible) .card-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+  }
+
+  @media (min-width: 640px) {
+    .catalog-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      grid-template-rows: auto auto;
+    }
+
+    .card-note {
+      grid-column: 2 / -1;
+      grid-row: 2;
+      justify-self: start;
+      width: 50%;
+      max-width: 50%;
+      min-height: 36px;
+      margin: 2px 0 0;
+      padding: 8px 12px;
+    }
+
+    .card-arrow {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .home-inner {
+      padding: clamp(28px, 6vh, 56px) 16px 48px;
+    }
+
+    .card {
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      grid-template-rows: auto auto;
+      column-gap: 12px;
+      padding: 14px 12px;
+      min-width: 0;
+    }
+
+    .card-note {
+      grid-column: 2 / -1;
+      grid-row: 2;
+      justify-self: stretch;
+      width: auto;
+      max-width: 100%;
+      min-width: 0;
+      min-height: 40px;
+      margin: 4px 0 0;
+      padding: 10px 14px;
+    }
+
+    .card-body {
+      min-width: 0;
+    }
+
+    .card-arrow {
+      display: none;
+    }
+
+    .brand {
+      max-width: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card,
+    .card-arrow,
+    .card-note {
+      transition: none;
+    }
+
+    .card:has(.card-main:hover) .card-arrow,
+    .card:has(.card-main:focus-visible) .card-arrow {
+      transform: none;
+    }
+  }
+</style>

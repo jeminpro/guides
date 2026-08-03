@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-05-body.html?raw";
+---
+
+<GuidePageShell
+  page={5}
+  total={20}
+  label={"Positive &amp; negative numbers"}
+  bodyClass={"p5"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

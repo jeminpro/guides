@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-03-body.html?raw";
+---
+
+<GuidePageShell
+  page={3}
+  total={20}
+  label={"Add &amp; take-away facts"}
+  bodyClass={"p3"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

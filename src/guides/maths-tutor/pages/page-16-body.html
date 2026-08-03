@@ -1,0 +1,164 @@
+<div>
+        <h1>Angle rules</h1>
+        <p class="lead">Angles total 180° on a straight line and in a triangle, 360° around a point and in a quadrilateral.</p>
+      </div>
+
+      <section>
+        <h2>Types of angle</h2>
+        <div class="angle-types">
+          <div class="angle-type">
+            <div class="deg">0° &lt; a &lt; 90°</div>
+            <svg class="angle-diagram" viewBox="0 0 110 64" role="img" aria-label="An acute angle of 35 degrees">
+              <path class="angle-fill" d="M26 52 L48 52 A22 22 0 0 0 44 39.4 Z" />
+              <path class="angle-rays" d="M26 52H100 M26 52L81.7 13" />
+              <path class="angle-arc" d="M48 52 A22 22 0 0 0 44 39.4" />
+              <text x="66" y="36" text-anchor="middle" dominant-baseline="central">35°</text>
+            </svg>
+            <div class="name">Acute</div>
+            <p>Sharp / smaller than a right angle</p>
+          </div>
+          <div class="angle-type right">
+            <div class="deg">a = 90°</div>
+            <svg class="angle-diagram" viewBox="0 0 110 64" role="img" aria-label="A right angle of 90 degrees">
+              <path class="angle-fill right-fill" d="M32 54 H46 V40 H32 Z" />
+              <path class="angle-rays" d="M32 54V8 M32 54H100" />
+              <path class="right-mark" d="M32 40H46V54" />
+              <text x="58" y="26" text-anchor="middle" dominant-baseline="central">90°</text>
+            </svg>
+            <div class="name">Right</div>
+            <p>Shown with a square corner mark</p>
+          </div>
+          <div class="angle-type obtuse">
+            <div class="deg">90° &lt; a &lt; 180°</div>
+            <svg class="angle-diagram" viewBox="0 0 110 64" role="img" aria-label="An obtuse angle of 120 degrees">
+              <path class="angle-fill" d="M46 50 L68 50 A22 22 0 0 0 35 30.95 Z" />
+              <path class="angle-rays" d="M46 50H98 M46 50L23 10.16" />
+              <path class="angle-arc" d="M68 50 A22 22 0 0 0 35 30.95" />
+              <text x="62" y="23" text-anchor="middle" dominant-baseline="central">120°</text>
+            </svg>
+            <div class="name">Obtuse</div>
+            <p>Wider than a right angle, less than straight</p>
+          </div>
+          <div class="angle-type reflex">
+            <div class="deg">180° &lt; a &lt; 360°</div>
+            <svg class="angle-diagram" viewBox="0 0 110 64" role="img" aria-label="A reflex angle of 220 degrees">
+              <path class="angle-fill reflex-fill" d="M55 30 L75 30 A20 20 0 1 1 39.68 17.14 Z" />
+              <path class="angle-rays" d="M55 30H97 M55 30L24.4 4.3" />
+              <path class="angle-arc reflex-arc" d="M75 30 A20 20 0 1 1 39.68 17.14" />
+              <text x="44" y="58" text-anchor="middle" dominant-baseline="central">220°</text>
+            </svg>
+            <div class="name">Reflex</div>
+            <p>Bigger than a straight line</p>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1.5mm">
+          Straight line = <span class="ex">180°</span> · Full turn = <span class="ex">360°</span>.
+          Reflex of an angle = <span class="ex">360° − that angle</span>.
+        </p>
+      </section>
+
+      <div class="grid-2">
+        <section class="panel filled tight angle-card">
+          <h3>Straight line</h3>
+          <p class="formula">Angles on a straight line = <strong>180°</strong></p>
+          <span class="ex">a + b = 180°</span>
+        </section>
+        <section class="panel tight angle-card">
+          <h3>Around a point</h3>
+          <p class="formula">Angles around a point = <strong>360°</strong></p>
+          <span class="ex">a + b + c + d = 360°</span>
+        </section>
+        <section class="panel warm tight angle-card">
+          <h3>Triangle</h3>
+          <p class="formula">Interior angles = <strong>180°</strong></p>
+          <span class="ex">Equilateral → each 60°</span>
+          <span class="ex">Right-angled → other two sum to 90°</span>
+        </section>
+        <section class="panel tight angle-card">
+          <h3>Vertically opposite</h3>
+          <p class="formula">Opposite angles at a cross are <strong>equal</strong></p>
+          <span class="ex">If one angle is 70°, the opposite is 70°</span>
+        </section>
+      </div>
+
+      <section>
+        <h2>Parallel lines (transversal)</h2>
+        <div class="rule-diagrams">
+          <div class="rule-card">
+            <svg viewBox="0 0 150 60" role="img" aria-label="Corresponding angles: two equal angles in matching positions, forming an F shape">
+              <path class="angle-mark" d="M60.3,14 L73.3,14 A13,13 0 0,1 67.51,24.82 Z" />
+              <path class="angle-mark" d="M80.3,44 L93.3,44 A13,13 0 0,1 87.51,54.82 Z" />
+              <line class="rule-line" x1="8" y1="14" x2="142" y2="14" />
+              <line class="rule-line" x1="8" y1="44" x2="142" y2="44" />
+              <path class="rule-line" fill="none" d="M123,10 L127,14 L123,18" />
+              <path class="rule-line" fill="none" d="M123,40 L127,44 L123,48" />
+              <line class="transversal" x1="51" y1="0" x2="91" y2="60" />
+              <text class="angle-mark" style="fill:var(--navy)" text-anchor="middle" dominant-baseline="central" x="76.2" y="22.5">a</text>
+              <text class="angle-mark" style="fill:var(--navy)" text-anchor="middle" dominant-baseline="central" x="96.2" y="52.5">b</text>
+            </svg>
+            <h3>Corresponding (F)</h3>
+            <p class="mini-def">Same position at each crossing.</p>
+            <span class="ex">a = b</span>
+          </div>
+          <div class="rule-card">
+            <svg viewBox="0 0 150 60" role="img" aria-label="Alternate angles: two equal angles on opposite sides of the transversal, forming a Z shape">
+              <path class="angle-mark" d="M60.3,14 L67.51,24.82 A13,13 0 0,1 47.3,14 Z" />
+              <path class="angle-mark" d="M80.3,44 L93.3,44 A13,13 0 0,0 73.09,33.18 Z" />
+              <line class="rule-line" x1="8" y1="14" x2="142" y2="14" />
+              <line class="rule-line" x1="8" y1="44" x2="142" y2="44" />
+              <path class="rule-line" fill="none" d="M123,10 L127,14 L123,18" />
+              <path class="rule-line" fill="none" d="M123,40 L127,44 L123,48" />
+              <line class="transversal" x1="51" y1="0" x2="91" y2="60" />
+              <text class="angle-mark" style="fill:var(--navy)" text-anchor="middle" dominant-baseline="central" x="51.8" y="29.9">a</text>
+              <text class="angle-mark" style="fill:var(--navy)" text-anchor="middle" dominant-baseline="central" x="88.8" y="28.1">b</text>
+            </svg>
+            <h3>Alternate (Z)</h3>
+            <p class="mini-def">Inside, opposite sides of the transversal.</p>
+            <span class="ex">a = b</span>
+          </div>
+          <div class="rule-card">
+            <svg viewBox="0 0 150 60" role="img" aria-label="Co-interior angles: two angles on the same side of the transversal that add to 180 degrees, forming a C shape">
+              <path class="angle-mark" d="M60.3,14 L73.3,14 A13,13 0 0,1 67.51,24.82 Z" />
+              <path class="angle-mark" d="M80.3,44 L93.3,44 A13,13 0 0,0 73.09,33.18 Z" />
+              <line class="rule-line" x1="8" y1="14" x2="142" y2="14" />
+              <line class="rule-line" x1="8" y1="44" x2="142" y2="44" />
+              <path class="rule-line" fill="none" d="M123,10 L127,14 L123,18" />
+              <path class="rule-line" fill="none" d="M123,40 L127,44 L123,48" />
+              <line class="transversal" x1="51" y1="0" x2="91" y2="60" />
+              <text class="angle-mark" style="fill:var(--navy)" text-anchor="middle" dominant-baseline="central" x="76.2" y="22.5">a</text>
+              <text class="angle-mark" style="fill:var(--navy)" text-anchor="middle" dominant-baseline="central" x="88.8" y="28.1">b</text>
+            </svg>
+            <h3>Co-interior (C)</h3>
+            <p class="mini-def">Inside, same side of the transversal.</p>
+            <span class="ex">a + b = 180°</span>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1.5mm">
+          Arrows mark the parallel lines. Only use these three rules once you have spotted the arrows.
+        </p>
+      </section>
+
+      <section>
+        <h2>Polygon interior angles</h2>
+        <table class="table-compact">
+          <thead>
+            <tr><th>Shape</th><th>Sides (n)</th><th>Sum of interiors</th><th>Regular: each interior</th><th>Regular: each exterior</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Triangle</td><td class="mono">3</td><td class="mono">180°</td><td class="mono">60°</td><td class="mono">120°</td></tr>
+            <tr><td>Quadrilateral</td><td class="mono">4</td><td class="mono">360°</td><td class="mono">90°</td><td class="mono">90°</td></tr>
+            <tr><td>Pentagon</td><td class="mono">5</td><td class="mono">540°</td><td class="mono">108°</td><td class="mono">72°</td></tr>
+            <tr><td>Hexagon</td><td class="mono">6</td><td class="mono">720°</td><td class="mono">120°</td><td class="mono">60°</td></tr>
+          </tbody>
+        </table>
+        <p class="note" style="margin-top:1.5mm">
+          Sum of interiors = <span class="ex">(n − 2) × 180°</span>.
+          Exteriors of <em>any</em> polygon sum to <span class="ex">360°</span>, so a regular one has each exterior = <span class="ex">360° ÷ n</span>.
+          At every vertex <span class="ex">interior + exterior = 180°</span>, so each interior = <span class="ex">180° − (360° ÷ n)</span>.
+        </p>
+      </section>
+
+      <div class="callout">
+        <strong>Exam tip:</strong>
+        Label everything you know first. Look for straight lines, triangles, and parallel marks (arrows).
+      </div>

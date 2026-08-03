@@ -1,0 +1,160 @@
+<div>
+        <h1>Sequences &amp; algebra extras</h1>
+        <p class="lead">Use the term-to-term rule to continue a sequence and substitute given values into expressions.</p>
+      </div>
+
+      <section>
+        <h2>Number sequences</h2>
+        <div class="panel tight nth-term-panel">
+          <h3>Finding the nth term — step by step</h3>
+          <p class="note" style="margin:0 0 1mm">
+            <strong>Use this method only when the gap is the same each time</strong> (an arithmetic sequence).
+          </p>
+          <p class="formula" style="margin:0.5mm 0 1.5mm">Example: 5, 8, 11, 14…</p>
+          <div class="recipe across">
+            <div class="recipe-row">
+              <span class="from">Step 1</span>
+              Find the common gap
+              <span class="ex">8 − 5 = 3, so gap = 3</span>
+            </div>
+            <div class="recipe-row">
+              <span class="from">Step 2</span>
+              Write that gap times n
+              <span class="ex">3n</span>
+            </div>
+            <div class="recipe-row">
+              <span class="from">Step 3</span>
+              Match the first term: 3n gives 3 when n = 1, but we need 5, so add 2
+              <span class="ex">3n + 2</span>
+            </div>
+            <div class="recipe-row">
+              <span class="from">Check</span>
+              Put any position in for n
+              <span class="ex">n = 10 → 3×10 + 2 = 32</span>
+            </div>
+          </div>
+        </div>
+        <h3>Special sequences worth spotting</h3>
+        <div class="sequence-grid">
+          <div class="audit-card">
+            <strong>Square numbers</strong><br />
+            1, 4, 9, 16, 25, 36<br />
+            <span class="mono">n × n = n²</span> · gaps grow 3, 5, 7…
+          </div>
+          <div class="audit-card">
+            <strong>Cube numbers</strong><br />
+            1, 8, 27, 64, 125<br />
+            <span class="mono">n × n × n = n³</span>
+          </div>
+          <div class="audit-card">
+            <strong>Triangular numbers</strong><br />
+            1, 3, 6, 10, 15, 21<br />
+            Add one more each time (+2, +3, +4…)
+          </div>
+          <div class="audit-card">
+            <strong>Fibonacci</strong><br />
+            1, 1, 2, 3, 5, 8, 13<br />
+            Add the two terms before it.
+          </div>
+          <div class="audit-card">
+            <strong>Powers of 2</strong><br />
+            1, 2, 4, 8, 16, 32, 64<br />
+            Double each time.
+          </div>
+          <div class="audit-card">
+            <strong>Going down</strong><br />
+            20, 17, 14, 11, 8<br />
+            d can be negative: <span class="mono">d = −3 → 23 − 3n</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid-2">
+        <section class="panel filled tight">
+          <h3>Substitution</h3>
+          <p style="font-size:9.5pt;margin:0 0 1mm">Replace the letter with the given value.</p>
+          <span class="ex">If a = 4 and b = 3, find 2a + b</span>
+          <p class="mono" style="margin:1mm 0 0;font-size:9.5pt">2(4) + 3 = 8 + 3 = <strong>11</strong></p>
+          <p class="note" style="margin-top:1.5mm">Do BIDMAS after substituting.</p>
+        </section>
+        <section class="panel warm tight">
+          <h3>Forming expressions</h3>
+          <p style="font-size:9.5pt;margin:0 0 1mm">Turn words into algebra.</p>
+          <table class="table-compact">
+            <tbody>
+              <tr><td>n more than 7</td><td class="mono">n + 7</td></tr>
+              <tr><td>5 less than n</td><td class="mono">n − 5</td></tr>
+              <tr><td>product of n and 4</td><td class="mono">4n</td></tr>
+              <tr><td>n shared into 3</td><td class="mono"><span class="frac"><span class="num">n</span><span class="den">3</span></span></td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <section>
+        <h2>Roman numerals</h2>
+        <div class="roman-strip">
+          <div><strong>I</strong> 1</div>
+          <div><strong>V</strong> 5</div>
+          <div><strong>X</strong> 10</div>
+          <div><strong>L</strong> 50</div>
+          <div><strong>C</strong> 100</div>
+          <div><strong>D</strong> 500</div>
+          <div><strong>M</strong> 1000</div>
+        </div>
+        <div class="roman-rules">
+          <div class="roman-rule add">
+            <h3>1 · Add</h3>
+            <p>When a symbol is followed by one of equal or lower value, add the values.</p>
+            <span class="ex">VI = 5 + 1 = 6</span>
+            <span class="ex">XII = 10 + 1 + 1 = 12</span>
+          </div>
+
+          <div class="roman-rule subtract">
+            <h3>2 · Subtract — only these pairs</h3>
+            <p>If a smaller symbol comes <strong>before</strong> a larger one, take it away instead of adding. Only <strong>I, X and C</strong> can be used this way, and only in these six pairs:</p>
+            <div class="roman-pairs">
+              <span><strong>I</strong> from V or X<br /><b>IV = 4 · IX = 9</b></span>
+              <span><strong>X</strong> from L or C<br /><b>XL = 40 · XC = 90</b></span>
+              <span><strong>C</strong> from D or M<br /><b>CD = 400 · CM = 900</b></span>
+            </div>
+          </div>
+
+          <div class="roman-rule repeat">
+            <h3>3 · Repeat</h3>
+            <p><strong>I, X, C and M</strong> may repeat up to three times in a row.</p>
+            <span class="ex">III = 3</span>
+            <span class="ex">XXX = 30</span>
+            <p class="roman-never"><strong>V, L and D never repeat and are never used to subtract.</strong></p>
+          </div>
+        </div>
+
+        <div class="roman-worked">
+          <strong>Roman → number:</strong>
+          <span class="ex">MCMXLIV = M + CM + XL + IV = 1000 + 900 + 40 + 4 = 1944</span>
+        </div>
+        <div class="roman-worked">
+          <strong>Number → Roman:</strong>
+          <span class="ex">1944 → 1000 + 900 + 40 + 4 → M + CM + XL + IV → MCMXLIV</span>
+        </div>
+        <p class="note" style="margin:1.2mm 0 0;font-size:8.5pt">
+          Going that way, split the number into thousands, hundreds, tens and ones, swap each part for its symbols, then join them up in order.
+        </p>
+        <div class="roman-examples">
+          <strong>Common examples:</strong>
+          <div class="roman-example-grid">
+            <span class="ex">IV = 4</span>
+            <span class="ex">IX = 9</span>
+            <span class="ex">XIV = 14</span>
+            <span class="ex">XXIX = 29</span>
+            <span class="ex">XLII = 42</span>
+            <span class="ex">XLIX = 49</span>
+            <span class="ex">LXXV = 75</span>
+            <span class="ex">XC = 90</span>
+            <span class="ex">XCIX = 99</span>
+            <span class="ex">CDX = 410</span>
+            <span class="ex">DCLXVI = 666</span>
+            <span class="ex">MMXXVI = 2026</span>
+          </div>
+        </div>
+      </section>

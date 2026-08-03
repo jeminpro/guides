@@ -1,0 +1,145 @@
+<div>
+        <h1>3D shapes &amp; volume</h1>
+        <p class="lead">Volume measures 3D space in cubic units; for a cuboid, volume = length × width × height.</p>
+      </div>
+
+      <section>
+        <h2>Common 3D shapes</h2>
+        <table class="table-compact">
+          <thead>
+            <tr><th>Shape</th><th>Faces</th><th>Edges</th><th>Vertices</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="td-shape">
+                  <svg class="svg-3d" viewBox="0 0 56 48" aria-hidden="true">
+                    <polygon class="face-top" points="18,16 32,8 46,16 32,24" />
+                    <polygon class="face-side" points="32,24 46,16 46,34 32,42" />
+                    <polygon class="face-front" points="18,16 32,24 32,42 18,34" />
+                  </svg>
+                  <span>Cube</span>
+                </div>
+              </td>
+              <td class="mono">6</td><td class="mono">12</td><td class="mono">8</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-shape">
+                  <svg class="svg-3d" viewBox="0 0 56 48" aria-hidden="true">
+                    <polygon class="face-top" points="10,20 34,8 50,16 26,28" />
+                    <polygon class="face-side" points="26,28 50,16 50,32 26,44" />
+                    <polygon class="face-front" points="10,20 26,28 26,44 10,36" />
+                  </svg>
+                  <span>Cuboid</span>
+                </div>
+              </td>
+              <td class="mono">6</td><td class="mono">12</td><td class="mono">8</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-shape">
+                  <svg class="svg-3d" viewBox="0 0 56 48" aria-hidden="true">
+                    <polygon class="face-side" points="28,8 36,36 48,42 40,14" />
+                    <polygon class="face-top" points="12,36 36,36 48,42 24,42" />
+                    <polygon class="face-front" points="28,8 12,36 36,36" />
+                  </svg>
+                  <span>Triangular prism</span>
+                </div>
+              </td>
+              <td class="mono">5</td><td class="mono">9</td><td class="mono">6</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-shape">
+                  <svg class="svg-3d" viewBox="0 0 56 48" aria-hidden="true">
+                    <polygon class="face-side" points="28,6 46,34 28,40" />
+                    <polygon class="face-front" points="28,6 10,34 28,40" />
+                    <polygon class="face-top" points="10,34 28,28 46,34 28,40" />
+                  </svg>
+                  <span>Square-based pyramid</span>
+                </div>
+              </td>
+              <td class="mono">5</td><td class="mono">8</td><td class="mono">5</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-shape">
+                  <svg class="svg-3d" viewBox="0 0 56 48" aria-hidden="true">
+                    <path class="face-front" d="M12,14 V32 A16,7 0 0 0 44,32 V14" />
+                    <ellipse class="face-top" cx="28" cy="14" rx="16" ry="7" />
+                    <path class="edge" d="M12,32 A16,7 0 0 0 44,32" />
+                  </svg>
+                  <span>Cylinder</span>
+                </div>
+              </td>
+              <td class="mono">3</td><td class="mono">2</td><td class="mono">0</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-shape">
+                  <svg class="svg-3d" viewBox="0 0 56 48" aria-hidden="true">
+                    <path class="face-front" d="M28,6 L10,32 A18,7 0 0 0 46,32 Z" />
+                    <ellipse class="face-top" cx="28" cy="32" rx="18" ry="7" />
+                  </svg>
+                  <span>Cone</span>
+                </div>
+              </td>
+              <td class="mono">2</td><td class="mono">1</td><td class="mono">1</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="td-shape">
+                  <svg class="svg-3d" viewBox="0 0 56 48" aria-hidden="true">
+                    <circle class="face-front" cx="28" cy="24" r="16" />
+                    <ellipse class="edge" cx="28" cy="24" rx="16" ry="6" />
+                    <ellipse class="edge" cx="28" cy="24" rx="6" ry="16" />
+                  </svg>
+                  <span>Sphere</span>
+                </div>
+              </td>
+              <td class="mono">1</td><td class="mono">0</td><td class="mono">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note" style="margin-top:1mm">
+          Euler’s check (for many polyhedra): <span class="ex">F + V − E = 2</span>
+          (cube: 6+8−12 = 2 ✓).
+        </p>
+      </section>
+
+      <section>
+        <h2>Volume by counting layers</h2>
+        <div class="worked-strip">
+          <div class="net-example">
+            <div class="net-squares"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            One layer of a 4 × 3 × 3 cuboid — count the cubes that cover the base.
+          </div>
+          <div class="net-example">
+            <p class="mini-def" style="margin:0 0 1mm"><strong>Build it up a layer at a time</strong></p>
+            <span class="ex" style="display:block;white-space:normal">1 layer = 4 × 3 = 12 cubes</span>
+            <span class="ex" style="display:block;white-space:normal">3 layers = 12 × 3 = 36 cubes</span>
+            <span class="ex" style="display:block;white-space:normal">V = 36 cm³ — same as 4 × 3 × 3</span>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1.5mm">
+          Counting layers is the same as l × w × h: the base layer gives l × w, then multiply by the number of layers (h).
+        </p>
+      </section>
+
+      <section class="panel filled tight">
+        <h3>Volume formulas</h3>
+        <p class="formula" style="margin:0.5mm 0">Cuboid: V = length × width × height</p>
+        <span class="ex" style="display:block;white-space:normal;margin-bottom:1mm">5 × 3 × 2 = 30 cm³ · Cube: V = s³</span>
+        <p class="formula" style="margin:0.5mm 0">Prism: V = area of cross-section × length</p>
+        <span class="ex" style="display:block;white-space:normal;margin-bottom:1mm">Triangle end 12 cm² × 10 cm = 120 cm³</span>
+        <p class="formula" style="margin:0.5mm 0">Cylinder: V = πr²h &nbsp;(or area of circle × height)</p>
+        <span class="ex" style="display:block;white-space:normal">π × 3² × 10 ≈ 282.7 cm³</span>
+      </section>
+
+      <div class="callout">
+        <strong>Surface area (cuboid):</strong>
+        Add the areas of all faces:
+        <span class="mono">2(lw + lh + wh)</span>.
+        Don’t mix area (cm²) with volume (cm³).
+      </div>

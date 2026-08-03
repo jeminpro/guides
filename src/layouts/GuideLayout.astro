@@ -1,0 +1,95 @@
+---
+import SiteLayout from "./SiteLayout.astro";
+import GuideToolbar from "../components/GuideToolbar.astro";
+
+interface Props {
+  title: string;
+  guideId: string;
+  expectedPages: number;
+  guideTitle: string;
+}
+
+const { title, guideId, expectedPages, guideTitle } = Astro.props;
+---
+
+<SiteLayout title={title}>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,750&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <slot name="head" />
+  </Fragment>
+
+  <GuideToolbar guideId={guideId} guideTitle={guideTitle} />
+  <main
+    class="pages maths-tutor-root"
+    id="pages"
+    data-guide={guideId}
+    data-expected-pages={expectedPages}
+  >
+    <slot />
+  </main>
+</SiteLayout>
+
+<style is:global>
+  .pages {
+    --page-gutter: 12px;
+    --page-fit: min(1, (100vw - var(--page-gutter) * 2) / 210mm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(10mm * var(--page-fit));
+    padding: calc(10mm * var(--page-fit)) 0;
+    overflow-x: clip;
+    background: #d8dde4;
+  }
+
+  .page-frame {
+    width: calc(210mm * var(--page-fit));
+    height: calc(297mm * var(--page-fit));
+    flex-shrink: 0;
+  }
+
+  .pages .page {
+    box-shadow: 0 3mm 10mm rgb(23 50 77 / 18%);
+    transform: scale(var(--page-fit));
+    transform-origin: top left;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .page-frame:last-child .page {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  @media print {
+    html,
+    body {
+      background: #fff;
+    }
+
+    .pages {
+      --page-fit: 1;
+      display: block;
+      padding: 0;
+      gap: 0;
+      overflow: visible;
+      background: #fff;
+    }
+
+    .page-frame {
+      width: auto;
+      height: auto;
+    }
+
+    .pages .page {
+      margin: 0;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+</style>

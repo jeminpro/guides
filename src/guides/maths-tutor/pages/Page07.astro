@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-07-body.html?raw";
+---
+
+<GuidePageShell
+  page={7}
+  total={20}
+  label={"Sequences &amp; algebra"}
+  bodyClass={"p7"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

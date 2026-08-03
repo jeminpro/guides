@@ -1,0 +1,125 @@
+<div>
+        <h1>Coordinates &amp; transformations</h1>
+        <p class="lead">Coordinates are written (x, y): move across the x-axis first, then up or down the y-axis.</p>
+      </div>
+
+      <div class="grid-2">
+        <section class="panel filled tight">
+          <h3>Coordinates (x, y)</h3>
+          <div class="coord-row">
+            <svg class="svg-coord" viewBox="0 0 120 120" aria-label="Coordinate grid with point (3, -2)">
+              <!-- quadrant fills -->
+              <rect class="q1" x="60" y="10" width="50" height="50" />
+              <rect class="q2" x="10" y="10" width="50" height="50" />
+              <rect class="q3" x="10" y="60" width="50" height="50" />
+              <rect class="q4" x="60" y="60" width="50" height="50" />
+              <!-- grid -->
+              <g class="grid-lines">
+                <line x1="10" y1="35" x2="110" y2="35" />
+                <line x1="10" y1="85" x2="110" y2="85" />
+                <line x1="35" y1="10" x2="35" y2="110" />
+                <line x1="85" y1="10" x2="85" y2="110" />
+              </g>
+              <!-- axes -->
+              <line class="axis-line" x1="10" y1="60" x2="110" y2="60" />
+              <line class="axis-line" x1="60" y1="10" x2="60" y2="110" />
+              <polygon class="axis-arrow" points="110,60 104,57 104,63" />
+              <polygon class="axis-arrow" points="60,10 57,16 63,16" />
+              <!-- labels -->
+              <text class="axis-name" text-anchor="start" x="112" y="63">x</text>
+              <text class="axis-name" text-anchor="middle" x="60" y="8">y</text>
+              <text class="q-label" text-anchor="middle" x="85" y="28">I (+,+)</text>
+              <text class="q-label" text-anchor="middle" x="35" y="28">II (−,+)</text>
+              <text class="q-label" text-anchor="middle" x="35" y="98">III (−,−)</text>
+              <text class="q-label" text-anchor="middle" x="85" y="98">IV (+,−)</text>
+              <text class="origin" text-anchor="end" x="57" y="72">O</text>
+              <!-- point (3,-2): scale ~8.3 per unit from origin; 3 right, 2 down -->
+              <line class="guide" x1="60" y1="76.6" x2="85" y2="76.6" />
+              <line class="guide" x1="85" y1="60" x2="85" y2="76.6" />
+              <circle class="plot-dot" cx="85" cy="76.6" r="3.2" />
+              <text class="plot-label" text-anchor="start" x="88" y="82">(3, −2)</text>
+            </svg>
+            <div>
+              <p style="font-size:9pt;margin:0">Along the corridor (<strong>x</strong>), then up/down the stairs (<strong>y</strong>).</p>
+              <span class="ex" style="display:block;margin-top:1.5mm;white-space:normal;font-size:8.5pt">(3, −2) → right 3, down 2</span>
+              <p class="note" style="margin-top:1.5mm;font-size:8pt">
+                Origin = (0, 0). Count from O along x, then parallel to y.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel tight">
+          <h3>Line symmetry</h3>
+          <p style="font-size:9pt;margin:0 0 1.5mm">
+            A <strong>line of symmetry</strong> is a mirror line: if you fold along it, both halves match exactly.
+          </p>
+          <div class="sym-gallery">
+            <figure class="sym-item">
+              <svg class="svg-coord svg-sym" viewBox="0 0 80 80" aria-label="Square with 4 lines of symmetry">
+                <rect class="sym-shape" x="20" y="20" width="40" height="40" />
+                <line class="mirror" x1="40" y1="12" x2="40" y2="68" />
+                <line class="mirror" x1="12" y1="40" x2="68" y2="40" />
+                <line class="mirror" x1="20" y1="20" x2="60" y2="60" />
+                <line class="mirror" x1="60" y1="20" x2="20" y2="60" />
+              </svg>
+              <figcaption><strong>Square = 4</strong></figcaption>
+            </figure>
+            <figure class="sym-item">
+              <svg class="svg-coord svg-sym" viewBox="0 0 80 80" aria-label="Rectangle with 2 lines of symmetry">
+                <rect class="sym-shape" x="14" y="26" width="52" height="28" />
+                <line class="mirror" x1="40" y1="18" x2="40" y2="62" />
+                <line class="mirror" x1="8" y1="40" x2="72" y2="40" />
+              </svg>
+              <figcaption><strong>Rectangle = 2</strong></figcaption>
+            </figure>
+            <figure class="sym-item">
+              <svg class="svg-coord svg-sym" viewBox="0 0 80 80" aria-label="Equilateral triangle with 3 lines of symmetry">
+                <polygon class="sym-shape" points="40,14 12,62 68,62" />
+                <line class="mirror" x1="40" y1="10" x2="40" y2="66" />
+                <line class="mirror" x1="8" y1="66" x2="56" y2="34" />
+                <line class="mirror" x1="72" y1="66" x2="24" y2="34" />
+              </svg>
+              <figcaption><strong>Equilateral △ = 3</strong></figcaption>
+            </figure>
+          </div>
+          <p class="note" style="margin-top:1.2mm;font-size:8pt">A circle has infinitely many lines of symmetry.</p>
+        </section>
+      </div>
+
+      <section>
+        <h2>Transformations</h2>
+        <div class="xform-grid">
+          <article class="xform-card">
+            <svg class="svg-xform" viewBox="0 0 110 72" aria-hidden="true">
+              <line class="axis-line" x1="8" y1="58" x2="102" y2="58" />
+              <line class="axis-line" x1="20" y1="8" x2="20" y2="64" />
+              <polygon class="shape-from" points="28,28 48,28 48,48" />
+              <polygon class="shape-to" points="58,38 78,38 78,58" />
+              <defs>
+                <marker id="arr-t" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                  <path d="M0 0 L6 3 L0 6 Z" fill="#e65a41" />
+                </marker>
+              </defs>
+              <line class="move-arrow" x1="40" y1="36" x2="66" y2="48" marker-end="url(#arr-t)" />
+              <text class="mini-label" x="58" y="68">→ right 3, down 2</text>
+            </svg>
+            <h3>Translation</h3>
+            <p>Slide — no turn, no flip. Describe it with a column vector: top = across, bottom = up/down.</p>
+            <span class="ex"><span class="vector"><span>3</span><span>−2</span></span> means (x, y) → (x + 3, y − 2)</span>
+          </article>
+
+          <article class="xform-card">
+            <svg class="svg-xform" viewBox="0 0 110 72" aria-hidden="true">
+              <line class="axis-line" x1="8" y1="36" x2="102" y2="36" />
+              <line class="mirror thick" x1="55" y1="8" x2="55" y2="64" />
+              <polygon class="shape-from" points="22,48 42,48 42,22" />
+              <polygon class="shape-to" points="88,48 68,48 68,22" />
+              <text class="mini-label" text-anchor="middle" x="55" y="70">mirror (y-axis)</text>
+            </svg>
+            <h3>Reflection</h3>
+            <p>Flip — same distance the other side of the mirror. Always name the mirror line.</p>
+            <span class="ex">In the y-axis: (a, b) → (−a, b)</span>
+          </article>
+        </div>
+      </section>

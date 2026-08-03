@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-19-body.html?raw";
+---
+
+<GuidePageShell
+  page={19}
+  total={20}
+  label={"Averages &amp; charts"}
+  bodyClass={"audit-19"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

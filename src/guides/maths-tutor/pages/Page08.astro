@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-08-body.html?raw";
+---
+
+<GuidePageShell
+  page={8}
+  total={20}
+  label={"Factors, multiples &amp; primes"}
+  bodyClass={"p8"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

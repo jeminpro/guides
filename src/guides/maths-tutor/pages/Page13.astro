@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-13-body.html?raw";
+---
+
+<GuidePageShell
+  page={13}
+  total={20}
+  label={"Ratio &amp; proportion"}
+  bodyClass={"p13"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

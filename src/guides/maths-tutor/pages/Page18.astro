@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-18-body.html?raw";
+---
+
+<GuidePageShell
+  page={18}
+  total={20}
+  label={"Coordinates &amp; transformations"}
+  bodyClass={"audit-18"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

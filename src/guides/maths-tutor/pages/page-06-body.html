@@ -1,0 +1,147 @@
+<div>
+        <h1>BIDMAS &amp; solving for x</h1>
+        <p class="lead">Use BIDMAS for calculation order; solve equations by applying the same inverse operation to both sides.</p>
+      </div>
+
+      <section>
+        <h2>Order of operations — BIDMAS</h2>
+        <div class="bidmas">
+          <div class="step">
+            <div class="letter">B</div>
+            <div class="word">Brackets</div>
+            <div class="sym">( ) { } [ ]</div>
+            <span class="ex">5 × (4+2)<br />= 5 × 6 = 30</span>
+          </div>
+          <div class="step">
+            <div class="letter">I</div>
+            <div class="word">Indices</div>
+            <div class="sym">√x &nbsp; x²</div>
+            <span class="ex">2 + 3²<br />= 2 + 9 = 11</span>
+          </div>
+          <div class="step">
+            <div class="letter">DM</div>
+            <div class="word">Divide &amp; Multiply</div>
+            <div class="sym">÷ &nbsp; ×</div>
+            <span class="ex">15 − 4 × 3<br />= 15 − 12 = 3</span>
+          </div>
+          <div class="step">
+            <div class="letter">AS</div>
+            <div class="word">Add &amp; Subtract</div>
+            <div class="sym">+ &nbsp; −</div>
+            <span class="ex">10 − 4 + 3<br />= 6 + 3 = 9</span>
+          </div>
+        </div>
+
+        <h3 style="margin-top:2.5mm">Step-by-step examples</h3>
+        <div class="bidmas-more">
+          <div class="bex">
+            <div class="q">20 − 3 × (2 + 4)</div>
+            <div class="steps work">
+              <div class="wline"><i class="lbl b">B</i><span class="bit">2 + 4 = 6</span><span class="eq">= 20 − 3 × 6</span></div>
+              <div class="wline"><i class="lbl m">M</i><span class="bit">3 × 6 = 18</span><span class="eq">= 20 − 18</span></div>
+              <div class="wline"><i class="lbl s">S</i><span class="bit"></span><span class="eq">= <strong>2</strong></span></div>
+            </div>
+          </div>
+          <div class="bex">
+            <div class="q">4² + 12 ÷ 4</div>
+            <div class="steps work">
+              <div class="wline"><i class="lbl i">I</i><span class="bit">4² = 16</span><span class="eq">= 16 + 12 ÷ 4</span></div>
+              <div class="wline"><i class="lbl d">D</i><span class="bit">12 ÷ 4 = 3</span><span class="eq">= 16 + 3</span></div>
+              <div class="wline"><i class="lbl a">A</i><span class="bit"></span><span class="eq">= <strong>19</strong></span></div>
+            </div>
+          </div>
+          <div class="bex">
+            <div class="q">(8 + 4) ÷ 2 − 3</div>
+            <div class="steps work">
+              <div class="wline"><i class="lbl b">B</i><span class="bit">8 + 4 = 12</span><span class="eq">= 12 ÷ 2 − 3</span></div>
+              <div class="wline"><i class="lbl d">D</i><span class="bit">12 ÷ 2 = 6</span><span class="eq">= 6 − 3</span></div>
+              <div class="wline"><i class="lbl s">S</i><span class="bit"></span><span class="eq">= <strong>3</strong></span></div>
+            </div>
+          </div>
+          <div class="bex">
+            <div class="q">5 + 2 × 3² − 10 ÷ 5</div>
+            <div class="steps work">
+              <div class="wline"><i class="lbl i">I</i><span class="bit">3² = 9</span><span class="eq">= 5 + 2 × 9 − 10 ÷ 5</span></div>
+              <div class="wline"><i class="lbl m">M</i><span class="bit">2 × 9 = 18</span><span class="eq">= 5 + 18 − 10 ÷ 5</span></div>
+              <div class="wline"><i class="lbl d">D</i><span class="bit">10 ÷ 5 = 2</span><span class="eq">= 5 + 18 − 2</span></div>
+              <div class="wline"><i class="lbl a">A</i><span class="bit"></span><span class="eq">= <strong>21</strong></span></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="note" style="margin-top:1.5mm">
+          Watch out: <strong>DM</strong> does not mean divide before multiply — work left to right.
+          <span class="ex">24 ÷ 6 × 2 = 8</span> (not&nbsp;2).
+        </p>
+      </section>
+
+      <section>
+        <h2>Solving algebra equations</h2>
+        <p class="note" style="margin:0 0 1.5mm">
+          <strong>5x means 5 × x.</strong> The × sign is left out so it is not muddled up with the letter x — in the same way
+          <span class="ex">3(x + 2)</span> means 3 × (x + 2). To undo it, divide.
+        </p>
+        <table class="align-left">
+          <thead>
+            <tr>
+              <th>Equation</th>
+              <th>Solution</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">x + a = b</td>
+              <td class="mono">x = b − a</td>
+              <td class="mono">x + 1 = 3 → x = 3 − 1 = 2</td>
+            </tr>
+            <tr>
+              <td class="mono">x − a = b</td>
+              <td class="mono">x = b + a</td>
+              <td class="mono">x − 1 = 3 → x = 3 + 1 = 4</td>
+            </tr>
+            <tr>
+              <td class="mono">a × x = b</td>
+              <td class="mono">x = <span class="frac"><span class="num">b</span><span class="den">a</span></span></td>
+              <td class="mono">5x = 25 → x = <span class="frac"><span class="num">25</span><span class="den">5</span></span> = 5</td>
+            </tr>
+            <tr>
+              <td class="mono"><span class="frac"><span class="num">x</span><span class="den">a</span></span> = b</td>
+              <td class="mono">x = b × a</td>
+              <td class="mono"><span class="frac"><span class="num">x</span><span class="den">2</span></span> = 5 → x = 5 × 2 = 10</td>
+            </tr>
+            <tr>
+              <td class="mono"><span class="frac"><span class="num">a</span><span class="den">x</span></span> = b</td>
+              <td class="mono">x = <span class="frac"><span class="num">a</span><span class="den">b</span></span></td>
+              <td class="mono"><span class="frac"><span class="num">8</span><span class="den">x</span></span> = 2 → x = <span class="frac"><span class="num">8</span><span class="den">2</span></span> = 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h3>Two-step equations <span class="h3-hint">undo the + or − first, then the × or ÷</span></h3>
+        <div class="bidmas-more">
+          <div class="bex">
+            <div class="q">3x + 4 = 19</div>
+            <div class="steps">
+              <span><i class="lbl s">1</i>Take 4 off both sides → 3x = 15</span>
+              <span><i class="lbl d">2</i>Divide both sides by 3 → <strong>x = 5</strong></span>
+              <span><i class="lbl b">✓</i>Check: 3 × 5 + 4 = 19</span>
+            </div>
+          </div>
+          <div class="bex">
+            <div class="q"><span class="frac"><span class="num">x</span><span class="den">2</span></span> − 3 = 4</div>
+            <div class="steps">
+              <span><i class="lbl a">1</i>Add 3 to both sides → <span class="frac"><span class="num">x</span><span class="den">2</span></span> = 7</span>
+              <span><i class="lbl m">2</i>Multiply both sides by 2 → <strong>x = 14</strong></span>
+              <span><i class="lbl b">✓</i>Check: 14 ÷ 2 − 3 = 4</span>
+            </div>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1.5mm">
+          Undo the steps in the <em>opposite</em> order to BIDMAS, and always do the same thing to <strong>both sides</strong>.
+          With brackets, take the loose number off first, then divide:
+          <span class="ex">2(x + 4) + 6 = 18</span> → 2(x + 4) = 12 → x + 4 = 6 → <strong>x = 2</strong>
+        </p>
+      </section>

@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-09-body.html?raw";
+---
+
+<GuidePageShell
+  page={9}
+  total={20}
+  label={"Divisibility rules"}
+  bodyClass={"p9"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

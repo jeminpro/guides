@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-01-body.html?raw";
+---
+
+<GuidePageShell
+  page={1}
+  total={20}
+  label={"Place value"}
+  bodyClass={"p1"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

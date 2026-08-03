@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-17-body.html?raw";
+---
+
+<GuidePageShell
+  page={17}
+  total={20}
+  label={"3D shapes &amp; volume"}
+  bodyClass={"audit-17"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

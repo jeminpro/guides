@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-11-body.html?raw";
+---
+
+<GuidePageShell
+  page={11}
+  total={20}
+  label={"Fractions, decimals &amp; %"}
+  bodyClass={"p11"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>
