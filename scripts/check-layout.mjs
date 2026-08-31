@@ -348,6 +348,22 @@ function watchSources(browser, allGuides, selectedIds) {
   console.log("\nWatching guide sources. Press Ctrl+C to stop.");
 }
 
+async function launchBrowser() {
+  try {
+    return await chromium.launch({ headless: true });
+  } catch (error) {
+    try {
+      return await chromium.launch({ channel: "msedge", headless: true });
+    } catch {
+      try {
+        return await chromium.launch({ channel: "chrome", headless: true });
+      } catch {
+        throw error;
+      }
+    }
+  }
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const allGuides = discoverGuides();
@@ -378,7 +394,7 @@ async function main() {
   const server = startAstro(args.preview ? "preview" : "dev");
   try {
     await waitForServer(`${BASE_URL}/`);
-    const browser = await chromium.launch({ headless: true });
+    const browser = await launchBrowser();
     const failureCount = await runChecks(browser, selected);
 
     if (args.watch) {

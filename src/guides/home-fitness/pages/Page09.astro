@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-09-body.html?raw";
+---
+
+<GuidePageShell
+  page={9}
+  total={14}
+  label={"Exercise guide — Legs"}
+  bodyClass={"f9"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

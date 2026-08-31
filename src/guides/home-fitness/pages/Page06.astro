@@ -1,0 +1,13 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-06-body.html?raw";
+---
+
+<GuidePageShell
+  page={6}
+  total={14}
+  label={"Cardio &amp; running"}
+  bodyClass={"f6"}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>

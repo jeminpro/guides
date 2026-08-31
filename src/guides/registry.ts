@@ -6,6 +6,12 @@ import {
   GUIDE_TITLE,
   PAGE_COUNT
 } from "./maths-tutor/meta";
+import {
+  GUIDE_DESCRIPTION as HOME_FITNESS_DESCRIPTION,
+  GUIDE_ID as HOME_FITNESS_ID,
+  GUIDE_TITLE as HOME_FITNESS_TITLE,
+  PAGE_COUNT as HOME_FITNESS_PAGE_COUNT
+} from "./home-fitness/meta";
 
 export const guides: readonly GuideMeta[] = [
   {
@@ -16,6 +22,15 @@ export const guides: readonly GuideMeta[] = [
     pageCount: PAGE_COUNT,
     status: "ready",
     icon: "∑"
+  },
+  {
+    id: HOME_FITNESS_ID,
+    title: HOME_FITNESS_TITLE,
+    description: HOME_FITNESS_DESCRIPTION,
+    href: withBase(`${HOME_FITNESS_ID}/`),
+    pageCount: HOME_FITNESS_PAGE_COUNT,
+    status: "ready",
+    icon: "▲"
   }
 ];
 

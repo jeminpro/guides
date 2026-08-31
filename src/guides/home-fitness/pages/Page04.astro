@@ -1,0 +1,8 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import bodyHtml from "./page-04-body.html?raw";
+---
+
+<GuidePageShell page={4} total={14} label={"Workout B — Pull"} bodyClass={"f4"}>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>
