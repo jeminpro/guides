@@ -12,6 +12,12 @@ import {
   GUIDE_TITLE as HOME_FITNESS_TITLE,
   PAGE_COUNT as HOME_FITNESS_PAGE_COUNT
 } from "./home-fitness/meta";
+import {
+  GUIDE_DESCRIPTION as VOCABULARY_DESCRIPTION,
+  GUIDE_ID as VOCABULARY_ID,
+  GUIDE_TITLE as VOCABULARY_TITLE,
+  PAGE_COUNT as VOCABULARY_PAGE_COUNT
+} from "./vocabulary/meta";
 
 export const guides: readonly GuideMeta[] = [
   {
@@ -31,6 +37,15 @@ export const guides: readonly GuideMeta[] = [
     pageCount: HOME_FITNESS_PAGE_COUNT,
     status: "ready",
     icon: "▲"
+  },
+  {
+    id: VOCABULARY_ID,
+    title: VOCABULARY_TITLE,
+    description: VOCABULARY_DESCRIPTION,
+    href: withBase(`${VOCABULARY_ID}/`),
+    pageCount: VOCABULARY_PAGE_COUNT,
+    status: "ready",
+    icon: "Aa"
   }
 ];
 

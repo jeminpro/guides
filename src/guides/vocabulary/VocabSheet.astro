@@ -1,0 +1,62 @@
+---
+import type { VocabSet } from "./data/types";
+
+interface Props {
+  set: VocabSet;
+}
+
+const { set } = Astro.props;
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function highlightWords(text: string, words: readonly string[]): string {
+  const pattern = words
+    .slice()
+    .sort((a, b) => b.length - a.length)
+    .map(escapeRegExp)
+    .join("|");
+  return text.replace(new RegExp(`\\b(${pattern})\\b`, "gi"), "<strong>$1</strong>");
+}
+
+const wordList = set.words.map((entry) => entry.word);
+const highlighted = set.paragraphs.map((paragraph) =>
+  highlightWords(paragraph, wordList)
+);
+---
+
+<section class="word-grid" aria-label="Word bank">
+  {
+    set.words.map((entry) => (
+      <article class="word-card">
+        <h2>{entry.word}</h2>
+        <p class="meaning">{entry.meaning}</p>
+        <div class="pairs">
+          <p class="pair syn">
+            <span class="pair-mark" aria-hidden="true">
+              ≈
+            </span>
+            <span>{entry.synonyms.join(", ")}</span>
+          </p>
+          <p class="pair ant">
+            <span class="pair-mark" aria-hidden="true">
+              ≠
+            </span>
+            <span>{entry.antonyms.join(", ")}</span>
+          </p>
+        </div>
+        <p class="example">{entry.example}</p>
+      </article>
+    ))
+  }
+</section>
+
+<section class="passage" aria-label="Words in context">
+  <h2>In the story</h2>
+  {
+    highlighted.map((paragraph) => (
+      <p set:html={paragraph} />
+    ))
+  }
+</section>
