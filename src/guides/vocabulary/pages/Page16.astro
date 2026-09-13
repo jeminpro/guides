@@ -1,0 +1,17 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import VocabSheet from "../VocabSheet.astro";
+import { set16 } from "../data/set-16";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[15];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <VocabSheet set={set16} />
+</GuidePageShell>

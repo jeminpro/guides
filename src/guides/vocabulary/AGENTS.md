@@ -14,6 +14,7 @@ A4 word-study sheets (Wordsmith on-sheet brand). Each page is one set: ten words
 ## Content model
 
 - Word lists live in `data/set-NN.ts` as a `VocabSet` (see `data/types.ts`).
+- `words/words.md` is the canonical word bank. Add every guide word there and remove duplicates case-insensitively whenever updating it.
 - Do not hand-write card markup — add a set, a thin `PageNN.astro`, and bump `PAGE_COUNT`.
 - Keep ten words per sheet so the card grid plus passage still fit one A4 page.
 
