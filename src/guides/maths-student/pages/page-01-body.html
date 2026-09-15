@@ -1,0 +1,85 @@
+<div>
+  <h1>Place value &amp; rounding</h1>
+  <p class="lead">A digit’s value is the digit × its place. One place left is ×10; one place right is ÷10.</p>
+</div>
+
+<section>
+  <h2>What is each digit worth?</h2>
+  <div class="place-chart" aria-label="Place values in 3428.56">
+    <div class="place-cell whole"><span class="place-name">Thousands</span><strong>3</strong><span class="place-value">= 3,000</span></div>
+    <div class="place-cell whole"><span class="place-name">Hundreds</span><strong>4</strong><span class="place-value">= 400</span></div>
+    <div class="place-cell whole"><span class="place-name">Tens</span><strong>2</strong><span class="place-value">= 20</span></div>
+    <div class="place-cell whole"><span class="place-name">Ones</span><strong>8</strong><span class="place-value">= 8</span></div>
+    <div class="place-point" aria-label="decimal point"><strong>.</strong></div>
+    <div class="place-cell decimal"><span class="place-name">Tenths</span><strong>5</strong><span class="place-value">= 0.5</span></div>
+    <div class="place-cell decimal"><span class="place-name">Hundredths</span><strong>6</strong><span class="place-value">= 0.06</span></div>
+    <div class="place-cell decimal"><span class="place-name">Thousandths</span><strong>0</strong><span class="place-value">= 0</span></div>
+  </div>
+  <div class="place-direction">
+    <span>← each move left is <strong>10× bigger</strong></span>
+    <span>each move right is <strong>10× smaller</strong> →</span>
+  </div>
+  <p class="note">
+    <strong>3428.56</strong> = <span class="ex">3,000 + 400 + 20 + 8 + 0.5 + 0.06</span>
+    · Extra zeros at the end of a decimal don’t change it <span class="ex">2.5 = 2.50</span>
+  </p>
+</section>
+
+<section class="panel tight">
+  <h2>Compare numbers</h2>
+  <div class="grid-3">
+    <div class="cmp-item">
+      <span class="sym">&lt;</span>
+      <span class="name">Less than</span>
+      <span class="ex">0.58 &lt; 0.6</span>
+    </div>
+    <div class="cmp-item">
+      <span class="sym">=</span>
+      <span class="name">The same</span>
+      <span class="ex">0.5 = 0.50</span>
+    </div>
+    <div class="cmp-item">
+      <span class="sym">&gt;</span>
+      <span class="name">Greater than</span>
+      <span class="ex">5,847 &gt; 962</span>
+    </div>
+  </div>
+  <p class="note" style="margin-top:2mm">
+    More digits wins for whole numbers. Same length? Compare left to right. Decimals: start after the point — tenths, then hundredths.
+  </p>
+</section>
+
+<section class="panel tight filled">
+  <h2>Rounding</h2>
+  <div class="round-steps round-steps-vertical">
+    <div class="round-step">
+      <span class="round-num">1</span>
+      <div><strong>Find the place</strong><p>Circle the digit you are rounding to.</p></div>
+    </div>
+    <div class="round-step">
+      <span class="round-num">2</span>
+      <div><strong>Look next door</strong><p>The digit immediately to its right decides.</p></div>
+    </div>
+    <div class="round-step">
+      <span class="round-num">3</span>
+      <div><strong>Decide</strong><p><span class="tag">0–4</span> stay · <span class="tag warm">5–9</span> round up. Then zeros (or drop digits after a decimal).</p></div>
+    </div>
+  </div>
+  <p class="round-visual-line" style="margin-top:2mm">
+    <span class="round-digits mono">2,<span class="round-target">8</span><span class="round-neighbour">7</span>6</span>
+    <span class="round-arrow">→ nearest 100 →</span>
+    <strong class="round-result">2,900</strong>
+  </p>
+  <div class="round-examples-grid">
+    <span class="ex"><span class="mono">47</span> → 10 → <strong>50</strong></span>
+    <span class="ex"><span class="mono">342</span> → 100 → <strong>300</strong></span>
+    <span class="ex"><span class="mono">3.68</span> → 1 d.p. → <strong>3.7</strong></span>
+    <span class="ex"><span class="mono">0.95</span> → 1 d.p. → <strong>1.0</strong></span>
+  </div>
+</section>
+
+<div class="callout">
+  <strong>Remember:</strong>
+  5 or more rounds <em>up</em>. Whole numbers: fill the rest with zeros.
+  <span class="mono">2,876 → 2,900</span>
+</div>

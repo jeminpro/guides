@@ -1,0 +1,27 @@
+---
+interface Props {
+  page: number;
+  total: number;
+  label: string;
+  bodyClass?: string;
+}
+
+const { page, total, label, bodyClass = "" } = Astro.props;
+const ariaLabel = `Page ${page}: ${label}`;
+---
+
+<div class="page-frame">
+  <section class:list={["page", bodyClass]} aria-label={ariaLabel}>
+    <header class="page-header">
+      <div class="brand">Maths <span>Racer</span></div>
+      <div class="section-label">{label}</div>
+    </header>
+    <div class="page-body">
+      <slot />
+    </div>
+    <footer class="page-footer">
+      <span>Maths Guide — Student</span>
+      <span>{page} / {total}</span>
+    </footer>
+  </section>
+</div>

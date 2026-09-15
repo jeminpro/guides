@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import { PAGE_COUNT, pages } from "../meta";
+import bodyHtml from "./page-08-body.html?raw";
+
+const page = pages[7];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <Fragment set:html={bodyHtml} />
+</GuidePageShell>
