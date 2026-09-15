@@ -1,4 +1,4 @@
-# Maths Tutor guide
+# Maths Guide - Tutor
 
 Twenty A4 cheat sheets for Primary & 11+ maths (Maths Racer on-sheet brand). Covers place value through word problems and Venns.
 

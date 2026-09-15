@@ -5,7 +5,7 @@ Print-first maths guides built with Astro and TypeScript. Pick a guide on the ho
 ## Features
 
 - **Printable A4 sheets** — exact `210mm × 297mm` pages
-- **Maths Tutor** — Primary & 11+ reference booklet (Maths Racer branding on-sheet)
+- **Maths Guide - Tutor** — Primary & 11+ reference booklet (Maths Racer branding on-sheet)
 - **Notes** — per-guide sticky notes with export/import and optional cloud sync
 - **Multi-guide** — add more guides via the registry pattern
 
