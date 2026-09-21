@@ -1,12 +1,12 @@
 # Vocabulary guide
 
-A4 word-study sheets (Wordsmith on-sheet brand). Each page is one set: ten words with meaning, synonyms, antonyms, an example sentence, plus a short passage that uses every word. The header shows the brand only — no set pill.
+A4 word-study sheets (Wordground on-sheet brand). Each page is one set: ten words with meaning, synonyms, antonyms, an example sentence, plus a short passage that uses every word. The header shows the brand only — no set pill.
 
 ## Layout
 
 - Route: `src/pages/vocabulary/index.astro`
 - Meta: `meta.ts` (page list, guide id/title)
-- Shell: `GuidePageShell.astro` (brand header, footer `n / N`)
+- Shell: `GuidePageShell.astro` (brand header, footer page number)
 - Sheets: `Sheets.astro` imports `pages/PageNN.astro`
 - Renderer: `VocabSheet.astro` reads a typed set from `data/`
 - Styles: `styles/guide.css`
@@ -20,7 +20,7 @@ A4 word-study sheets (Wordsmith on-sheet brand). Each page is one set: ten words
 
 ## Constraints
 
-- Update `PAGE_COUNT` / footer total when adding sheets.
+- Update `PAGE_COUNT` when adding sheets. The footer shows the page number only.
 - Page-specific squeeze classes (`v1`, …) on `.page` control density.
 - Do not import other guides' files.
 - Verify: `npm run check:layout -- --guide=vocabulary`

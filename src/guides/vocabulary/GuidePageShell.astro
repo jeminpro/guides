@@ -6,20 +6,24 @@ interface Props {
   bodyClass?: string;
 }
 
-const { page, total, label, bodyClass = "" } = Astro.props;
+const { page, label, bodyClass = "" } = Astro.props;
 const ariaLabel = `Page ${page}: ${label}`;
 ---
 
 <div class="page-frame">
   <section class:list={["page", bodyClass]} id={`page-${page}`} aria-label={ariaLabel}>
     <header class="page-header">
-      <div class="brand">Word<span>smith</span></div>
+      <div class="brand">
+        <span class="mark" aria-hidden="true">Aa</span>
+        <span class="name">Word<span>ground</span></span>
+      </div>
     </header>
     <div class="page-body">
       <slot />
     </div>
     <footer class="page-footer">
       <span>Vocabulary &middot; 11+ word study</span>
+      <span class="page-num">{page}</span>
     </footer>
   </section>
 </div>

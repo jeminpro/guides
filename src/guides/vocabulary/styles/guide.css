@@ -1,4 +1,4 @@
-/* Wordsmith — 11+ vocabulary sheets */
+/* Wordground — 11+ vocabulary sheets */
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap");
 
@@ -92,31 +92,44 @@
 .page-header .brand {
   display: flex;
   align-items: center;
-  gap: 2mm;
+  gap: 2.2mm;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 15.5pt;
-  letter-spacing: -0.01em;
+  font-size: 16pt;
+  letter-spacing: -0.03em;
   color: var(--navy);
-  text-transform: uppercase;
 }
 
-.page-header .brand::before {
-  content: "Aa";
-  display: inline-flex;
+.page-header .brand .mark {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 7.2mm;
+  width: 9.2mm;
   height: 7.2mm;
-  border-radius: 50%;
-  background: var(--indigo);
+  border-radius: 1.7mm;
+  background:
+    linear-gradient(var(--teal), var(--teal)) left / 0.8mm 100% no-repeat,
+    var(--indigo);
   color: #fff;
-  font-size: 7.5pt;
+  font-size: 9.5pt;
   line-height: 1;
+  letter-spacing: -0.04em;
+  overflow: hidden;
   flex-shrink: 0;
 }
 
-.page-header .brand span {
+.page-header .brand .mark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.7mm;
+  height: 2.7mm;
+  background: linear-gradient(225deg, #fff8e4 46%, var(--gold) 46% 64%, transparent 64%);
+}
+
+.page-header .brand .name span {
   color: var(--indigo);
 }
 
@@ -125,11 +138,17 @@
   padding-top: 2mm;
   border-top: 1.5px solid var(--rule);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   font-size: 9pt;
   font-weight: 700;
   color: var(--ink-muted);
   flex-shrink: 0;
+}
+
+.page-footer .page-num {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
 }
 
 .page-body {
