@@ -1,13 +1,16 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
 import bodyHtml from "./page-13-body.html?raw";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[12];
 ---
 
 <GuidePageShell
-  page={13}
-  total={20}
-  label={"Ratio &amp; proportion"}
-  bodyClass={"p13"}
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
 >
   <Fragment set:html={bodyHtml} />
 </GuidePageShell>

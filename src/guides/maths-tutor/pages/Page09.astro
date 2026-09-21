@@ -1,13 +1,16 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
 import bodyHtml from "./page-09-body.html?raw";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[8];
 ---
 
 <GuidePageShell
-  page={9}
-  total={20}
-  label={"Divisibility rules"}
-  bodyClass={"p9"}
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
 >
   <Fragment set:html={bodyHtml} />
 </GuidePageShell>

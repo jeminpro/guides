@@ -1,121 +1,118 @@
-<div>
-        <h1>Times tables &amp; quick tricks</h1>
-        <p class="lead">Multiplication and division are inverse operations; each multiplication fact gives two division facts.</p>
+<section>
+  <h1>Roman numerals</h1>
+  <div class="roman-strip">
+    <div><strong>I</strong> 1</div>
+    <div><strong>V</strong> 5</div>
+    <div><strong>X</strong> 10</div>
+    <div><strong>L</strong> 50</div>
+    <div><strong>C</strong> 100</div>
+    <div><strong>D</strong> 500</div>
+    <div><strong>M</strong> 1000</div>
+  </div>
+  <div class="roman-rules">
+    <div class="roman-rule add">
+      <h3>1 · Add</h3>
+      <p>When a symbol is followed by one of equal or lower value, add the values.</p>
+      <span class="ex">VI = 5 + 1 = 6</span>
+      <span class="ex">XII = 10 + 1 + 1 = 12</span>
+    </div>
+
+    <div class="roman-rule subtract">
+      <h3>2 · Subtract — only these pairs</h3>
+      <p>If a smaller symbol comes <strong>before</strong> a larger one, take it away instead of adding. Only <strong>I, X and C</strong> can be used this way, and only in these six pairs:</p>
+      <div class="roman-pairs">
+        <span><strong>I</strong> from V or X<br /><b>IV = 4 · IX = 9</b></span>
+        <span><strong>X</strong> from L or C<br /><b>XL = 40 · XC = 90</b></span>
+        <span><strong>C</strong> from D or M<br /><b>CD = 400 · CM = 900</b></span>
       </div>
+    </div>
 
-      <section>
-        <h2>1–12 multiplication chart</h2>
-        <div class="times-grid compact" role="table" aria-label="1 to 12 multiplication chart">
-          <div class="tt-h tt-corner" role="columnheader">×</div>
-          <div class="tt-h" role="columnheader">1</div>
-          <div class="tt-h" role="columnheader">2</div>
-          <div class="tt-h" role="columnheader">3</div>
-          <div class="tt-h" role="columnheader">4</div>
-          <div class="tt-h" role="columnheader">5</div>
-          <div class="tt-h" role="columnheader">6</div>
-          <div class="tt-h" role="columnheader">7</div>
-          <div class="tt-h" role="columnheader">8</div>
-          <div class="tt-h" role="columnheader">9</div>
-          <div class="tt-h" role="columnheader">10</div>
-          <div class="tt-h" role="columnheader">11</div>
-          <div class="tt-h" role="columnheader">12</div>
+    <div class="roman-rule repeat">
+      <h3>3 · Repeat</h3>
+      <p><strong>I, X, C and M</strong> may repeat up to three times in a row.</p>
+      <span class="ex">III = 3</span>
+      <span class="ex">XXX = 30</span>
+      <p class="roman-never"><strong>V, L and D never repeat and are never used to subtract.</strong></p>
+    </div>
+  </div>
 
-          <div class="tt-h" role="rowheader">1</div>
-          <div class="b1">1</div><div class="b2">2</div><div class="b3">3</div><div class="b4">4</div><div class="b5">5</div><div class="b6">6</div><div class="b7">7</div><div class="b8">8</div><div class="b9">9</div><div class="b10">10</div><div class="b11">11</div><div class="b12">12</div>
+  <div class="roman-worked">
+    <strong>Roman → number:</strong>
+    <span class="ex">MCMXLIV = M + CM + XL + IV = 1000 + 900 + 40 + 4 = 1944</span>
+  </div>
+  <div class="roman-worked">
+    <strong>Number → Roman:</strong>
+    <span class="ex">1944 → 1000 + 900 + 40 + 4 → M + CM + XL + IV → MCMXLIV</span>
+  </div>
+  <p class="note" style="margin:1.2mm 0 0;font-size:8.5pt">
+    Going that way, split the number into thousands, hundreds, tens and ones, swap each part for its symbols, then join them up in order.
+  </p>
 
-          <div class="tt-h" role="rowheader">2</div>
-          <div class="b2">2</div><div class="b2">4</div><div class="b3">6</div><div class="b4">8</div><div class="b5">10</div><div class="b6">12</div><div class="b7">14</div><div class="b8">16</div><div class="b9">18</div><div class="b10">20</div><div class="b11">22</div><div class="b12">24</div>
+  <h2>Build any number</h2>
+  <p class="note" style="margin:0 0 1.2mm;font-size:8.5pt">
+    Look up each place, then join left to right. School questions usually stay below 4000, so thousands only need M, MM or MMM.
+  </p>
+  <table class="table-compact roman-build">
+    <thead>
+      <tr>
+        <th></th>
+        <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Ones</th>
+        <td>I</td><td>II</td><td>III</td><td>IV</td><td>V</td><td>VI</td><td>VII</td><td>VIII</td><td>IX</td>
+      </tr>
+      <tr>
+        <th scope="row">Tens</th>
+        <td>X</td><td>XX</td><td>XXX</td><td>XL</td><td>L</td><td>LX</td><td>LXX</td><td>LXXX</td><td>XC</td>
+      </tr>
+      <tr>
+        <th scope="row">Hundreds</th>
+        <td>C</td><td>CC</td><td>CCC</td><td>CD</td><td>D</td><td>DC</td><td>DCC</td><td>DCCC</td><td>CM</td>
+      </tr>
+      <tr>
+        <th scope="row">Thousands</th>
+        <td>M</td><td>MM</td><td>MMM</td>
+        <td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+        <td class="empty">—</td><td class="empty">—</td><td class="empty">—</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="roman-worked">
+    <strong>Using the table:</strong>
+    <span class="ex">276 → 200 + 70 + 6 → CC + LXX + VI → CCLXXVI</span>
+    <span class="ex">44 → 40 + 4 → XL + IV → XLIV</span>
+  </div>
 
-          <div class="tt-h" role="rowheader">3</div>
-          <div class="b3">3</div><div class="b3">6</div><div class="b3">9</div><div class="b4">12</div><div class="b5">15</div><div class="b6">18</div><div class="b7">21</div><div class="b8">24</div><div class="b9">27</div><div class="b10">30</div><div class="b11">33</div><div class="b12">36</div>
-
-          <div class="tt-h" role="rowheader">4</div>
-          <div class="b4">4</div><div class="b4">8</div><div class="b4">12</div><div class="b4">16</div><div class="b5">20</div><div class="b6">24</div><div class="b7">28</div><div class="b8">32</div><div class="b9">36</div><div class="b10">40</div><div class="b11">44</div><div class="b12">48</div>
-
-          <div class="tt-h" role="rowheader">5</div>
-          <div class="b5">5</div><div class="b5">10</div><div class="b5">15</div><div class="b5">20</div><div class="b5">25</div><div class="b6">30</div><div class="b7">35</div><div class="b8">40</div><div class="b9">45</div><div class="b10">50</div><div class="b11">55</div><div class="b12">60</div>
-
-          <div class="tt-h" role="rowheader">6</div>
-          <div class="b6">6</div><div class="b6">12</div><div class="b6">18</div><div class="b6">24</div><div class="b6">30</div><div class="b6">36</div><div class="b7">42</div><div class="b8">48</div><div class="b9">54</div><div class="b10">60</div><div class="b11">66</div><div class="b12">72</div>
-
-          <div class="tt-h" role="rowheader">7</div>
-          <div class="b7">7</div><div class="b7">14</div><div class="b7">21</div><div class="b7">28</div><div class="b7">35</div><div class="b7">42</div><div class="b7">49</div><div class="b8">56</div><div class="b9">63</div><div class="b10">70</div><div class="b11">77</div><div class="b12">84</div>
-
-          <div class="tt-h" role="rowheader">8</div>
-          <div class="b8">8</div><div class="b8">16</div><div class="b8">24</div><div class="b8">32</div><div class="b8">40</div><div class="b8">48</div><div class="b8">56</div><div class="b8">64</div><div class="b9">72</div><div class="b10">80</div><div class="b11">88</div><div class="b12">96</div>
-
-          <div class="tt-h" role="rowheader">9</div>
-          <div class="b9">9</div><div class="b9">18</div><div class="b9">27</div><div class="b9">36</div><div class="b9">45</div><div class="b9">54</div><div class="b9">63</div><div class="b9">72</div><div class="b9">81</div><div class="b10">90</div><div class="b11">99</div><div class="b12">108</div>
-
-          <div class="tt-h" role="rowheader">10</div>
-          <div class="b10">10</div><div class="b10">20</div><div class="b10">30</div><div class="b10">40</div><div class="b10">50</div><div class="b10">60</div><div class="b10">70</div><div class="b10">80</div><div class="b10">90</div><div class="b10">100</div><div class="b11">110</div><div class="b12">120</div>
-
-          <div class="tt-h" role="rowheader">11</div>
-          <div class="b11">11</div><div class="b11">22</div><div class="b11">33</div><div class="b11">44</div><div class="b11">55</div><div class="b11">66</div><div class="b11">77</div><div class="b11">88</div><div class="b11">99</div><div class="b11">110</div><div class="b11">121</div><div class="b12">132</div>
-
-          <div class="tt-h" role="rowheader">12</div>
-          <div class="b12">12</div><div class="b12">24</div><div class="b12">36</div><div class="b12">48</div><div class="b12">60</div><div class="b12">72</div><div class="b12">84</div><div class="b12">96</div><div class="b12">108</div><div class="b12">120</div><div class="b12">132</div><div class="b12">144</div>
-        </div>
-      </section>
-
-      <div class="grid-2">
-        <section class="panel tight filled">
-          <h3>× works both ways</h3>
-          <p style="font-size:9pt;margin:0 0 1mm">
-            Swap the numbers round — same answer! So you only learn <strong>half</strong> the chart.
-          </p>
-          <span class="ex">7 × 8 = 56 &nbsp;and&nbsp; 8 × 7 = 56</span>
-        </section>
-        <section class="panel tight warm">
-          <h3>÷ is the opposite of ×</h3>
-          <p style="font-size:9pt;margin:0 0 1mm">
-            Every times-table fact gives you two dividing facts free.
-          </p>
-          <span class="ex">56 ÷ 8 = 7 &nbsp;and&nbsp; 56 ÷ 7 = 8</span>
-        </section>
+  <div class="roman-lower">
+    <div class="panel warm tight">
+      <h3>Never write these</h3>
+      <p>They look clever, but they break the subtract and repeat rules.</p>
+      <div class="roman-traps">
+        <div><s>IL</s> → <strong>XLIX</strong> = 49</div>
+        <div><s>IC</s> → <strong>XCIX</strong> = 99</div>
+        <div><s>VV</s> → <strong>X</strong> = 10</div>
+        <div><s>IIII</s> → <strong>IV</strong> = 4</div>
+        <div><s>MIM</s> → <strong>MCMXCIX</strong> = 1999</div>
       </div>
+    </div>
+    <div class="roman-examples">
+      <strong>Mixed practice:</strong>
+      <div class="roman-example-grid">
+        <span class="ex">XIV = 14</span>
+        <span class="ex">XXIX = 29</span>
+        <span class="ex">XLII = 42</span>
+        <span class="ex">XLIX = 49</span>
+        <span class="ex">LXXV = 75</span>
+        <span class="ex">XCIX = 99</span>
+        <span class="ex">CDX = 410</span>
+        <span class="ex">DCLXVI = 666</span>
+        <span class="ex">MMXXVI = 2026</span>
+      </div>
+    </div>
+  </div>
 
-      <section>
-        <h2>Multiplying &amp; dividing in your head</h2>
-        <div class="grid-2">
-          <div class="method">
-            <div class="num">1 · Doubling &amp; halving</div>
-            <div class="name">Double it, then double again</div>
-            <p>×4 = double twice · ×8 = double 3 times · ÷4 = halve twice.</p>
-            <span class="ex">35 × 4 → 70 → 140 &nbsp;·&nbsp; 96 ÷ 4 → 48 → 24</span>
-          </div>
-          <div class="method">
-            <div class="num">2 · Partitioning</div>
-            <div class="name">Split it up, then add</div>
-            <p>Split into tens and ones, times each part, then add them.</p>
-            <span class="ex">23 × 6 → (20×6) + (3×6) → 120 + 18 = 138</span>
-          </div>
-          <div class="method">
-            <div class="num">3 · ×10 / ×100 &amp; multiples of 10</div>
-            <div class="name">Every digit moves along</div>
-            <p>×10 → 1 place left · ÷10 → 1 place right — not “add a 0”.</p>
-            <span class="ex">4.7 × 100 = 470 &nbsp;·&nbsp; 30 × 40 = 1200</span>
-          </div>
-          <div class="method">
-            <div class="num">4 · Related facts</div>
-            <div class="name">Use a fact you already know</div>
-            <p>×5 = ×10 then halve · ×9 = ×10 then take one lot off.</p>
-            <span class="ex">28 × 5 → 280 ÷ 2 = 140 &nbsp;·&nbsp; 7 × 9 → 70 − 7 = 63</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel tight">
-        <h3>Patterns that help you remember <span class="h3-hint">×6, ×7 and ×8 are the ones people forget</span></h3>
-        <div class="grid-3 pattern-tips">
-          <div><span class="tt-badge">×2</span> Double it — always even<span class="mono">7 × 2 = 14</span></div>
-          <div><span class="tt-badge">×5</span> Answer ends in 5 or 0<span class="mono">6 × 5 = 30</span></div>
-          <div><span class="tt-badge">×10</span> Every digit moves 1 place left<span class="mono">8 × 10 = 80 · 4.7 × 10 = 47</span></div>
-          <div><span class="tt-badge">×6</span> Do ×3, then double it<span class="mono">6 × 7 → 21 → 42</span></div>
-          <div><span class="tt-badge">×7</span> Do ×5, then add ×2<span class="mono">8 × 7 → 40 + 16 = 56</span></div>
-          <div><span class="tt-badge">×8</span> Double three times<span class="mono">7 × 8 → 14 → 28 → 56</span></div>
-          <div><span class="tt-badge">×9</span> Digits add up to 9 (up to ×10)<span class="mono">4 × 9 = 36 → 3 + 6 = 9</span></div>
-          <div><span class="tt-badge">×11</span> Write the digit twice (up to ×9)<span class="mono">7 × 11 = 77</span></div>
-          <div><span class="tt-badge">×12</span> Do ×10 and ×2, then add<span class="mono">7 × 12 = 70 + 14 = 84</span></div>
-        </div>
-      </section>
+  
+</section>

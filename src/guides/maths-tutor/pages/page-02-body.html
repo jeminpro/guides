@@ -1,68 +1,89 @@
-<div>
-        <h1>Odd, even &amp; clever tricks</h1>
-        <p class="lead">Even numbers end in 0, 2, 4, 6 or 8; odd numbers end in 1, 3, 5, 7 or 9.</p>
+      <div>
+        <h1>Addition &amp; Subtraction</h1>
       </div>
 
-      <section>
-        <h2>Odd and even numbers</h2>
-        <div class="oe-pair">
-          <div class="oe-box odd">
-            <div class="big">Odd</div>
-            <p style="font-size:9.5pt;margin:0">Share them into 2 equal groups and there is always <strong>1 left over</strong> (not divisible by 2).</p>
-            <div style="display:flex;justify-content:center;align-items:center;gap:3mm;margin:1.2mm 0 0.6mm;font-size:14pt;line-height:1;color:var(--coral-deep)">
-              <span>●●</span><span>●●</span><span style="color:var(--navy)">○</span>
+      <div class="ops-grid">
+        <section class="panel tight op-add">
+          <h2>Addition (+)</h2>
+          <div class="worked">
+            <div class="sum add long-add" aria-label="487 plus 356 equals 843">
+              <svg viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <text class="la-carry la-red" x="18" y="12" text-anchor="middle">1</text>
+                <text class="la-carry la-red" x="34" y="12" text-anchor="middle">1</text>
+                <text class="la-note la-red" x="48" y="12" text-anchor="start">carry</text>
+
+                <text class="la-num" x="18" y="28" text-anchor="middle">4</text>
+                <text class="la-num" x="34" y="28" text-anchor="middle">8</text>
+                <text class="la-num" x="50" y="28" text-anchor="middle">7</text>
+
+                <text class="la-op" x="4" y="44" text-anchor="middle">+</text>
+                <text class="la-num" x="18" y="44" text-anchor="middle">3</text>
+                <text class="la-num" x="34" y="44" text-anchor="middle">5</text>
+                <text class="la-num" x="50" y="44" text-anchor="middle">6</text>
+                <line class="la-rule" x1="2" y1="48" x2="60" y2="48" />
+
+                <text class="la-num" x="18" y="64" text-anchor="middle">8</text>
+                <text class="la-num" x="34" y="64" text-anchor="middle">4</text>
+                <text class="la-num" x="50" y="64" text-anchor="middle">3</text>
+              </svg>
             </div>
-            <p class="note" style="margin:0;font-size:8.5pt">5 → 2 pairs and 1 with no partner</p>
-            <div class="digits">1 &nbsp; 3 &nbsp; 5 &nbsp; 7 &nbsp; 9</div>
-            <p class="note" style="margin:0">Just check the last digit — odd numbers end in these</p>
+            <ul>
+              <li>Line ones under ones. Start on the <strong>right</strong>.</li>
+              <li>Ones: 7 + 6 = 13 → write <strong>3</strong>, carry <strong>1</strong>.</li>
+              <li>Tens: 1 + 8 + 5 = 14 → write <strong>4</strong>, carry <strong>1</strong>.</li>
+              <li>Hundreds: 1 + 4 + 3 = <strong>8</strong>.</li>
+            </ul>
           </div>
-          <div class="oe-box even">
-            <div class="big">Even</div>
-            <p style="font-size:9.5pt;margin:0">Share them into 2 equal groups and there is <strong>nothing left over</strong> (divisible by 2).</p>
-            <div style="display:flex;justify-content:center;align-items:center;gap:3mm;margin:1.2mm 0 0.6mm;font-size:14pt;line-height:1;color:var(--sky-deep)">
-              <span>●●</span><span>●●</span><span>●●</span>
+        </section>
+
+        <section class="panel tight op-sub">
+          <h2>Subtraction (−)</h2>
+          <div class="worked">
+            <div class="sum sub long-sub" aria-label="843 minus 356 equals 487">
+              <svg viewBox="0 0 92 84" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <text class="ls-carry ls-red" x="18" y="12" text-anchor="middle">7</text>
+                <text class="ls-carry ls-red" x="34" y="12" text-anchor="middle">13</text>
+                <text class="ls-carry ls-red" x="54" y="12" text-anchor="middle">13</text>
+                <text class="ls-note ls-red" x="68" y="12" text-anchor="start">borrow</text>
+
+                <text class="ls-num" x="18" y="30" text-anchor="middle">8</text>
+                <text class="ls-num" x="34" y="30" text-anchor="middle">4</text>
+                <text class="ls-num" x="54" y="30" text-anchor="middle">3</text>
+
+                <text class="ls-op" x="4" y="48" text-anchor="middle">−</text>
+                <text class="ls-num" x="18" y="48" text-anchor="middle">3</text>
+                <text class="ls-num" x="34" y="48" text-anchor="middle">5</text>
+                <text class="ls-num" x="54" y="48" text-anchor="middle">6</text>
+                <line class="ls-rule" x1="2" y1="52" x2="64" y2="52" />
+
+                <text class="ls-num" x="18" y="68" text-anchor="middle">4</text>
+                <text class="ls-num" x="34" y="68" text-anchor="middle">8</text>
+                <text class="ls-num" x="54" y="68" text-anchor="middle">7</text>
+              </svg>
             </div>
-            <p class="note" style="margin:0;font-size:8.5pt">6 → 3 pairs, everyone has a partner</p>
-            <div class="digits">0 &nbsp; 2 &nbsp; 4 &nbsp; 6 &nbsp; 8</div>
-            <p class="note" style="margin:0">Ends in these — and 0 counts as even too</p>
+            <ul>
+              <li>Line ones under ones. Start on the <strong>right</strong>.</li>
+              <li>Ones: borrow 1 ten from the 4. The <strong>4 becomes 3</strong>, and the 3 becomes 13. Then <strong>13 − 6 = 7</strong>.</li>
+              <li>Tens: 3 is too small, so borrow 1 hundred from the 8. The <strong>8 becomes 7</strong>, and the 3 becomes 13. Then <strong>13 − 5 = 8</strong>.</li>
+              <li>Hundreds: <strong>7 − 3 = 4</strong>.</li>
+            </ul>
           </div>
+        </section>
+      </div>
+
+      <section class="panel tight">
+        <h3>Learn these by heart</h3>
+        <p>Learn quick addition and subtraction of single digits (0 to 9).</p>
+        <div class="try">
+          <span class="ex">6 + 7 = 13</span>
+          <span class="ex">9 − 4 = 5</span>
+        </div>
+        <p>Also learn quick take-aways from (10 to 19), taking away a single digit (0 to 9).</p>
+        <div class="try">
+          <span class="ex">15 − 8 = 7</span>
+          <span class="ex">13 − 6 = 7</span>
         </div>
       </section>
-
-      <div class="grid-2">
-        <section class="panel tight">
-          <h3>Adding &amp; taking away</h3>
-          <table class="table-compact">
-            <thead>
-              <tr><th>Rule</th><th>Example</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Odd + Odd = Even</td><td class="mono">3 + 5 = 8</td></tr>
-              <tr><td>Even + Even = Even</td><td class="mono">2 + 4 = 6</td></tr>
-              <tr><td>Odd + Even = Odd</td><td class="mono">5 + 2 = 7</td></tr>
-            </tbody>
-          </table>
-          <p class="note" style="margin-top:1.2mm;font-size:8.5pt">
-            Two spare ones pair up — that is why odd + odd is even.
-          </p>
-        </section>
-        <section class="panel tight">
-          <h3>Multiplying</h3>
-          <table class="table-compact">
-            <thead>
-              <tr><th>Rule</th><th>Example</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Odd × Odd = Odd</td><td class="mono">5 × 7 = 35</td></tr>
-              <tr><td>Odd × Even = Even</td><td class="mono">5 × 8 = 40</td></tr>
-              <tr><td>Even × Even = Even</td><td class="mono">4 × 8 = 32</td></tr>
-            </tbody>
-          </table>
-          <p class="note" style="margin-top:1.2mm;font-size:8.5pt">
-            If <strong>either</strong> number is even, the answer is even.
-          </p>
-        </section>
-      </div>
 
       <section>
         <h2>Adding &amp; subtracting in your head</h2>
@@ -72,6 +93,12 @@
             <div class="name">Split into tens and ones</div>
             <p>Add the tens, add the ones, then join them.</p>
             <span class="ex">47 + 36 → (40+30) + (7+6) → 70 + 13 = 83</span>
+            <p class="when"><strong>When:</strong> any 2-digit add where neither number is near a 10.</p>
+            <div class="try">
+              <span class="ex">53 + 28 = 81</span>
+              <span class="ex">64 + 25 = 89</span>
+              <span class="ex">35 + 47 = 82</span>
+            </div>
           </div>
           <div class="method">
             <div class="num">2 · Compensation</div>
@@ -79,12 +106,24 @@
             <p>Round to the nearest 10 to make it easy, then undo exactly what you changed.</p>
             <span class="ex">198 + 47 → 200+47 = 247 → −2 = 245</span>
             <span class="ex">82 − 29 → 82−30 = 52 → +1 = 53</span>
+            <p class="when"><strong>When:</strong> one number is just below a tidy 10 or 100.</p>
+            <div class="try">
+              <span class="ex">299 + 46 = 345</span>
+              <span class="ex">97 + 38 = 135</span>
+              <span class="ex">81 − 39 = 42</span>
+            </div>
           </div>
           <div class="method">
             <div class="num">3 · Bridging</div>
             <div class="name">Hop to the next 10 first</div>
             <p>Jump up to the next 10, then add what is left.</p>
             <span class="ex">38 + 7 → 38+2 = 40 → 40+5 = 45</span>
+            <p class="when"><strong>When:</strong> the ones take you past a 10.</p>
+            <div class="try">
+              <span class="ex">47 + 8 = 55</span>
+              <span class="ex">26 + 7 = 33</span>
+              <span class="ex">58 + 6 = 64</span>
+            </div>
           </div>
           <div class="method">
             <div class="num">4 · Difference method</div>
@@ -101,40 +140,13 @@
               </span>
               <strong>2 + 3 = 5</strong>
             </div>
+            <p class="when"><strong>When:</strong> the two numbers are only a little apart.</p>
+            <div class="try">
+              <span class="ex">72 − 67 = 5</span>
+              <span class="ex">51 − 48 = 3</span>
+              <span class="ex">84 − 79 = 5</span>
+            </div>
           </div>
         </div>
       </section>
-
-      <section>
-        <h2>Which trick should I use?</h2>
-        <div class="recipe across">
-          <div class="recipe-row">
-            <span class="from">Any 2-digit add</span>
-            <strong>Partition.</strong> Neither number is near a 10, so split both into tens and ones, add each part, then join.
-            <span class="ex">53 + 28 = 81</span>
-            <span class="ex">64 + 25 = 89</span>
-            <span class="ex">35 + 47 = 82</span>
-          </div>
-          <div class="recipe-row">
-            <span class="from">Near a 10</span>
-            <strong>Compensate.</strong> One number is just below a tidy 10 or 100, so round it up, add, then take the extra back off.
-            <span class="ex">299 + 46 = 345</span>
-            <span class="ex">97 + 38 = 135</span>
-            <span class="ex">81 − 39 = 42</span>
-          </div>
-          <div class="recipe-row">
-            <span class="from">Crossing 10</span>
-            <strong>Bridge.</strong> The ones take you past a 10, so hop up to that 10 first, then add whatever is left.
-            <span class="ex">47 + 8 = 55</span>
-            <span class="ex">26 + 7 = 33</span>
-            <span class="ex">58 + 6 = 64</span>
-          </div>
-          <div class="recipe-row">
-            <span class="from">Numbers close</span>
-            <strong>Count up.</strong> The two numbers are only a little apart, so count on from the smaller one instead of taking away.
-            <span class="ex">72 − 67 = 5</span>
-            <span class="ex">51 − 48 = 3</span>
-            <span class="ex">84 − 79 = 5</span>
-          </div>
-        </div>
-      </section>
+      

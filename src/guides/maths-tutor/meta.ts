@@ -7,7 +7,7 @@ export type MathsTutorPageMeta = {
 };
 
 export const GUIDE_ID = "maths-tutor" as const;
-export const GUIDE_TITLE = "Maths Guide - Tutor";
+export const GUIDE_TITLE = "Maths Guide";
 export const GUIDE_DESCRIPTION =
   "Primary & 11+ maths cheat sheets — place value through word problems.";
 export const PAGE_COUNT = 20 as const;
@@ -16,56 +16,56 @@ export const pages = [
   {
     number: 1,
     id: "place-value",
-    label: "Place value",
-    title: "Place value & number sense",
+    label: "Place value, odd & even",
+    title: "Place value, odd & even",
     bodyClass: "p1"
   },
   {
     number: 2,
-    id: "odd-even-mental",
-    label: "Odd, even &amp; mental maths",
-    title: "Odd, even & clever tricks",
+    id: "add-mental",
+    label: "Addition & Subtraction",
+    title: "Addition & Subtraction",
     bodyClass: "p2"
   },
   {
     number: 3,
-    id: "add-takeaway",
-    label: "Add &amp; take-away facts",
-    title: "Add & take away facts",
+    id: "times-multiply-divide",
+    label: "Times tables, × & ÷",
+    title: "Times tables, multiply & divide",
     bodyClass: "p3"
   },
   {
     number: 4,
-    id: "times-tables",
-    label: "Times tables",
-    title: "Times tables & quick tricks",
+    id: "roman-numerals",
+    label: "Roman numerals",
+    title: "Roman numerals",
     bodyClass: "p4"
   },
   {
     number: 5,
     id: "positive-negative",
-    label: "Positive &amp; negative numbers",
+    label: "Positive & negative numbers",
     title: "Positive & negative numbers",
     bodyClass: "p5"
   },
   {
     number: 6,
     id: "bidmas-algebra",
-    label: "BIDMAS &amp; algebra",
+    label: "BIDMAS & algebra",
     title: "BIDMAS & solving for x",
     bodyClass: "p6"
   },
   {
     number: 7,
     id: "sequences-algebra",
-    label: "Sequences &amp; algebra",
+    label: "Sequences & algebra",
     title: "Sequences & algebra extras",
     bodyClass: "p7"
   },
   {
     number: 8,
     id: "factors-primes",
-    label: "Factors, multiples &amp; primes",
+    label: "Factors, multiples & primes",
     title: "Factors, multiples & primes",
     bodyClass: "p8"
   },
@@ -79,14 +79,14 @@ export const pages = [
   {
     number: 10,
     id: "squares-cubes",
-    label: "Squares &amp; cubes",
+    label: "Squares & cubes",
     title: "Squares & cubes",
     bodyClass: "p10"
   },
   {
     number: 11,
     id: "fractions-pct",
-    label: "Fractions, decimals &amp; %",
+    label: "Fractions, decimals & %",
     title: "Fractions, decimals & %",
     bodyClass: "p11"
   },
@@ -100,14 +100,14 @@ export const pages = [
   {
     number: 13,
     id: "ratio",
-    label: "Ratio &amp; proportion",
+    label: "Ratio & proportion",
     title: "Ratio & proportion",
     bodyClass: "p13"
   },
   {
     number: 14,
     id: "measures",
-    label: "Measures, time &amp; SDT",
+    label: "Measures, time & SDT",
     title: "Measures, time & SDT",
     bodyClass: "p14"
   },
@@ -128,28 +128,28 @@ export const pages = [
   {
     number: 17,
     id: "3d-volume",
-    label: "3D shapes &amp; volume",
+    label: "3D shapes & volume",
     title: "3D shapes & volume",
     bodyClass: "audit-17"
   },
   {
     number: 18,
     id: "coordinates",
-    label: "Coordinates &amp; transformations",
+    label: "Coordinates & transformations",
     title: "Coordinates & transformations",
     bodyClass: "audit-18"
   },
   {
     number: 19,
     id: "averages",
-    label: "Averages &amp; charts",
+    label: "Averages & charts",
     title: "Averages & charts",
     bodyClass: "audit-19"
   },
   {
     number: 20,
     id: "word-problems",
-    label: "Word problems &amp; Venns",
+    label: "Word problems, tables & Venns",
     title: "Word problems, tables & Venns",
     bodyClass: "audit-20"
   }

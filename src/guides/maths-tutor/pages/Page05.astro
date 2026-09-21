@@ -1,13 +1,16 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
 import bodyHtml from "./page-05-body.html?raw";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[4];
 ---
 
 <GuidePageShell
-  page={5}
-  total={20}
-  label={"Positive &amp; negative numbers"}
-  bodyClass={"p5"}
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
 >
   <Fragment set:html={bodyHtml} />
 </GuidePageShell>

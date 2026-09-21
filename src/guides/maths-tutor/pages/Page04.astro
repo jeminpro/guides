@@ -1,13 +1,16 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
 import bodyHtml from "./page-04-body.html?raw";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[3];
 ---
 
 <GuidePageShell
-  page={4}
-  total={20}
-  label={"Times tables"}
-  bodyClass={"p4"}
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
 >
   <Fragment set:html={bodyHtml} />
 </GuidePageShell>

@@ -1,6 +1,5 @@
 <div>
-        <h1>Place value &amp; number sense</h1>
-        <p class="lead">A digit’s value is the digit × its place value. One place left is ×10; one place right is ÷10.</p>
+        <h1>Place value, odd &amp; even</h1>
       </div>
 
       <section>
@@ -36,7 +35,7 @@
               <div class="cmp-step">
                 <span class="cmp-step-num">1</span>
                 <p><strong>Count the digits.</strong> For whole numbers, more digits means bigger.
-                  <span class="ex">5,847 vs 962 → 5,847 wins</span></p>
+                  <span class="ex">5,847 vs 962 → 5,847 is greater</span></p>
               </div>
               <div class="cmp-step">
                 <span class="cmp-step-num">2</span>
@@ -44,8 +43,8 @@
               </div>
               <div class="cmp-step">
                 <span class="cmp-step-num">3</span>
-                <p><strong>Decimals?</strong> If the whole parts match, compare after the point left to right - tenths, hundredths… The greater digit wins.
-                  <span class="ex">0.58 vs 0.6 → 0.6 wins</span></p>
+                <p><strong>Decimals?</strong> If the whole parts match, compare after the point left to right - tenths, hundredths… The first place they differ decides which is greater.
+                  <span class="ex">0.58 vs 0.6 → 0.6 is greater</span></p>
               </div>
             </div>
           </div>
@@ -106,8 +105,8 @@
             <div class="round-step">
               <span class="round-num">2</span>
               <div>
-                <strong>Look next door</strong>
-                <p>Check the digit immediately to its right - this neighbour decides everything.</p>
+                <strong>Look next digit</strong>
+                <p>Check the digit immediately to its right - it decides everything.</p>
               </div>
             </div>
             <div class="round-step">
@@ -157,218 +156,48 @@
         </div>
       </section>
 
-      <div class="ops-grid">
-        <section class="panel tight op-add">
-          <h2>Addition (+)</h2>
-          <div class="worked">
-            <div class="sum add long-add" aria-label="487 plus 356 equals 843">
-              <svg viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- carries (written above the column they go into) -->
-                <text class="la-carry la-red" x="18" y="12" text-anchor="middle">1</text>
-                <text class="la-carry la-red" x="34" y="12" text-anchor="middle">1</text>
-                <text class="la-note la-red" x="48" y="12" text-anchor="start">carry</text>
-
-                <!-- 487 -->
-                <text class="la-num" x="18" y="28" text-anchor="middle">4</text>
-                <text class="la-num" x="34" y="28" text-anchor="middle">8</text>
-                <text class="la-num" x="50" y="28" text-anchor="middle">7</text>
-
-                <!-- + 356 -->
-                <text class="la-op" x="4" y="44" text-anchor="middle">+</text>
-                <text class="la-num" x="18" y="44" text-anchor="middle">3</text>
-                <text class="la-num" x="34" y="44" text-anchor="middle">5</text>
-                <text class="la-num" x="50" y="44" text-anchor="middle">6</text>
-                <line class="la-rule" x1="2" y1="48" x2="60" y2="48" />
-
-                <!-- 843 -->
-                <text class="la-num" x="18" y="64" text-anchor="middle">8</text>
-                <text class="la-num" x="34" y="64" text-anchor="middle">4</text>
-                <text class="la-num" x="50" y="64" text-anchor="middle">3</text>
-              </svg>
-            </div>
-            <ul>
-              <li>Line ones under ones. Start on the <strong>right</strong>.</li>
-              <li>Ones: 7 + 6 = 13 → write <strong>3</strong>, carry <strong>1</strong>.</li>
-              <li>Tens: 1 + 8 + 5 = 14 → write <strong>4</strong>, carry <strong>1</strong>.</li>
-              <li>Hundreds: 1 + 4 + 3 = <strong>8</strong>.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="panel tight op-sub">
-          <h2>Subtraction (−)</h2>
-          <div class="worked">
-            <div class="sum sub long-sub" aria-label="843 minus 356 equals 487">
-              <svg viewBox="0 0 92 84" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- borrowed values -->
-                <text class="ls-carry ls-red" x="18" y="12" text-anchor="middle">7</text>
-                <text class="ls-carry ls-red" x="34" y="12" text-anchor="middle">13</text>
-                <text class="ls-carry ls-red" x="54" y="12" text-anchor="middle">13</text>
-                <text class="ls-note ls-red" x="68" y="12" text-anchor="start">borrow</text>
-
-                <!-- 843 -->
-                <text class="ls-num" x="18" y="30" text-anchor="middle">8</text>
-                <text class="ls-num" x="34" y="30" text-anchor="middle">4</text>
-                <text class="ls-num" x="54" y="30" text-anchor="middle">3</text>
-
-                <!-- − 356 -->
-                <text class="ls-op" x="4" y="48" text-anchor="middle">−</text>
-                <text class="ls-num" x="18" y="48" text-anchor="middle">3</text>
-                <text class="ls-num" x="34" y="48" text-anchor="middle">5</text>
-                <text class="ls-num" x="54" y="48" text-anchor="middle">6</text>
-                <line class="ls-rule" x1="2" y1="52" x2="64" y2="52" />
-
-                <!-- 487 -->
-                <text class="ls-num" x="18" y="68" text-anchor="middle">4</text>
-                <text class="ls-num" x="34" y="68" text-anchor="middle">8</text>
-                <text class="ls-num" x="54" y="68" text-anchor="middle">7</text>
-              </svg>
-            </div>
-            <ul>
-              <li>Line ones under ones. Start on the <strong>right</strong>.</li>
-              <li>Ones: borrow 1 ten from the 4. The <strong>4 becomes 3</strong>, and the 3 becomes 13. Then <strong>13 − 6 = 7</strong>.</li>
-              <li>Tens: 3 is too small, so borrow 1 hundred from the 8. The <strong>8 becomes 7</strong>, and the 3 becomes 13. Then <strong>13 − 5 = 8</strong>.</li>
-              <li>Hundreds: <strong>7 − 3 = 4</strong>.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="panel tight op-mul">
-          <h2>Multiplication (×)</h2>
-          <div class="worked">
-            <div class="sum mul long-mul" aria-label="25.8 multiplied by 75 equals 1935.0">
-              <svg viewBox="-10 0 138 108" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- carries: red (×5) on top, blue (×7) below -->
-                <text class="lm-carry lm-red" x="48" y="10" text-anchor="middle">2</text>
-                <text class="lm-carry lm-red" x="62" y="10" text-anchor="middle">4</text>
-                <text class="lm-carry lm-blue" x="48" y="19" text-anchor="middle">4</text>
-                <text class="lm-carry lm-blue" x="62" y="19" text-anchor="middle">5</text>
-
-                <!-- 25.8 -->
-                <text class="lm-num" x="34" y="33" text-anchor="middle">2</text>
-                <text class="lm-num" x="48" y="33" text-anchor="middle">5</text>
-                <text class="lm-num" x="55" y="33" text-anchor="middle">.</text>
-                <text class="lm-num" x="62" y="33" text-anchor="middle">8</text>
-
-                <!-- × 75 -->
-                <text class="lm-op" x="8" y="47" text-anchor="middle">×</text>
-                <text class="lm-num" x="48" y="47" text-anchor="middle">7</text>
-                <text class="lm-num" x="62" y="47" text-anchor="middle">5</text>
-                <line class="lm-rule" x1="4" y1="51" x2="70" y2="51" />
-
-                <!-- 258 × 5 = 1290 -->
-                <text class="lm-num lm-red" x="20" y="65" text-anchor="middle">1</text>
-                <text class="lm-num lm-red" x="34" y="65" text-anchor="middle">2</text>
-                <text class="lm-num lm-red" x="48" y="65" text-anchor="middle">9</text>
-                <text class="lm-num lm-red" x="62" y="65" text-anchor="middle">0</text>
-                <text class="lm-note" x="76" y="65" text-anchor="start">× by 5</text>
-
-                <!-- 258 × 70 = 18060 -->
-                <text class="lm-op" x="-4" y="79" text-anchor="middle">+</text>
-                <text class="lm-num lm-blue" x="6" y="79" text-anchor="middle">1</text>
-                <text class="lm-num lm-blue" x="20" y="79" text-anchor="middle">8</text>
-                <text class="lm-num lm-blue" x="34" y="79" text-anchor="middle">0</text>
-                <text class="lm-num lm-blue" x="48" y="79" text-anchor="middle">6</text>
-                <text class="lm-num lm-green" x="62" y="79" text-anchor="middle">0</text>
-                <text class="lm-note" x="76" y="79" text-anchor="start">× by 7</text>
-                <text class="lm-note lm-green" x="100" y="79" text-anchor="start">0</text>
-                <line class="lm-rule" x1="4" y1="83" x2="70" y2="83" />
-
-                <!-- 19350 → 1935.0 (1 d.p. from 25.8) -->
-                <text class="lm-num" x="6" y="97" text-anchor="middle">1</text>
-                <text class="lm-num" x="20" y="97" text-anchor="middle">9</text>
-                <text class="lm-num" x="34" y="97" text-anchor="middle">3</text>
-                <text class="lm-num" x="48" y="97" text-anchor="middle">5</text>
-                <text class="lm-num" x="55" y="97" text-anchor="middle">.</text>
-                <text class="lm-num" x="62" y="97" text-anchor="middle">0</text>
-              </svg>
-            </div>
-            <ul>
-              <li>Ignore the decimal for now: work with <strong>258 × 75</strong>.</li>
-              <li>Multiply by the ones digit (5) → get 1290.</li>
-              <li>Multiply by the tens digit (7), put a <strong>0</strong> on the end first → get 18060.</li>
-              <li>Add those two answers together.</li>
-              <li>Count decimal places in the starting numbers (here: 1) and put the point that many digits from the right.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="panel tight op-div">
-          <h2>Division (÷)</h2>
-          <div class="worked">
-            <div class="sum div long-div" aria-label="117 divided by 5 equals 23.4">
-              <div class="division-forms-inline" aria-label="Equivalent ways to write 117 divided by 5">
-                <span>117 ÷ 5</span>
-                <span>=</span>
-                <span class="frac"><span class="num">117</span><span class="den">5</span></span>
+      <section class="panel tight oe-short">
+        <h2>Odd and even numbers</h2>
+        <div class="oe-top">
+          <p class="oe-lead">
+            Even numbers end in <strong>0, 2, 4, 6 or 8</strong> (0 counts). <br/>
+            Odd numbers end in <strong>1, 3, 5, 7 or 9</strong>. <br/>
+            Check the last digit only.
+          </p>
+          <div class="oe-diagrams">
+            <div class="oe-card even">
+              <strong>Even</strong>
+              <div class="oe-dot-row" role="img" aria-label="Four dots in two pairs">
+                <span class="oe-pair"><span class="oe-dot"></span><span class="oe-dot"></span></span>
+                <span class="oe-pair"><span class="oe-dot"></span><span class="oe-dot"></span></span>
               </div>
-              <svg viewBox="0 0 152 138" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <defs>
-                  <marker id="ld-arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                    <path d="M0 0 L6 3 L0 6 Z" fill="#3b82f6" />
-                  </marker>
-                </defs>
-
-                <!-- labels -->
-                <text class="ld-label" x="76" y="7" text-anchor="middle">quotient</text>
-                <text class="ld-label" x="20" y="22" text-anchor="middle">divisor</text>
-                <text class="ld-label" x="108" y="36" text-anchor="start">dividend</text>
-                <text class="ld-label" x="108" y="132" text-anchor="start">remainder</text>
-
-                <!-- quotient: 2 above tens of 11, 3 above 7, 4 above 0 -->
-                <text class="ld-num" x="58" y="18" text-anchor="middle">2</text>
-                <text class="ld-num" x="72" y="18" text-anchor="middle">3</text>
-                <text class="ld-num" x="83" y="18" text-anchor="middle">.</text>
-                <text class="ld-num" x="94" y="18" text-anchor="middle">4</text>
-
-                <!-- red division bracket -->
-                <path class="ld-bracket" d="M32 23 H102 M32 23 V36" />
-
-                <!-- divisor & dividend -->
-                <text class="ld-num" x="20" y="36" text-anchor="middle">5</text>
-                <text class="ld-num" x="44" y="36" text-anchor="middle">1</text>
-                <text class="ld-num" x="58" y="36" text-anchor="middle">1</text>
-                <text class="ld-num" x="72" y="36" text-anchor="middle">7</text>
-                <text class="ld-num" x="83" y="36" text-anchor="middle">.</text>
-                <text class="ld-num" x="94" y="36" text-anchor="middle">0</text>
-
-                <!-- step 1: 2 × 5 = 10 under 11 -->
-                <text class="ld-minus" x="20" y="52" text-anchor="middle">−</text>
-                <text class="ld-num" x="44" y="52" text-anchor="middle">1</text>
-                <text class="ld-num" x="58" y="52" text-anchor="middle">0</text>
-                <line class="ld-rule" x1="36" y1="56" x2="66" y2="56" />
-                <text class="ld-num" x="58" y="68" text-anchor="middle">1</text>
-
-                <!-- bring down 7: arrow from the 7 in the dividend -->
-                <line class="ld-arrow" x1="72" y1="38" x2="72" y2="58" marker-end="url(#ld-arrowhead)" />
-                <text class="ld-num" x="72" y="68" text-anchor="middle">7</text>
-
-                <!-- step 2: 3 × 5 = 15 under 17 -->
-                <text class="ld-minus" x="20" y="84" text-anchor="middle">−</text>
-                <text class="ld-num" x="58" y="84" text-anchor="middle">1</text>
-                <text class="ld-num" x="72" y="84" text-anchor="middle">5</text>
-                <line class="ld-rule" x1="50" y1="88" x2="80" y2="88" />
-                <text class="ld-num" x="72" y="100" text-anchor="middle">2</text>
-
-                <!-- bring down 0: arrow from the 0 in the dividend -->
-                <line class="ld-arrow" x1="94" y1="38" x2="94" y2="90" marker-end="url(#ld-arrowhead)" />
-                <text class="ld-num" x="94" y="100" text-anchor="middle">0</text>
-
-                <!-- step 3: 4 × 5 = 20 under 20 -->
-                <text class="ld-minus" x="20" y="116" text-anchor="middle">−</text>
-                <text class="ld-num" x="72" y="116" text-anchor="middle">2</text>
-                <text class="ld-num" x="94" y="116" text-anchor="middle">0</text>
-                <line class="ld-rule" x1="64" y1="120" x2="102" y2="120" />
-                <text class="ld-num" x="94" y="132" text-anchor="middle">0</text>
-              </svg>
+              <span class="oe-caption">they pair up</span>
             </div>
-            <ul>
-              <li>How many times does 5 fit into the first digits? (11 ÷ 5 = 2)</li>
-              <li>Write that on top. Multiply (2 × 5 = 10), then subtract.</li>
-              <li><strong>Bring down</strong> the next digit and do the same again.</li>
-              <li>Still some left over? Add a decimal point and a <strong>0</strong>, then keep going.</li>
-              <li>When nothing is left over, you’re done - line the decimal points up!</li>
-            </ul>
+            <div class="oe-card odd">
+              <strong>Odd</strong>
+              <div class="oe-dot-row" role="img" aria-label="Five dots with one left over">
+                <span class="oe-pair"><span class="oe-dot"></span><span class="oe-dot"></span></span>
+                <span class="oe-pair"><span class="oe-dot"></span><span class="oe-dot"></span></span>
+                <span class="oe-left"><span class="oe-dot"></span></span>
+              </div>
+              <span class="oe-caption">one left over</span>
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <h3>Adding &amp; taking away</h3>
+            <p class="note">Same type (odd,odd or even,even) → even. <br/> Mixed (odd,even or even,odd) → odd.</p>
+            <span class="ex">3 + 5 = 8</span>
+            <span class="ex">2 + 4 = 6</span>
+            <span class="ex">5 + 2 = 7</span>
+          </div>
+          <div>
+            <h3>Multiplying</h3>
+            <p class="note">If <strong>either</strong> number is even, the answer is even. <br/> Odd × odd stays odd.</p>
+            <span class="ex">5 × 8 = 40</span>
+            <span class="ex">4 × 8 = 32</span>
+            <span class="ex">5 × 7 = 35</span>
+          </div>
+        </div>
+      </section>

@@ -1,13 +1,16 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
 import bodyHtml from "./page-06-body.html?raw";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[5];
 ---
 
 <GuidePageShell
-  page={6}
-  total={20}
-  label={"BIDMAS &amp; algebra"}
-  bodyClass={"p6"}
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
 >
   <Fragment set:html={bodyHtml} />
 </GuidePageShell>
