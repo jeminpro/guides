@@ -2167,6 +2167,10 @@ li .frac {
   stroke-width: 1;
 }
 
+.page.audit-15 .geo-card {
+  grid-template-columns: 26mm 1fr;
+}
+
 .compound-area {
   display: grid;
   grid-template-columns: 32mm 1fr;
