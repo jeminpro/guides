@@ -16,7 +16,7 @@ npm install
 npm run dev
 npm run check
 npm run build
-npm run check:layout -- --guide=maths-tutor
+npm run check:layout -- --guide=maths-guide
 ```
 
 Site base path is `/guides` → deployed at `https://jeminpro.com/guides`.
@@ -39,7 +39,7 @@ src/
 
 ## Add a guide
 
-See root `AGENTS.md` and copy the `maths-tutor` folder pattern.
+See root `AGENTS.md` and copy the `maths-guide` folder pattern.
 
 ## Deploy
 

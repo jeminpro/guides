@@ -6,7 +6,7 @@ export type MathsTutorPageMeta = {
   bodyClass: string;
 };
 
-export const GUIDE_ID = "maths-tutor" as const;
+export const GUIDE_ID = "maths-guide" as const;
 export const GUIDE_TITLE = "Maths Guide";
 export const GUIDE_DESCRIPTION =
   "Primary & 11+ maths cheat sheets — place value through word problems.";

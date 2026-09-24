@@ -5,7 +5,7 @@ import {
   GUIDE_ID,
   GUIDE_TITLE,
   PAGE_COUNT
-} from "./maths-tutor/meta";
+} from "./maths-guide/meta";
 import {
   GUIDE_DESCRIPTION as VOCABULARY_DESCRIPTION,
   GUIDE_ID as VOCABULARY_ID,

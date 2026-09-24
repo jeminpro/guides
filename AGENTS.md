@@ -9,8 +9,8 @@ npm run dev
 npm run check
 npm run build
 npm run check:layout
-npm run check:layout -- --guide=maths-tutor
-npm run watch:layout -- --guide=maths-tutor
+npm run check:layout -- --guide=maths-guide
+npm run watch:layout -- --guide=maths-guide
 ```
 
 - `npm run check` — TypeScript/Astro diagnostics only.
@@ -29,7 +29,7 @@ npm run watch:layout -- --guide=maths-tutor
 
 ## Add a guide
 
-1. Copy `src/guides/maths-tutor/` to `src/guides/<id>/` and adapt meta/pages/styles.
+1. Copy `src/guides/maths-guide/` to `src/guides/<id>/` and adapt meta/pages/styles.
 2. Add `src/pages/<id>/index.astro` that imports that guide’s sheets and CSS.
 3. Register metadata in `src/guides/registry.ts`.
 4. Write `src/guides/<id>/AGENTS.md`.
