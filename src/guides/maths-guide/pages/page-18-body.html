@@ -1,125 +1,134 @@
 <div>
-        <h1>Coordinates &amp; transformations</h1>
-        <p class="lead">Coordinates are written (x, y): move across the x-axis first, then up or down the y-axis.</p>
-      </div>
-
-      <div class="grid-2">
-        <section class="panel filled tight">
-          <h3>Coordinates (x, y)</h3>
-          <div class="coord-row">
-            <svg class="svg-coord" viewBox="0 0 120 120" aria-label="Coordinate grid with point (3, -2)">
-              <!-- quadrant fills -->
-              <rect class="q1" x="60" y="10" width="50" height="50" />
-              <rect class="q2" x="10" y="10" width="50" height="50" />
-              <rect class="q3" x="10" y="60" width="50" height="50" />
-              <rect class="q4" x="60" y="60" width="50" height="50" />
-              <!-- grid -->
-              <g class="grid-lines">
-                <line x1="10" y1="35" x2="110" y2="35" />
-                <line x1="10" y1="85" x2="110" y2="85" />
-                <line x1="35" y1="10" x2="35" y2="110" />
-                <line x1="85" y1="10" x2="85" y2="110" />
-              </g>
-              <!-- axes -->
-              <line class="axis-line" x1="10" y1="60" x2="110" y2="60" />
-              <line class="axis-line" x1="60" y1="10" x2="60" y2="110" />
-              <polygon class="axis-arrow" points="110,60 104,57 104,63" />
-              <polygon class="axis-arrow" points="60,10 57,16 63,16" />
-              <!-- labels -->
-              <text class="axis-name" text-anchor="start" x="112" y="63">x</text>
-              <text class="axis-name" text-anchor="middle" x="60" y="8">y</text>
-              <text class="q-label" text-anchor="middle" x="85" y="28">I (+,+)</text>
-              <text class="q-label" text-anchor="middle" x="35" y="28">II (−,+)</text>
-              <text class="q-label" text-anchor="middle" x="35" y="98">III (−,−)</text>
-              <text class="q-label" text-anchor="middle" x="85" y="98">IV (+,−)</text>
-              <text class="origin" text-anchor="end" x="57" y="72">O</text>
-              <!-- point (3,-2): scale ~8.3 per unit from origin; 3 right, 2 down -->
-              <line class="guide" x1="60" y1="76.6" x2="85" y2="76.6" />
-              <line class="guide" x1="85" y1="60" x2="85" y2="76.6" />
-              <circle class="plot-dot" cx="85" cy="76.6" r="3.2" />
-              <text class="plot-label" text-anchor="start" x="88" y="82">(3, −2)</text>
-            </svg>
-            <div>
-              <p style="font-size:9pt;margin:0">Along the corridor (<strong>x</strong>), then up/down the stairs (<strong>y</strong>).</p>
-              <span class="ex" style="display:block;margin-top:1.5mm;white-space:normal;font-size:8.5pt">(3, −2) → right 3, down 2</span>
-              <p class="note" style="margin-top:1.5mm;font-size:8pt">
-                Origin = (0, 0). Count from O along x, then parallel to y.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="panel tight">
-          <h3>Line symmetry</h3>
-          <p style="font-size:9pt;margin:0 0 1.5mm">
-            A <strong>line of symmetry</strong> is a mirror line: if you fold along it, both halves match exactly.
-          </p>
-          <div class="sym-gallery">
-            <figure class="sym-item">
-              <svg class="svg-coord svg-sym" viewBox="0 0 80 80" aria-label="Square with 4 lines of symmetry">
-                <rect class="sym-shape" x="20" y="20" width="40" height="40" />
-                <line class="mirror" x1="40" y1="12" x2="40" y2="68" />
-                <line class="mirror" x1="12" y1="40" x2="68" y2="40" />
-                <line class="mirror" x1="20" y1="20" x2="60" y2="60" />
-                <line class="mirror" x1="60" y1="20" x2="20" y2="60" />
-              </svg>
-              <figcaption><strong>Square = 4</strong></figcaption>
-            </figure>
-            <figure class="sym-item">
-              <svg class="svg-coord svg-sym" viewBox="0 0 80 80" aria-label="Rectangle with 2 lines of symmetry">
-                <rect class="sym-shape" x="14" y="26" width="52" height="28" />
-                <line class="mirror" x1="40" y1="18" x2="40" y2="62" />
-                <line class="mirror" x1="8" y1="40" x2="72" y2="40" />
-              </svg>
-              <figcaption><strong>Rectangle = 2</strong></figcaption>
-            </figure>
-            <figure class="sym-item">
-              <svg class="svg-coord svg-sym" viewBox="0 0 80 80" aria-label="Equilateral triangle with 3 lines of symmetry">
-                <polygon class="sym-shape" points="40,14 12,62 68,62" />
-                <line class="mirror" x1="40" y1="10" x2="40" y2="66" />
-                <line class="mirror" x1="8" y1="66" x2="56" y2="34" />
-                <line class="mirror" x1="72" y1="66" x2="24" y2="34" />
-              </svg>
-              <figcaption><strong>Equilateral △ = 3</strong></figcaption>
-            </figure>
-          </div>
-          <p class="note" style="margin-top:1.2mm;font-size:8pt">A circle has infinitely many lines of symmetry.</p>
-        </section>
+        <h1>Averages &amp; charts</h1>
       </div>
 
       <section>
-        <h2>Transformations</h2>
-        <div class="xform-grid">
-          <article class="xform-card">
-            <svg class="svg-xform" viewBox="0 0 110 72" aria-hidden="true">
-              <line class="axis-line" x1="8" y1="58" x2="102" y2="58" />
-              <line class="axis-line" x1="20" y1="8" x2="20" y2="64" />
-              <polygon class="shape-from" points="28,28 48,28 48,48" />
-              <polygon class="shape-to" points="58,38 78,38 78,58" />
-              <defs>
-                <marker id="arr-t" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-                  <path d="M0 0 L6 3 L0 6 Z" fill="#e65a41" />
-                </marker>
-              </defs>
-              <line class="move-arrow" x1="40" y1="36" x2="66" y2="48" marker-end="url(#arr-t)" />
-              <text class="mini-label" x="58" y="68">→ right 3, down 2</text>
+        <h2>Three averages and the range</h2>
+        <div class="grid-2">
+          <div class="method">
+            <div class="num">Mean</div>
+            <div class="name">Add all values, then divide by how many there are</div>
+            <p>The mean gives the equal-share value.</p>
+            <span class="ex">2, 5, 5, 8 → <span class="frac"><span class="num">2+5+5+8</span><span class="den">4</span></span> = 5</span>
+          </div>
+          <div class="method">
+            <div class="num">Median</div>
+            <div class="name">Put in order, then find the middle</div>
+            <p>Odd number of values: use the one middle value. Even number: add the two middle values and divide by 2.</p>
+            <span class="ex">1, 3, 5 → one middle → median = 3</span>
+            <span class="ex">1, 3, 5, 9 → (3+5)÷2 → median = 4</span>
+          </div>
+          <div class="method">
+            <div class="num">Mode</div>
+            <div class="name">The value or values that appear most</div>
+            <p>If values tie for the highest frequency, they are all modes. If every value appears equally often, there is no mode.</p>
+            <span class="ex">2, 2, 4, 4, 7 → modes = 2 and 4</span>
+            <span class="ex">1, 2, 3, 4 → no mode</span>
+          </div>
+          <div class="method">
+            <div class="num">Range</div>
+            <div class="name">Biggest − smallest</div>
+            <p>This shows the spread — it is <em>not</em> an average.</p>
+            <span class="ex">2, 5, 5, 8 → 8 − 2 = 6</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="callout">
+        <strong>Three averages, one spread:</strong>
+        mean, median and mode are the averages — <span class="mono">range</span> only measures spread.
+        <span class="mono">Mean</span> is mean — it makes you do the adding and dividing ·
+        <span class="mono">Median</span> is the middle ·
+        <span class="mono">Mode</span> is the most often.
+      </div>
+
+      <section>
+        <h2>Mean from a frequency table</h2>
+        <div class="frequency-work">
+          <table class="table-compact">
+            <thead>
+              <tr><th>Goals (x)</th><th>Frequency (f)</th><th>x × f</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="mono">0</td><td class="mono">3</td><td class="mono">0</td></tr>
+              <tr><td class="mono">1</td><td class="mono">5</td><td class="mono">5</td></tr>
+              <tr><td class="mono">2</td><td class="mono">4</td><td class="mono">8</td></tr>
+              <tr><td class="mono">3</td><td class="mono">2</td><td class="mono">6</td></tr>
+              <tr><td><strong>Total</strong></td><td class="mono"><strong>14</strong></td><td class="mono"><strong>19</strong></td></tr>
+            </tbody>
+          </table>
+          <div>
+            <span class="ex" style="display:block;white-space:normal">Mean = <span class="frac"><span class="num">19</span><span class="den">14</span></span> ≈ 1.36 goals</span>
+            <span class="ex" style="display:block;white-space:normal">Mode = 1 (biggest frequency, 5)</span>
+            <span class="ex" style="display:block;white-space:normal">Range = 3 − 0 = 3</span>
+            <span class="ex" style="display:block;white-space:normal">Median: 14 values, so use the 7th and 8th — both are 1, so median = 1.</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Reading charts</h2>
+        <div class="chart-grid" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+          <article class="chart-card">
+            <svg class="svg-chart" viewBox="0 0 100 72" aria-hidden="true">
+              <line class="axis" x1="14" y1="8" x2="14" y2="58" />
+              <line class="axis" x1="14" y1="58" x2="92" y2="58" />
+              <rect class="bar bar-a" x="22" y="34" width="14" height="24" rx="1" />
+              <rect class="bar bar-b" x="42" y="18" width="14" height="40" rx="1" />
+              <rect class="bar bar-c" x="62" y="26" width="14" height="32" rx="1" />
+              <text class="chart-label" text-anchor="middle" x="29" y="68">A</text>
+              <text class="chart-label" text-anchor="middle" x="49" y="68">B</text>
+              <text class="chart-label" text-anchor="middle" x="69" y="68">C</text>
             </svg>
-            <h3>Translation</h3>
-            <p>Slide — no turn, no flip. Describe it with a column vector: top = across, bottom = up/down.</p>
-            <span class="ex"><span class="vector"><span>3</span><span>−2</span></span> means (x, y) → (x + 3, y − 2)</span>
+            <h3>Bar chart</h3>
+            <p>Height of each bar = frequency / value. Check the scale and whether bars start at zero.</p>
           </article>
 
-          <article class="xform-card">
-            <svg class="svg-xform" viewBox="0 0 110 72" aria-hidden="true">
-              <line class="axis-line" x1="8" y1="36" x2="102" y2="36" />
-              <line class="mirror thick" x1="55" y1="8" x2="55" y2="64" />
-              <polygon class="shape-from" points="22,48 42,48 42,22" />
-              <polygon class="shape-to" points="88,48 68,48 68,22" />
-              <text class="mini-label" text-anchor="middle" x="55" y="70">mirror (y-axis)</text>
+          <article class="chart-card">
+            <svg class="svg-chart" viewBox="0 0 100 72" aria-hidden="true">
+              <line class="axis" x1="14" y1="8" x2="14" y2="58" />
+              <line class="axis" x1="14" y1="58" x2="92" y2="58" />
+              <polyline class="line-plot" points="22,48 40,36 58,40 76,18" />
+              <circle class="dot" cx="22" cy="48" r="2.5" />
+              <circle class="dot" cx="40" cy="36" r="2.5" />
+              <circle class="dot" cx="58" cy="40" r="2.5" />
+              <circle class="dot" cx="76" cy="18" r="2.5" />
+              <text class="chart-label" text-anchor="middle" x="22" y="68">Mon</text>
+              <text class="chart-label" text-anchor="middle" x="76" y="68">Thu</text>
             </svg>
-            <h3>Reflection</h3>
-            <p>Flip — same distance the other side of the mirror. Always name the mirror line.</p>
-            <span class="ex">In the y-axis: (a, b) → (−a, b)</span>
+            <h3>Line graph</h3>
+            <p>Best for change over time. Read both axes carefully — join the plotted points.</p>
+          </article>
+
+          <article class="chart-card">
+            <svg class="svg-chart" viewBox="0 0 100 72" aria-hidden="true">
+              <!-- 3 × 120° slices; centre (40,36), r=28; 0° at top, clockwise -->
+              <path class="pie-slice-a" d="M40,36 L40,8 A28,28 0 0,1 64.25,50 Z" />
+              <path class="pie-slice-b" d="M40,36 L64.25,50 A28,28 0 0,1 15.75,50 Z" />
+              <path class="pie-slice-c" d="M40,36 L15.75,50 A28,28 0 0,1 40,8 Z" />
+              <circle class="pie-ring" cx="40" cy="36" r="28" />
+              <line class="pie-guide" x1="58" y1="18" x2="76" y2="10" />
+              <text class="chart-label" x="78" y="12">120°</text>
+            </svg>
+            <h3>Pie chart</h3>
+            <p>Full circle = 360° = whole set. Angle = <span class="frac"><span class="num">part</span><span class="den">total</span></span> × 360°.</p>
+            <span class="ex">12/36 × 360° = 120°</span>
+          </article>
+
+          <article class="chart-card">
+            <svg class="svg-chart" viewBox="0 0 100 72" aria-hidden="true">
+              <text class="chart-label" text-anchor="start" x="6" y="20">Cats</text>
+              <circle class="picto" cx="40" cy="16" r="6" />
+              <circle class="picto" cx="56" cy="16" r="6" />
+              <circle class="picto" cx="72" cy="16" r="6" />
+              <path class="picto-half" d="M88,10 A6,6 0 0,1 88,22 L88,16 Z" />
+              <text class="chart-label" text-anchor="start" x="6" y="44">Dogs</text>
+              <circle class="picto picto-alt" cx="40" cy="40" r="6" />
+              <circle class="picto picto-alt" cx="56" cy="40" r="6" />
+              <text class="chart-label" text-anchor="start" x="6" y="64">Key: ● = 2 pets · half = 1</text>
+            </svg>
+            <h3>Pictogram</h3>
+            <p>Always check the key. Half a symbol = half the key value.</p>
           </article>
         </div>
       </section>

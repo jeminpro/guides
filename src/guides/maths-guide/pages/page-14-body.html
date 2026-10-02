@@ -1,122 +1,238 @@
 <div>
-        <h1>Measures, time &amp; SDT</h1>
-        <p class="lead">Convert to matching units before calculating; speed = distance ÷ time.</p>
+        <h1>Shape cheats</h1>
+        <p class="lead">Perimeter is the distance around a shape; area is the space inside it, measured in square units.</p>
       </div>
 
-      <section>
-        <h2>Metric conversions</h2>
-        <div class="grid-3 unit-grid">
-          <div class="panel tight">
-            <h3>Length</h3>
-            <p class="mono" style="font-size:9pt;margin:0;line-height:1.55">
-              10 mm = 1 cm<br />
-              100 cm = 1 m<br />
-              1000 m = 1 km
-            </p>
+      <div class="geo-grid">
+        <!-- Square -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 80 80" aria-hidden="true">
+            <rect class="fill" x="22" y="18" width="44" height="44" />
+            <text class="label" text-anchor="middle" x="44" y="14">s</text>
+            <text class="label" text-anchor="middle" x="12" y="42">s</text>
+          </svg>
+          <div>
+            <h3>Square</h3>
+            <span class="formula"><span>Area = s²</span><span>Perimeter = 4s</span></span>
+            <ul>
+              <li>All sides equal</li>
+              <li>Opposite sides parallel</li>
+              <li>All interior angles 90°</li>
+              <li>Lines of symmetry 4 · rotational order 4</li>
+            </ul>
           </div>
-          <div class="panel tight">
-            <h3>Mass</h3>
-            <p class="mono" style="font-size:9pt;margin:0;line-height:1.55">
-              1000 mg = 1 g<br />
-              1000 g = 1 kg<br />
-              1000 kg = 1 tonne
-            </p>
-          </div>
-          <div class="panel tight">
-            <h3>Capacity</h3>
-            <p class="mono" style="font-size:9pt;margin:0;line-height:1.55">
-              1000 ml = 1 litre<br />
-              100 cl = 1 litre<br />
-              1 ml = 1 cm³
-            </p>
-          </div>
-        </div>
-        <p class="note" style="margin-top:1.5mm">
-          <span class="ex">3.2 km = 3200 m</span> ·
-          <span class="ex">4500 g = 4.5 kg</span>
-        </p>
-      </section>
+        </article>
 
-      <section class="panel tight">
-        <h3>Imperial &amp; mixed units — exams usually print the conversion</h3>
-        <div class="imperial-panel">
-          <div><h4>Length</h4><p>1 ft = 12 in · 1 yd = 3 ft<br />1 in ≈ 2.5 cm · 1 mile ≈ 1.6 km</p></div>
-          <div><h4>Mass</h4><p>1 lb = 16 oz · 1 stone = 14 lb<br />1 kg ≈ 2.2 lb · 1 lb ≈ 454 g</p></div>
-          <div><h4>Capacity</h4><p>1 gallon = 8 pints<br />1 pint ≈ 568 ml · 1 gallon ≈ 4.5 L</p></div>
-        </div>
-      </section>
-
-      <div class="grid-2">
-        <section class="panel filled tight">
-          <h3>Time — clock facts</h3>
-          <p class="mono" style="font-size:9pt;margin:0;line-height:1.5">
-            60 seconds = 1 minute · 60 minutes = 1 hour<br />
-            24 hours = 1 day · 7 days = 1 week<br />
-            365 days = 1 year (366 in a leap year)
-          </p>
-          <p style="font-size:9pt;margin:1.5mm 0 0.6mm"><strong>Noon &amp; midnight:</strong></p>
-          <p class="mono" style="font-size:8.5pt;margin:0;line-height:1.45">
-            Noon = 12:00 midday = 12 pm<br />
-            Midnight = 00:00 = 12 am<br />
-            After noon, add 12 (1:30 pm = 13:30)
-          </p>
-          <p style="font-size:9pt;margin:1.5mm 0 0.4mm">
-            <strong>Elapsed time:</strong> convert both times to 24-hour, then count on. Crossing noon is the same as any other gap.
-          </p>
-          <p class="mono" style="font-size:8.5pt;margin:0;line-height:1.4">
-            9:45 am to 1:20 pm<br />
-            9:45 am = 09:45 · 1:20 pm = 13:20<br />
-            09:45→10:00 = 15 min · 10:00→13:20 = 3 h 20<br />
-            total <span class="ex">3 h 35 min</span>
-          </p>
-        </section>
-        <section class="panel warm tight" style="min-width:0">
-          <h3>Minutes → decimal hours</h3>
-          <p style="font-size:9pt;margin:0 0 1mm">
-            For speed questions, divide minutes by 60. Do <strong>not</strong> treat minutes as hundredths.
-          </p>
-          <div class="dec-hours" style="grid-template-columns:repeat(2,minmax(0,1fr))">
-            <span class="ex">15m→0.25h</span><span class="ex">30m→0.5h</span>
-            <span class="ex">45m→0.75h</span><span class="ex">20m→0.33h</span>
+        <!-- Rectangle -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 90 70" aria-hidden="true">
+            <rect class="fill" x="18" y="18" width="60" height="34" />
+            <line class="dim" x1="18" y1="14" x2="78" y2="14" />
+            <text class="label" text-anchor="middle" x="48" y="11">a</text>
+            <text class="label" text-anchor="middle" x="9" y="38">b</text>
+          </svg>
+          <div>
+            <h3>Rectangle</h3>
+            <span class="formula"><span>Area = a × b</span><span>Perimeter = 2a + 2b</span></span>
+            <ul>
+              <li>Opposite sides equal &amp; parallel</li>
+              <li>Adjacent interior angles 90°</li>
+              <li>Lines of symmetry 2 · rotational order 2</li>
+            </ul>
           </div>
-          <p class="warn">2 hours 30 minutes = <strong>2.5 h</strong> (2 + 30÷60), never 2.3 h.</p>
-          <p style="font-size:9pt;margin:1.5mm 0 0"><strong>Money:</strong> £1 = 100p. Line up decimal points.
-            <span class="ex" style="display:block;white-space:normal">£10 − £6.35 = £3.65 change</span>
-          </p>
-        </section>
+        </article>
+
+        <!-- Rhombus -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 90 70" aria-hidden="true">
+            <polygon class="fill" points="50,12 78,35 50,58 22,35" />
+            <line class="dim" x1="50" y1="12" x2="50" y2="58" />
+            <line class="dim" x1="22" y1="35" x2="78" y2="35" />
+            <rect class="right-angle" x="50" y="35" width="5" height="5" />
+            <line class="dim" x1="14" y1="12" x2="14" y2="58" />
+            <text class="label" text-anchor="middle" x="7" y="38">h</text>
+            <line class="dim" x1="26" y1="64" x2="74" y2="64" />
+            <text class="label" text-anchor="middle" x="50" y="69">b</text>
+          </svg>
+          <div>
+            <h3>Rhombus</h3>
+            <span class="formula"><span>Area = b × h</span><span>Perimeter = 4b</span></span>
+            <ul>
+              <li>All sides equal; opposite sides parallel</li>
+              <li>Opposite angles equal; diagonals cross at 90°</li>
+              <li>Lines of symmetry 2 · rotational order 2</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Parallelogram -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 90 70" aria-hidden="true">
+            <polygon class="fill" points="28,14 82,14 68,52 14,52" />
+            <line class="dim right-height" x1="28" y1="14" x2="28" y2="52" />
+            <rect class="right-angle" x="28" y="47" width="5" height="5" />
+            <text class="label" text-anchor="middle" x="18" y="36">h</text>
+            <text class="label" text-anchor="middle" x="48" y="66">b</text>
+            <text class="label" text-anchor="start" x="77" y="37">a</text>
+          </svg>
+          <div>
+            <h3>Parallelogram</h3>
+            <span class="formula"><span>Area = b × h</span><span>Perimeter = 2a + 2b</span></span>
+            <ul>
+              <li>Opposite sides equal &amp; parallel (<strong>a</strong> = slant side)</li>
+              <li>Opposite angles equal; <strong>h</strong> ⟂ b, not the slant</li>
+              <li>Lines of symmetry 0 · rotational order 2</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Kite -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 80 80" aria-hidden="true">
+            <polygon class="fill" points="40,8 70,30 40,74 10,30" />
+            <line class="dim" x1="40" y1="8" x2="40" y2="74" />
+            <line class="dim" x1="10" y1="30" x2="70" y2="30" />
+            <rect class="right-angle" x="40" y="30" width="5" height="5" />
+            <text class="label" text-anchor="end" x="37" y="48">d₁</text>
+            <text class="label" text-anchor="middle" x="56" y="42">d₂</text>
+            <text class="label" text-anchor="middle" x="20" y="16">a</text>
+            <text class="label" text-anchor="middle" x="18" y="56">b</text>
+          </svg>
+          <div>
+            <h3>Kite</h3>
+            <span class="formula"><span>Area = <span class="frac"><span class="num">d₁ × d₂</span><span class="den">2</span></span></span><span>Perimeter = 2a + 2b</span></span>
+            <ul>
+              <li>Two pairs of adjacent sides equal; only one pair of opposite angles equal</li>
+              <li>Diagonals cross at 90°; the long one is the mirror line</li>
+              <li>Lines of symmetry 1 · rotational order 1</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Trapezium -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 90 70" aria-hidden="true">
+            <polygon class="fill" points="28,16 68,16 80,52 16,52" />
+            <line class="dim right-height" x1="28" y1="16" x2="28" y2="52" />
+            <rect class="right-angle" x="28" y="47" width="5" height="5" />
+            <line class="dim" x1="48" y1="10" x2="48" y2="58" />
+            <text class="label" text-anchor="middle" x="18" y="37">h</text>
+            <text class="label" text-anchor="middle" x="37" y="12">a</text>
+            <text class="label" text-anchor="middle" x="48" y="66">b</text>
+          </svg>
+          <div>
+            <h3>Trapezium</h3>
+            <span class="formula"><span>Area = <span class="frac"><span class="num">a + b</span><span class="den">2</span></span> × h</span><span>Perimeter = sum of sides</span></span>
+            <ul>
+              <li>One pair of opposite sides parallel (a and b)</li>
+              <li><strong>Isosceles</strong> (shown) — slant sides equal, base angles equal, 1 line of symmetry</li>
+              <li>Plain trapezium: symmetry 0 · rotational order 1</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Triangle -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 90 70" aria-hidden="true">
+            <polygon class="fill" points="52,12 80,54 20,54" />
+            <line class="dim" x1="52" y1="12" x2="52" y2="54" />
+            <text class="label" text-anchor="middle" x="42" y="36">h</text>
+            <text class="label" text-anchor="middle" x="50" y="66">b</text>
+          </svg>
+          <div>
+            <h3>Triangle</h3>
+            <span class="formula"><span>Area = <span class="frac"><span class="num">b × h</span><span class="den">2</span></span></span><span>Perimeter = sum of sides</span></span>
+            <ul>
+              <li>Equilateral — all sides equal</li>
+              <li>Isosceles — 2 sides equal</li>
+              <li>Scalene — no sides equal</li>
+              <li>Acute — all angles less than 90°</li>
+              <li>Obtuse — one angle greater than 90°</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Circle -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 80 80" aria-hidden="true">
+            <circle class="fill" cx="40" cy="40" r="26" />
+            <line class="dim" x1="14" y1="40" x2="66" y2="40" />
+            <line class="dim" x1="40" y1="40" x2="40" y2="14" />
+            <text class="label" text-anchor="middle" x="24" y="36">d</text>
+            <text class="label" text-anchor="start" x="44" y="28">r</text>
+          </svg>
+          <div>
+            <h3>Circle</h3>
+            <span class="formula"><span>Area = πr²</span><span>Circumference = 2πr = πd</span></span>
+            <ul>
+              <li>Diameter = 2 × radius (2r)</li>
+              <li>π ≈ <span class="frac"><span class="num">22</span><span class="den">7</span></span> ≈ 3.14</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Right-angled triangle -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 100 80" aria-hidden="true">
+            <polygon class="fill" points="18,62 18,18 78,62" />
+            <rect class="right-angle" x="18" y="52" width="10" height="10" />
+            <text class="label" text-anchor="middle" x="10" y="42">a</text>
+            <text class="label" text-anchor="middle" x="48" y="74">b</text>
+            <text class="label" text-anchor="middle" x="54" y="36">c</text>
+          </svg>
+          <div>
+            <h3>Right-angled triangle</h3>
+            <span class="formula">
+              <span>Pythagoras: a² + b² = c²</span>
+              <span>Area = <span class="frac"><span class="num">a × b</span><span class="den">2</span></span></span>
+            </span>
+            <ul>
+              <li>One angle is exactly 90° (square corner)</li>
+              <li>Hypotenuse <strong>c</strong> is longest — opposite the right angle</li>
+              <li>Other two angles add to 90°</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Semicircle -->
+        <article class="geo-card">
+          <svg class="svg-shape" viewBox="0 0 90 70" aria-hidden="true">
+            <path class="fill" d="M16,52 A29,29 0 0,1 45,23 A29,29 0 0,1 74,52 Z" />
+            <line class="dim" x1="16" y1="52" x2="74" y2="52" />
+            <line class="dim" x1="45" y1="52" x2="45" y2="23" />
+            <text class="label" text-anchor="middle" x="45" y="64">d</text>
+            <text class="label" text-anchor="start" x="48" y="40">r</text>
+          </svg>
+          <div>
+            <h3>Semicircle</h3>
+            <span class="formula">
+              <span>Area = <span class="frac"><span class="num">πr²</span><span class="den">2</span></span></span>
+              <span>Perimeter = πr + d</span>
+            </span>
+            <ul>
+              <li>Half a circle (diameter is the straight edge)</li>
+              <li>Perimeter = curved part + diameter</li>
+              <li>Diameter = 2r · π ≈ 3.14</li>
+            </ul>
+          </div>
+        </article>
       </div>
 
-      <section>
-        <h2>Speed, distance &amp; time</h2>
-        <div class="grid-2">
-          <div class="panel filled tight">
-            <h3>Remember this</h3>
-            <p class="formula" style="font-size:12pt;margin:1.5mm 0;text-align:center">
-              Speed = <span class="frac"><span class="num">Distance</span><span class="den">Time</span></span>
-            </p>
-            <span class="ex" style="display:block;text-align:center;white-space:normal">120 km in 2.5 h → S = <span class="frac"><span class="num">120</span><span class="den">2.5</span></span> = 48 km/h</span>
-          </div>
-          <div class="panel warm tight">
-            <h3>Rearrange for D or T</h3>
-            <p style="font-size:9pt;margin:0 0 1.5mm">Start from S = <span class="frac"><span class="num">D</span><span class="den">T</span></span>, then solve like algebra.</p>
-            <p style="font-size:9pt;margin:0 0 1mm"><strong>Distance:</strong> multiply both sides by T → D = S × T</p>
-            <span class="ex" style="display:block;white-space:normal;margin-bottom:1.5mm">48 km/h for 2.5 h → D = 48 × 2.5 = 120 km</span>
-            <p style="font-size:9pt;margin:0 0 1mm"><strong>Time:</strong> divide both sides by S (or flip) → T = <span class="frac"><span class="num">D</span><span class="den">S</span></span></p>
-            <span class="ex" style="display:block;white-space:normal">120 km at 48 km/h → T = <span class="frac"><span class="num">120</span><span class="den">48</span></span> = 2.5 h</span>
-          </div>
+      <div class="callout compound-area">
+        <svg class="compound-area-diagram" viewBox="0 0 130 100" role="img" aria-label="An L-shape made from a 10 by 8 rectangle with a 6 by 4 rectangle removed">
+          <!-- L-shape: outer 10 × 8, with a 6 × 4 corner removed -->
+          <path class="compound-fill" d="M18 12 H58 V52 H118 V84 H18 Z" />
+          <rect class="compound-hole" x="58" y="12" width="60" height="40" />
+          <text class="compound-label" x="88" y="34" text-anchor="middle">missing</text>
+          <text class="compound-label" x="88" y="45" text-anchor="middle">6 × 4</text>
+          <text class="compound-dim" x="68" y="97" text-anchor="middle">10</text>
+          <text class="compound-dim" x="7" y="51" text-anchor="middle">8</text>
+        </svg>
+        <div>
+          <strong>Compound / irregular area:</strong>
+          <p>Draw a rectangle around the L-shape, then subtract the missing part.</p>
+          <span class="ex">Whole: 10 × 8 = 80</span>
+          <span class="ex">Missing: 6 × 4 = 24</span>
+          <span class="ex">Area: 80 − 24 = 56 units²</span>
         </div>
-      </section>
-
-      <section class="panel tight">
-        <h3>Temperature — °C basics</h3>
-        <div class="temp-scale">
-          <span class="cold">0 °C<br />ice melts</span>
-          <span>10 °C<br />cool day</span>
-          <span>20 °C<br />room</span>
-          <span class="hot">37 °C<br />body</span>
-          <span class="hot">100 °C<br />water boils</span>
-        </div>
-        <p class="note" style="margin-top:1mm;font-size:8.5pt">
-          Below 0 °C is freezing. A rise of 5 °C from −3 °C reaches +2 °C.
-        </p>
-      </section>
+      </div>

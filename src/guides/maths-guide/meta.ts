@@ -71,86 +71,86 @@ export const pages = [
   },
   {
     number: 9,
-    id: "divisibility",
-    label: "Divisibility rules",
-    title: "Divisibility rules",
-    bodyClass: "p9"
-  },
-  {
-    number: 10,
     id: "squares-cubes",
     label: "Squares & cubes",
     title: "Squares & cubes",
     bodyClass: "p10"
   },
   {
-    number: 11,
+    number: 10,
     id: "fractions-pct",
     label: "Fractions, decimals & %",
     title: "Fractions, decimals & %",
     bodyClass: "p11"
   },
   {
-    number: 12,
+    number: 11,
     id: "fraction-skills",
     label: "Fraction skills",
     title: "Fraction skills",
     bodyClass: "p12"
   },
   {
-    number: 13,
+    number: 12,
     id: "ratio",
     label: "Ratio & proportion",
     title: "Ratio & proportion",
     bodyClass: "p13"
   },
   {
-    number: 14,
+    number: 13,
     id: "measures",
     label: "Measures, time & SDT",
     title: "Measures, time & SDT",
     bodyClass: "p14"
   },
   {
-    number: 15,
+    number: 14,
     id: "2d-shapes",
     label: "2D shapes",
     title: "Shape cheats",
     bodyClass: "audit-15"
   },
   {
-    number: 16,
+    number: 15,
     id: "angle-rules",
     label: "Angle rules",
     title: "Angle rules",
     bodyClass: "audit-16"
   },
   {
-    number: 17,
+    number: 16,
     id: "3d-volume",
     label: "3D shapes & volume",
     title: "3D shapes & volume",
     bodyClass: "audit-17"
   },
   {
-    number: 18,
+    number: 17,
     id: "coordinates",
     label: "Coordinates & transformations",
     title: "Coordinates & transformations",
     bodyClass: "audit-18"
   },
   {
-    number: 19,
+    number: 18,
     id: "averages",
     label: "Averages & charts",
     title: "Averages & charts",
     bodyClass: "audit-19"
   },
   {
-    number: 20,
+    number: 19,
     id: "word-problems",
     label: "Word problems, tables & Venns",
     title: "Word problems, tables & Venns",
     bodyClass: "audit-20"
+  },
+  {
+    number: 20,
+    id: "divisibility",
+    label: "Divisibility rules",
+    title: "Divisibility rules",
+    bodyClass: "p9"
   }
 ] as const satisfies readonly MathsTutorPageMeta[];
