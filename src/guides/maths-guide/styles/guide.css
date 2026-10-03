@@ -4223,7 +4223,11 @@ li .frac {
 .p1 .cmp-step-num { font-size: 11pt; width: 5.8mm; height: 5.8mm; }
 .p1 .cmp-step-track { gap: 1.2mm; }
 .p1 .round-panel { display: flex; flex-direction: column; }
-.p1 .round-panel .round-layout { flex: 1; gap: 2.4mm; }
+.p1 .round-panel .round-layout {
+  flex: 1;
+  gap: 2.4mm;
+  grid-template-columns: 0.92fr 1.08fr;
+}
 .p1 .round-panel .round-steps-vertical { gap: 1.1mm; }
 .p1 .round-panel .round-step { padding: 1.2mm 1.5mm; gap: 1.5mm; }
 .p1 .round-panel .round-step > div > strong { font-size: 10pt; margin-bottom: 0.35mm; }
@@ -4232,7 +4236,7 @@ li .frac {
 .p1 .round-panel .round-num { font-size: 11pt; width: 5.8mm; height: 5.8mm; }
 .p1 .round-worked { padding: 1.6mm 2mm; }
 .p1 .round-worked-label { font-size: 8pt; margin-bottom: 0.8mm; }
-.p1 .round-visual-line { font-size: 13pt; margin: 0; }
+.p1 .round-visual-line { font-size: 13pt; margin: 0; gap: 0.6mm 2.6mm; }
 .p1 .round-result { font-size: 13pt; }
 .p1 .round-worked-note { font-size: 8.5pt; line-height: 1.25; }
 .p1 .round-right { gap: 1.5mm; }
@@ -4247,11 +4251,17 @@ li .frac {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  gap: 1.15mm;
   white-space: nowrap;
   height: 100%;
   font-size: 8pt;
-  padding: 0.9mm 0.6mm;
+  padding: 0.9mm 0.8mm;
   line-height: 1.25;
+}
+.p1 .round-examples-grid .rnd-to {
+  color: var(--sky);
+  font-weight: 800;
+  line-height: 1;
 }
 .p1 .oe-short { display: flex; flex-direction: column; }
 .p1 .oe-short h2 { margin-bottom: 1.4mm; }
