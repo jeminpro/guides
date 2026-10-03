@@ -149,8 +149,8 @@ export const pages = [
   {
     number: 20,
     id: "divisibility",
-    label: "Divisibility rules",
-    title: "Divisibility rules",
+    label: "Tips & tricks",
+    title: "Tips & tricks",
     bodyClass: "p9"
   }
 ] as const satisfies readonly MathsTutorPageMeta[];

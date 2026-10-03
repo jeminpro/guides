@@ -4504,6 +4504,34 @@ li .frac {
   border-color: #f4c4bb;
   color: var(--coral-deep);
 }
+.p9 .fact-strip {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6mm;
+  row-gap: 0;
+}
+.p9 .fact-strip .word-card {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 2.2mm 0 2mm;
+  border-bottom: 1.5px solid var(--rule);
+  font-size: 10pt;
+  line-height: 1.35;
+}
+.p9 .fact-strip .word-card:nth-last-child(-n + 2) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.p9 .fact-strip .word-card b {
+  font-size: 11pt;
+  margin-bottom: 0.6mm;
+}
+.p9 .fact-strip .word-card p {
+  margin: 0;
+}
+.p9 .fact-strip .word-card .mono {
+  color: var(--navy);
+}
 
 .p10 .root-uses {
   display: grid;
