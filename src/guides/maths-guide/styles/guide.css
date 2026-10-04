@@ -4702,7 +4702,7 @@ li .frac {
 .p14 .dec-hours .ex {
   display: block;
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-size: 8.5pt;
 }
 .p14 .warn {
