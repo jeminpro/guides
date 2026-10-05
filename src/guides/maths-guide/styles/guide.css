@@ -871,6 +871,17 @@ tbody tr:nth-child(even) td:last-child.mono {
   fill: var(--ink);
 }
 
+.long-div .ld-point {
+  fill: var(--coral-deep);
+  font-size: 14px;
+}
+
+.long-div .ld-point-guide {
+  stroke: var(--coral-deep);
+  stroke-width: 1;
+  stroke-dasharray: 1.2 1.4;
+}
+
 .long-div .ld-label {
   font-family: var(--font-body);
   font-size: 9px;
@@ -4176,11 +4187,12 @@ li .frac {
 }
 .p2 .panel.filled .try:last-child { margin-bottom: 0; }
 
-.p1 .page-body { gap: 2.6mm; padding-bottom: 0; }
+.p1 .page-body { gap: 2.2mm; padding-bottom: 3mm; }
 .p1 .page-body > .panel { flex: 1 1 auto; }
+.p1 .page-body > .oe-short { flex: 0 1 auto; }
 .p1 h1 { margin-bottom: 1mm; }
-.p1 h2 { font-size: 12.5pt; margin-bottom: 1.5mm; }
-.p1 .panel.tight { padding: 2.4mm 2.8mm; }
+.p1 h2 { font-size: 12.5pt; margin-bottom: 1.2mm; }
+.p1 .panel.tight { padding: 2mm 2.8mm; }
 .p1 .place-cell { padding: 1.6mm 0.6mm; }
 .p1 .place-name { font-size: 8pt; }
 .p1 .place-cell strong { font-size: 16pt; }
@@ -4188,19 +4200,46 @@ li .frac {
 .p1 .place-point strong { font-size: 18pt; }
 .p1 .place-direction {
   font-size: 9pt;
-  margin: 1.6mm 0 0;
+  margin: 1.1mm 0 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2mm;
-  padding: 0.9mm 1.6mm;
+  grid-template-columns: repeat(4, 1fr) 7mm repeat(3, 1fr);
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  min-height: 7.5mm;
   background: var(--navy-soft);
   border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 .p1 .place-direction span { white-space: nowrap; }
-.p1 .place-direction span:last-child { text-align: right; }
+.p1 .place-direction span:first-child {
+  grid-column: 1 / 5;
+  justify-self: end;
+  align-self: center;
+  padding-right: 2.2mm;
+  color: var(--leaf-deep);
+}
+.p1 .place-direction-point {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--coral);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 0.8;
+}
+.p1 .place-direction span:last-child {
+  grid-column: 6 / -1;
+  justify-self: start;
+  align-self: center;
+  text-align: left;
+  padding-left: 2.2mm;
+}
 .p1 .place-expanded {
   font-size: 9.5pt;
-  margin: 1.5mm 0 0;
+  margin: 1.1mm 0 0;
   line-height: 1.5;
 }
 .p1 .place-expanded:has(.ex) { line-height: 1.55; }
@@ -4242,8 +4281,8 @@ li .frac {
 .p1 .round-right { gap: 1.5mm; }
 .p1 .round-examples-grid {
   gap: 1.1mm;
-  flex: 1;
-  align-content: stretch;
+  flex: 1 1 auto;
+  align-content: start;
 }
 .p1 .round-examples-grid .ex {
   display: flex;
@@ -4253,7 +4292,7 @@ li .frac {
   justify-content: center;
   gap: 1.15mm;
   white-space: nowrap;
-  height: 100%;
+  height: auto;
   font-size: 8pt;
   padding: 0.9mm 0.8mm;
   line-height: 1.25;
