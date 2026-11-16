@@ -1,0 +1,29 @@
+---
+const mistakes = [
+  ["He has went to school.", "He has gone to school.", "Gone is the past participle, not went."],
+  ["She was ate lunch.", "She ate lunch.", "Ate is the simple past. Do not add was."],
+  ["I have saw that film.", "I have seen that film.", "Use seen after have."],
+  ["They was running fast.", "They were running fast.", "They takes were."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Irregular Verbs</h1>
+  <p class="topic-lead">Common mistakes</p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Have, has and had need the past participle</h2>
+      {
+        mistakes.map(([wrong, right, why]) => (
+          <p>
+            {wrong}
+            <span class="mark mark-no" aria-label="Incorrect">✕</span>
+            {right}
+            <span class="mark mark-yes" aria-label="Correct">✓</span>
+            {why}
+          </p>
+        ))
+      }
+    </section>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+---
+const same = [
+  ["cut", "cut", "cut", "I cut my finger yesterday."],
+  ["put", "put", "put", "She put her bag down."],
+  ["hurt", "hurt", "hurt", "He hurt his leg."],
+  ["shut", "shut", "shut", "They shut the door."]
+];
+const pair = [
+  ["tell", "told", "told", "She told the story."],
+  ["feel", "felt", "felt", "I felt tired."],
+  ["keep", "kept", "kept", "He has kept his promise."],
+  ["sleep", "slept", "slept", "They slept well."],
+  ["leave", "left", "left", "She left early."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Irregular Verbs - Forms that match</h1>
+  <section class="summary-block summary-mint">
+    <h2>All three forms the same</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Base</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-rule" scope="col">Past participle</th>
+          <th class="th-function" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          same.map(([base, past, participle, example]) => (
+            <tr>
+              <th scope="row">{base}</th>
+              <td>{past}</td>
+              <td>{participle}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>These verbs never change, so the verb alone does not show the tense. Look at the rest of the sentence: <em>yesterday, has, had, will</em>.</p>
+  </section>
+  <section class="summary-block summary-yellow">
+    <h2>Past and past participle match</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Base</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-rule" scope="col">Past participle</th>
+          <th class="th-function" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          pair.map(([base, past, participle, example]) => (
+            <tr>
+              <th scope="row">{base}</th>
+              <td>{past}</td>
+              <td>{participle}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>The base form is different, but the past and the past participle are the same. They often end in <strong>-t</strong> rather than <em>-ed</em>: <em>left, felt, kept</em>. Do not mix <em>felt</em> with <em>feel</em>, or <em>kept</em> with <em>keep</em>.</p>
+  </section>
+</div>

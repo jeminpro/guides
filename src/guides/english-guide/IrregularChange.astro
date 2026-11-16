@@ -1,0 +1,72 @@
+---
+const vowels = [
+  ["begin", "began", "begun", "The concert began at 7."],
+  ["drink", "drank", "drunk", "He has drunk all the milk."],
+  ["sing", "sang", "sung", "They sang beautifully."],
+  ["ring", "rang", "rung", "The bell has rung."],
+  ["swim", "swam", "swum", "She has swum across the pool."]
+];
+const mixed = [
+  ["go", "went", "gone", "He has gone home."],
+  ["see", "saw", "seen", "I have seen that film."],
+  ["eat", "ate", "eaten", "She has eaten lunch."],
+  ["break", "broke", "broken", "He broke his pencil."],
+  ["write", "wrote", "written", "I have written a letter."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Irregular Verbs - Vowel changes</h1>
+  <section class="summary-block summary-peach">
+    <h2>The middle vowel changes</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Base</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-rule" scope="col">Past participle</th>
+          <th class="th-function" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          vowels.map(([base, past, participle, example]) => (
+            <tr>
+              <th scope="row">{base}</th>
+              <td>{past}</td>
+              <td>{participle}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>The usual pattern is <strong>i → a → u</strong>: <em>drink → drank → drunk, sing → sang → sung, begin → began → begun</em>. Say them as a rhythm: <em>sing–sang–sung, ring–rang–rung</em>.</p>
+  </section>
+  <section class="summary-block summary-lilac">
+    <h2>No fixed pattern</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Base</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-rule" scope="col">Past participle</th>
+          <th class="th-function" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          mixed.map(([base, past, participle, example]) => (
+            <tr>
+              <th scope="row">{base}</th>
+              <td>{past}</td>
+              <td>{participle}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>These need memorising. There is no single rule that builds <em>go → went → gone</em>.</p>
+  </section>
+</div>

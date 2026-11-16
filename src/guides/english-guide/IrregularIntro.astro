@@ -1,0 +1,47 @@
+---
+const forms = [
+  ["go", "went", "gone"],
+  ["eat", "ate", "eaten"],
+  ["write", "wrote", "written"],
+  ["see", "saw", "seen"],
+  ["take", "took", "taken"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Irregular Verbs - What they are</h1>
+  <p>
+    A regular verb adds <strong>-ed</strong> in the past (<em>play → played</em>). An <strong>irregular verb</strong> does not. It changes form for the past and the past participle (<em>eat → ate → eaten</em>).
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>Three forms</h2>
+    <p>The <strong>base</strong> form is the present, and the form after <em>to</em>. The <strong>past</strong> is the simple past. The <strong>past participle</strong> is used with <strong>have, has</strong> or <strong>had</strong>.</p>
+    <p>I <strong>go</strong> to school every day. I <strong>went</strong> to school yesterday. I <strong>have gone</strong> to school already.</p>
+    <p>After <em>have, has</em> or <em>had</em>, use the past participle, not the simple past.</p>
+  </section>
+  <section class="summary-block summary-blue">
+    <h2>Past beside past participle</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Base</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-rule" scope="col">Past participle</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          forms.map(([base, past, participle]) => (
+            <tr>
+              <th scope="row">{base}</th>
+              <td>{past}</td>
+              <td>{participle}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>I <strong>went</strong> to school yesterday. She <strong>ate</strong> her lunch. He <strong>wrote</strong> a story.</p>
+    <p>I <strong>have gone</strong> to school already. She <strong>has eaten</strong> her lunch. He <strong>has written</strong> a story.</p>
+  </section>
+</div>

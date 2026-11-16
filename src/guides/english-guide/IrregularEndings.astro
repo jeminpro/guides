@@ -1,0 +1,69 @@
+---
+const ending = [
+  ["take", "took", "taken", "She has taken her book."],
+  ["give", "gave", "given", "He has given it back."],
+  ["know", "knew", "known", "I have known her for years."],
+  ["drive", "drove", "driven", "Dad has driven us here."],
+  ["choose", "chose", "chosen", "They have chosen wisely."]
+];
+const summary = [
+  ["Regular", "Add -ed", "play → played"],
+  ["Same form", "No change", "cut → cut"],
+  ["Vowel change", "The middle vowel changes", "sing → sang → sung"],
+  ["Ends in -n", "The past participle ends in -n", "take → took → taken"],
+  ["Unique", "No pattern. Memorise it.", "go → went → gone"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Irregular Verbs - Participles in -n</h1>
+  <section class="summary-block summary-green">
+    <h2>The past participle ends in -n</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Base</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-rule" scope="col">Past participle</th>
+          <th class="th-function" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          ending.map(([base, past, participle, example]) => (
+            <tr>
+              <th scope="row">{base}</th>
+              <td>{past}</td>
+              <td>{participle}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>Many irregular past participles end in <strong>-n</strong>: <em>taken, known, chosen, given, written</em>.</p>
+  </section>
+  <section class="summary-block summary-sand">
+    <h2>Which pattern is it?</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Type</th>
+          <th class="th-rule" scope="col">Pattern</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          summary.map(([type, pattern, example]) => (
+            <tr>
+              <th scope="row">{type}</th>
+              <td>{pattern}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

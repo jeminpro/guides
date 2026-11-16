@@ -1,0 +1,58 @@
+---
+const verbs = [
+  ["be", "was / were", "been"],
+  ["become", "became", "become"],
+  ["begin", "began", "begun"],
+  ["break", "broke", "broken"],
+  ["bring", "brought", "brought"],
+  ["buy", "bought", "bought"],
+  ["come", "came", "come"],
+  ["do", "did", "done"],
+  ["drink", "drank", "drunk"],
+  ["drive", "drove", "driven"],
+  ["eat", "ate", "eaten"],
+  ["fall", "fell", "fallen"],
+  ["get", "got", "got / gotten"],
+  ["go", "went", "gone"],
+  ["have", "had", "had"],
+  ["make", "made", "made"],
+  ["read", "read (“red”)", "read"],
+  ["run", "ran", "run"],
+  ["say", "said", "said"],
+  ["see", "saw", "seen"],
+  ["sit", "sat", "sat"],
+  ["speak", "spoke", "spoken"],
+  ["take", "took", "taken"],
+  ["think", "thought", "thought"],
+  ["write", "wrote", "written"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Irregular Verbs</h1>
+  <p class="topic-lead">Twenty-five to know</p>
+  <section class="summary-block summary-blue">
+    <h2>Base, past and past participle</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Base</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-rule" scope="col">Past participle</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          verbs.map(([base, past, participle]) => (
+            <tr>
+              <th scope="row">{base}</th>
+              <td>{past}</td>
+              <td>{participle}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>The past and the past participle of <em>read</em> are both spelled <em>read</em> and said “red”. In British English, the usual past participle of <em>get</em> is <em>got</em>.</p>
+  </section>
+</div>

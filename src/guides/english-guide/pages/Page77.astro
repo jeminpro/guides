@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import IrregularTraps from "../IrregularTraps.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[76];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <IrregularTraps />
+</GuidePageShell>
