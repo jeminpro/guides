@@ -1,0 +1,57 @@
+---
+const shifts = [
+  ["“I am happy.”", "He said he was happy."],
+  ["“We are late.”", "They said they were late."],
+  ["“I have finished.”", "She said she had finished."],
+  ["“I will go tomorrow.”", "He said he would go the next day."],
+  ["“I can help.”", "She said she could help."],
+  ["“I may come.”", "He said he might come."],
+  ["“I have been studying.”", "He said he had been studying."]
+];
+const verbs = [
+  ["am", "was"],
+  ["are", "were"],
+  ["have finished", "had finished"],
+  ["will go", "would go"],
+  ["can help", "could help"],
+  ["may come", "might come"],
+  ["have been studying", "had been studying"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Direct and Reported Speech - What are they?</h1>
+  <section class="summary-block summary-yellow">
+    <h2>Exact words, or the meaning</h2>
+    <p><strong>Direct speech</strong> gives a speaker’s exact words, usually inside quotation marks: “Ben said, ‘I am tired.’”</p>
+    <p><strong>Reported speech</strong> gives the meaning without quoting the exact words: “Ben said that he was tired.”</p>
+    <p>The verb that introduces the speech (<em>said, told, asked</em> or <em>replied</em>) is the <strong>reporting verb</strong>.</p>
+  </section>
+  <section class="summary-block summary-blue">
+    <h2>Backshift</h2>
+    <p>When the reporting verb is in the past, reported speech often changes the original tense. Pronouns and time or place words may also need to change so they fit the new speaker and situation.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Direct speech</th>
+          <th class="th-example" scope="col">Common reported form</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          shifts.map(([direct, reported], index) => (
+            <tr>
+              <td set:html={direct.replace(verbs[index][0], `<strong>${verbs[index][0]}</strong>`)} />
+              <td set:html={reported.replace(verbs[index][1], `<strong>${verbs[index][1]}</strong>`)} />
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-peach">
+    <h2>Pronouns, time and place</h2>
+    <p>Pronouns change to match who is speaking and who is being spoken to. “I love <strong>my</strong> cat,” said Emma. → Emma said <strong>she</strong> loved <strong>her</strong> cat.</p>
+    <p>Time and place words can shift too, depending on when and where the report is made: <em>today → that day; tomorrow → the next day; now → then; here → there</em>.</p>
+  </section>
+</div>

@@ -1,0 +1,70 @@
+---
+const rows = [
+  ["I remember the day when we moved.", "Describes the noun day.", "Relative clause"],
+  ["When we moved, I was excited.", "Tells when I was excited.", "Time clause"],
+  ["This is the park where we met.", "Describes the noun park.", "Relative clause"],
+  ["I smiled because we met.", "Gives a reason for smiling.", "Reason clause"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Clauses</h1>
+  <p class="topic-lead">More about relative clauses</p>
+  <div class="summary-stack">
+    <section class="summary-block summary-yellow">
+      <h2>Identifying, or extra information?</h2>
+      <p>
+        “The book <strong>that has a red cover</strong> is mine.” The clause identifies which book. No commas.
+      </p>
+      <p>
+        “My bike, <strong>which has a red frame</strong>, is outside.” The bike is already identified. The
+        commas set off extra information. Do not comma every relative clause.
+      </p>
+    </section>
+    <section class="summary-block summary-mint">
+      <h2>Build one from two sentences</h2>
+      <p>I met a scientist. The scientist studies volcanoes.</p>
+      <p>I met a scientist <strong>who studies volcanoes</strong>.</p>
+      <p>Ask which noun the clause describes, and what it adds about that noun.</p>
+    </section>
+  </div>
+  <section class="summary-block summary-blue">
+    <h2>Does the clause describe a noun?</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">What it does</th>
+          <th class="th-feature" scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([example, job, type]) => (
+            <tr>
+              <td>{example}</td>
+              <td>{job}</td>
+              <td>{type}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Whose, who’s, and leaving the word out</h2>
+      <p>
+        the child who’s coat was lost
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        the child <strong>whose</strong> coat was lost
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+      <p>
+        <em>Who’s</em> means who is or who has. You may omit the relative word when it is the object: “The
+        cake <strong>Mum baked</strong>.” Do not omit it when it is the subject: “The cake
+        <strong>that fell</strong>.”
+      </p>
+    </section>
+  </div>
+</div>

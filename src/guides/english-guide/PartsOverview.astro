@@ -1,0 +1,58 @@
+---
+const rows = [
+  ["Noun", "Names a person, place, thing or idea", "The ", "crowd", " cheered."],
+  ["Verb", "Shows an action, occurrence or state", "The crowd ", "cheered", "."],
+  ["Adjective", "Describes a noun or pronoun", "The ", "excited", " crowd cheered."],
+  ["Adverb", "Adds information about a verb, adjective or adverb", "The crowd cheered ", "loudly", "."],
+  ["Pronoun", "Refers to a noun or noun phrase", "", "They", " cheered."],
+  ["Preposition", "Shows a relationship, often in a prepositional phrase", "They cheered ", "after the match", "."],
+  ["Conjunction", "Joins words, phrases or clauses", "They cheered ", "because", " they had won."],
+  ["Determiner", "Specifies a noun: which one, whose, or how many", "", "The", " crowd cheered."],
+  ["Interjection", "Expresses a reaction or feeling", "", "Hurray!", " They had won."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Parts of Speech - What are they?</h1>
+  <p>
+    Every word has a job in a sentence. That job is its <strong>part of speech</strong>. Knowing the job
+    helps you understand sentences and choose or correct words in grammar questions. A word’s job can
+    change with its use, so always look at the whole sentence.
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>Quick reference</h2>
+    <table class="punct-table summary-table">
+      <colgroup>
+        <col class="concept" />
+        <col class="practise" />
+        <col class="example" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Part of speech</th>
+          <th class="th-rule" scope="col">Main job</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([part, job, before, word, after]) => (
+            <tr>
+              <th scope="row">{part}</th>
+              <td>{job}</td>
+              <td>
+                {before}
+                <strong>{word}</strong>
+                {after}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    Articles (<strong>a, an, the</strong>) are a type of determiner. Some school materials count them
+    separately. The important point is to identify the word’s job in its sentence.
+  </p>
+</div>

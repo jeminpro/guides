@@ -1,0 +1,54 @@
+---
+const traps = [
+  {
+    title: "Random Capitals",
+    wrong: "The Boy ran To School quickly.",
+    tip: "Use capitals only when the word needs it."
+  },
+  {
+    title: "Missing Capitals in Names or Places",
+    wrong: "we went to bath last sunday.",
+    right: "We went to Bath last Sunday."
+  },
+  {
+    title: "Titles Not Fully Capitalised",
+    wrong: "alice in wonderland",
+    right: "Alice in Wonderland"
+  },
+  {
+    title: "Not Capitalising the Start of a Quoted Sentence",
+    wrong: "She whispered, “we have to go now.”",
+    right: "She whispered, “We have to go now.”"
+  },
+  {
+    title: "Capitalising Common Nouns",
+    wrong: "We saw a Mountain, a River, and a Dog.",
+    tip: "Use capitals only when the noun is specific, not general."
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Capital Letters</h1>
+  <p class="topic-lead">Common traps</p>
+  <div class="trap-card">
+    {
+      traps.map((trap) => (
+        <section class="trap">
+          <h2>{trap.title}</h2>
+          <p>
+            {trap.wrong}
+            <span class="mark mark-no" aria-label="Incorrect">✕</span>
+          </p>
+          {trap.right && (
+            <p>
+              {trap.right}
+              <span class="mark mark-yes" aria-label="Correct">✓</span>
+            </p>
+          )}
+          {trap.tip && <p class="trap-tip">{trap.tip}</p>}
+        </section>
+      ))
+    }
+  </div>
+</div>

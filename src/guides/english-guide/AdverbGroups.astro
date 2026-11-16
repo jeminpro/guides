@@ -1,0 +1,48 @@
+---
+const groups = [
+  ["Manner", "How?", "gently, quickly, well, carefully", "She closed the door gently."],
+  ["Time", "When?", "now, yesterday, later, soon, tomorrow", "We will meet later."],
+  ["Place", "Where?", "here, outside, nearby, upstairs", "Please wait outside."],
+  ["Frequency", "How often?", "always, often, sometimes, rarely, never", "He often reads at night."],
+  ["Possibility", "How sure?", "perhaps, probably, certainly", "She will probably arrive."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Adverbs - What they are</h1>
+  <p>
+    An <strong>adverb</strong> adds information to a sentence. It often tells us more about a verb, and it can also add information to an adjective or another adverb. Ask what the word tells us or changes. Do not decide from the spelling alone.
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>Three jobs</h2>
+    <p>She spoke <strong>quietly</strong>. <em>Quietly</em> tells us how she spoke.</p>
+    <p>The water was <strong>very</strong> cold. <em>Very</em> makes the adjective <em>cold</em> stronger.</p>
+    <p>He ran <strong>really</strong> quickly. <em>Really</em> strengthens the adverb <em>quickly</em>.</p>
+  </section>
+  <section class="summary-block summary-blue">
+    <h2>Five meaning groups</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Type</th>
+          <th class="th-rule" scope="col">Question</th>
+          <th class="th-example" scope="col">Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          groups.map(([type, question, examples, sentence]) => (
+            <tr>
+              <th scope="row">{type}</th>
+              <td>{question}</td>
+              <td>
+                {examples}. {sentence}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>A sentence can hold several adverbs. “<strong>Yesterday</strong>, Maya <strong>carefully</strong> placed her bag <strong>outside</strong>.” <em>Yesterday</em> tells when, <em>carefully</em> tells how, and <em>outside</em> tells where.</p>
+  </section>
+</div>

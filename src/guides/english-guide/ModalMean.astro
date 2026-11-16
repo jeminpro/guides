@@ -1,0 +1,42 @@
+---
+const meanings = [
+  ["Possibility", "It might rain.", "Rain is possible. The speaker is unsure."],
+  ["Expectation", "The bus should arrive soon.", "The speaker expects it, but does not guarantee it."],
+  ["Strong prediction", "The bus will arrive at noon.", "The speaker presents this confidently."],
+  ["Obligation", "You must wear a seat belt.", "It is required."],
+  ["Advice", "You should take a coat.", "The speaker recommends it."],
+  ["Permission", "You may leave.", "The speaker allows it."],
+  ["Ability", "I can swim.", "The speaker is able to do it."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Modal Verbs - What they mean</h1>
+  <p>
+    A <strong>modal verb</strong> is a helping verb that comes before another verb and changes how we understand the action. The common ones are <strong>can, could, may, might, shall, should, will, would</strong> and <strong>must</strong>.
+  </p>
+  <p>She <strong>might arrive</strong>. You <strong>must stop</strong>. I <strong>can swim</strong>.</p>
+  <section class="summary-block summary-green">
+    <h2>Read the meaning from the sentence</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Meaning</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">What it tells us</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          meanings.map(([meaning, example, tells]) => (
+            <tr>
+              <th scope="row">{meaning}</th>
+              <td>{example}</td>
+              <td>{tells}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

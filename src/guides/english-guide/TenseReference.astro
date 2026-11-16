@@ -1,0 +1,50 @@
+---
+const forms = [
+  ["Simple present", "run/runs", "She runs."],
+  ["Simple past", "past form", "She ran."],
+  ["Simple future", "will + base verb", "She will run."],
+  ["Present progressive", "am/is/are + verb-ing", "She is running."],
+  ["Past progressive", "was/were + verb-ing", "She was running."],
+  ["Future progressive", "will be + verb-ing", "She will be running."],
+  ["Present perfect", "have/has + past participle", "She has run."],
+  ["Past perfect", "had + past participle", "She had run."],
+  ["Future perfect", "will have + past participle", "She will have run."],
+  ["Present perfect progressive", "have/has been + verb-ing", "She has been running."],
+  ["Past perfect progressive", "had been + verb-ing", "She had been running."],
+  ["Future perfect progressive", "will have been + verb-ing", "She will have been running."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Verb Tenses</h1>
+  <p class="topic-lead">All twelve forms</p>
+  <section class="summary-block summary-green">
+    <h2>Three times, four patterns</h2>
+    <p>These combinations are sometimes taught as twelve tense forms: present, past and future, each with simple, progressive, perfect and perfect progressive patterns.</p>
+    <table class="punct-table summary-table">
+      <colgroup>
+        <col class="concept" />
+        <col class="practise" />
+        <col class="example" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Time and form</th>
+          <th class="th-rule" scope="col">Pattern</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          forms.map(([name, pattern, example]) => (
+            <tr>
+              <th scope="row">{name}</th>
+              <td>{pattern}</td>
+              <td set:html={example.replace(/(runs|ran|will run|is running|was running|will be running|has run|had run|will have run|has been running|had been running|will have been running)/, "<strong>$1</strong>")} />
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

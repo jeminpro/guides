@@ -1,0 +1,42 @@
+---
+const links = [
+  ["then", "The next event", "We packed. Then we left."],
+  ["afterwards", "A later event", "We swam. Afterwards, we ate."],
+  ["meanwhile", "The same time", "Dad cooked. Meanwhile, Maya set the table."],
+  ["therefore", "Result or conclusion", "It was raining. Therefore, the match was cancelled."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Connecting Ideas - Linking adverbs</h1>
+  <section class="summary-block summary-mint">
+    <h2>Link one event to the next</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Adverb</th>
+          <th class="th-rule" scope="col">Relationship</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          links.map(([word, relation, example]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{relation}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-pink">
+    <h2>Meanwhile is not therefore</h2>
+    <p><strong>Meanwhile</strong> means the second action happened at about the same time. “Dad cooked. <strong>Meanwhile</strong>, Maya set the table.”</p>
+    <p><strong>Therefore</strong> signals a result. “It was raining. <strong>Therefore</strong>, the match was cancelled.” It does not simply mean later.</p>
+    <p>“We ate lunch. Therefore, we opened the door” has no clear logical link unless more information explains it. <em>Meanwhile</em> does not fit an event that happened hours later.</p>
+    <p>At the start of a sentence, a comma often helps: “<strong>Meanwhile,</strong> the others waited.” “<strong>Therefore,</strong> we changed the plan.”</p>
+  </section>
+</div>

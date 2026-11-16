@@ -1,0 +1,77 @@
+---
+const rows = [
+  ["tall", "taller", "tallest"],
+  ["nice", "nicer", "nicest"],
+  ["happy", "happier", "happiest"],
+  ["big", "bigger", "biggest"],
+  ["careful", "more careful", "most careful"],
+  ["good", "better", "best"],
+  ["bad", "worse", "worst"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Adjectives - Describing and comparing</h1>
+  <p>
+    An <strong>adjective</strong> gives information about a noun or pronoun: “a <strong>heavy</strong> bag”;
+    “The bag is <strong>heavy</strong>.” Adjectives often come before a noun, but they can also follow a
+    linking verb.
+  </p>
+  <section class="summary-block summary-yellow">
+    <h2>Comparing</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Basic</th>
+          <th class="th-rule" scope="col">Comparative: two</th>
+          <th class="th-example" scope="col">Superlative: a group</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([basic, comparative, superlative]) => (
+            <tr>
+              <th scope="row">{basic}</th>
+              <td>{comparative}</td>
+              <td>{superlative}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    Short adjectives usually add <strong>-er</strong> and <strong>-est</strong>. Longer ones usually take
+    <strong>more</strong> and <strong>most</strong>. Some have their own forms, such as
+    <strong>good → better → best</strong>. <em>Clever</em> allows both <strong>cleverer</strong> and
+    <strong>more clever</strong>.
+  </p>
+  <p>
+    An adjective describes a noun. An adverb can describe an action: “The <strong>quick</strong> runner
+    moved <strong>quickly</strong>.” With a linking verb, keep the adjective: “The soup smells
+    <strong>wonderful</strong>.”
+  </p>
+  <p class="try-it">
+    <strong>Try it.</strong> Find the adjectives in “The tiny silver key opened the door.” Complete: “Of the
+    three roads, this is the (wide) ______.”
+  </p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Don’t double the comparison</h2>
+      <p>
+        more taller / most tallest
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+      </p>
+      <p>
+        <strong>taller</strong> / <strong>tallest</strong>
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+      <p>
+        gooder / goodest
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        <strong>better</strong> / <strong>best</strong>
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+    </section>
+  </div>
+</div>

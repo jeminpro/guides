@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import TensePerfect from "../TensePerfect.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[48];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <TensePerfect />
+</GuidePageShell>

@@ -1,0 +1,78 @@
+---
+const rows = [
+  ["Manner", "How?", "quietly, carefully, well"],
+  ["Place", "Where?", "here, outside, nearby"],
+  ["Time", "When?", "now, yesterday, soon"],
+  ["Frequency", "How often?", "always, often, sometimes, never"],
+  ["Degree", "To what extent?", "very, quite, almost"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Adverbs - Adding detail</h1>
+  <p>
+    An <strong>adverb</strong> can add information about a verb, an adjective or another adverb. It can tell
+    how, where, when or how often something happens, or show degree.
+  </p>
+  <section class="summary-block summary-mint">
+    <h2>Kinds of adverb</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Kind</th>
+          <th class="th-rule" scope="col">Question</th>
+          <th class="th-example" scope="col">Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([kind, question, examples]) => (
+            <tr>
+              <th scope="row">{kind}</th>
+              <td>{question}</td>
+              <td>{examples}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    Many manner adverbs end in <strong>-ly</strong>, but not all adverbs do: <strong>often, here</strong> and
+    <strong>soon</strong> are adverbs too. Not every <em>-ly</em> word is an adverb:
+    <strong>friendly</strong> is an adjective in “a friendly neighbour.” Ask what the word adds, rather than
+    trusting the ending.
+  </p>
+  <p>
+    The same word can change jobs. “The children waited <strong>outside</strong>” uses <em>outside</em> as an
+    adverb. “They waited <strong>outside the shop</strong>” uses it as a preposition. In “The water was
+    <strong>very</strong> cold,” <em>very</em> adds degree to the adjective <em>cold</em>.
+  </p>
+  <p class="try-it">
+    <strong>Try it.</strong> Sort the adverbs in “Yesterday, Aisha carefully placed the box here.”
+  </p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Good, well and fast</h2>
+      <p>
+        She sings good.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        She sings <strong>well</strong>.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        <em>Well</em> tells us how she sings.
+      </p>
+      <p>
+        She is a <strong>good</strong> singer.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        <em>Good</em> describes the noun <em>singer</em>.
+      </p>
+      <p>
+        He ran fastly.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        He ran <strong>fast</strong>.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        <em>Fast</em> is already an adverb.
+      </p>
+    </section>
+  </div>
+</div>

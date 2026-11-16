@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import Articles from "../Articles.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[31];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <Articles />
+</GuidePageShell>

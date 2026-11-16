@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import Subordinating from "../Subordinating.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[28];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <Subordinating />
+</GuidePageShell>

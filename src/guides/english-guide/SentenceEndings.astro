@@ -1,0 +1,106 @@
+---
+const rules = [
+  {
+    tone: "rule-sentence",
+    title: "Full Stop ( . )",
+    body: "Used to end a statement – something that tells us a fact, opinion, or command said calmly.",
+    examplesLabel: "Examples:",
+    examples: ["Please close the door quietly.", "London is the capital of England."]
+  },
+  {
+    tone: "rule-pronoun",
+    title: "Question Mark ( ? )",
+    body: "Used at the end of a direct question – when someone is asking something.",
+    examplesLabel: "Example:",
+    examples: ["Why are you laughing?"]
+  },
+  {
+    tone: "rule-proper",
+    title: "Exclamation Mark ( ! )",
+    body: "Used to show strong feeling, command, or surprise.",
+    follow: "Can end a statement, command, or exclamation.",
+    examplesLabel: "Examples:",
+    examples: ["Stop!", "What a beautiful day!", "That’s incredible!"]
+  }
+];
+
+const traps = [
+  {
+    title: "Comma Splice",
+    body: "Using a comma instead of a full stop or joining word.",
+    lines: [
+      { text: "It was late, we went home.", mark: "no" },
+      { text: "It was late. We went home.", mark: "yes" },
+      { text: "It was late, so we went home.", mark: "yes" }
+    ]
+  },
+  {
+    title: "Overusing Exclamation Marks",
+    lines: [{ text: "I went to school! It was fun! I met my friend!", mark: "no" }],
+    tip: "Use only for genuine emotion or strong emphasis."
+  },
+  {
+    title: "No End Punctuation",
+    body: "Forgetting a full stop or question mark makes writing seem rushed and unclear."
+  },
+  {
+    title: "Indirect Questions",
+    lines: [
+      { text: "She asked if I was coming?", mark: "no" },
+      { text: "She asked if I was coming.", mark: "yes" }
+    ],
+    tip: "Do not use question marks for indirect questions."
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Sentence Endings - What are they?</h1>
+  <ol class="rule-list">
+    {
+      rules.map((rule, index) => (
+        <li class:list={["rule", rule.tone]}>
+          <span class="rule-num" aria-hidden="true">
+            {index + 1}
+          </span>
+          <h2>{rule.title}</h2>
+          <p>{rule.body}</p>
+          {rule.follow && <p>{rule.follow}</p>}
+          <p class="rule-label">{rule.examplesLabel}</p>
+          <ul>
+            {rule.examples.map((example) => (
+              <li>{example}</li>
+            ))}
+          </ul>
+        </li>
+      ))
+    }
+  </ol>
+  <p class="topic-lead">Common traps</p>
+  <div class="trap-card">
+    {
+      traps.map((trap) => (
+        <section class="trap">
+          <h2>{trap.title}</h2>
+          {trap.body && <p>{trap.body}</p>}
+          {trap.lines?.map((line) => (
+            <p>
+              {line.text}
+              {line.mark === "no" && (
+                <span class="mark mark-no" aria-label="Incorrect">
+                  ✕
+                </span>
+              )}
+              {line.mark === "yes" && (
+                <span class="mark mark-yes" aria-label="Correct">
+                  ✓
+                </span>
+              )}
+            </p>
+          ))}
+          {trap.tip && <p class="trap-tip">{trap.tip}</p>}
+        </section>
+      ))
+    }
+  </div>
+</div>

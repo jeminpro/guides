@@ -1,0 +1,83 @@
+---
+const sounds = [
+  ["a university", "The first sound is y, a consonant sound."],
+  ["an umbrella", "The first sound is a vowel sound."],
+  ["an hour", "The h is silent, so the first sound is a vowel."],
+  ["a one-way street", "One begins with a w sound."],
+  ["an old house", "Listen to the adjective when it comes first."],
+  ["a large house", "Large begins with a consonant sound."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Articles - a, an and the</h1>
+  <p>
+    Articles are determiners. Choose <strong>a</strong> or <strong>an</strong> by the first
+    <strong>sound</strong> of the next word, not by the first letter.
+  </p>
+  <section class="summary-block summary-yellow">
+    <h2>A or an? Listen</h2>
+    <table class="punct-table summary-table">
+      <tbody>
+        {
+          sounds.map(([phrase, why]) => (
+            <tr>
+              <th scope="row">{phrase}</th>
+              <td>{why}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="summary-stack">
+    <section class="summary-block summary-sand">
+      <h2>A/an, the, or no article</h2>
+      <p>
+        <strong>A/an</strong> means one unspecified thing you can count: “I saw <strong>a</strong> bird.”
+      </p>
+      <p>
+        <strong>The</strong> means the reader can tell which one: “I saw a dog. <strong>The</strong> dog had
+        a red collar.” Also use <em>the</em> for unique things: <strong>the sun</strong>,
+        <strong>the moon</strong>, and for some names: <strong>the United Kingdom</strong>,
+        <strong>the River Severn</strong>.
+      </p>
+      <p>
+        Use <strong>no article</strong> when you mean things in general: “<strong>Dogs</strong> need
+        exercise”; “<strong>Water</strong> is important.” Compare “<strong>The dogs</strong> in our garden”
+        and “<strong>The water</strong> in this bottle.”
+      </p>
+      <p>
+        Also no article for many meals, sports and languages: have <strong>breakfast</strong>, play
+        <strong>football</strong>, speak <strong>French</strong>.
+      </p>
+    </section>
+  </div>
+  <p class="try-it">
+    <strong>Try it.</strong> Choose <em>a</em> or <em>an</em>: “___ useful tool”; “___ hour later.” Complete:
+    “I saw ___ fox. ___ fox ran away.”
+  </p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Articles</h2>
+      <p>
+        a apple / an university
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        <strong>an</strong> apple / <strong>a</strong> university
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+      <p>
+        The water is important. (meaning all water)
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        <strong>Water</strong> is important.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+      <p>
+        those book / much apples
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        <strong>those books</strong> / <strong>many apples</strong>
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+    </section>
+  </div>
+</div>

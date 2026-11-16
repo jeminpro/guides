@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import ModalMany from "../ModalMany.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[63];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <ModalMany />
+</GuidePageShell>

@@ -1,0 +1,44 @@
+---
+const jobs = [
+  ["Conjunction", "Joins a clause. A clause has a subject and a verb.", "We stayed in because it rained."],
+  ["Linking adverb", "Links one sentence or event to another.", "It rained. Therefore, we stayed in."],
+  ["Preposition", "Relates a following noun phrase to the sentence.", "We stayed in during the storm."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Connecting Ideas - Three jobs</h1>
+  <p>
+    A connecting word can show <strong>time, place, reason, result, contrast</strong> or <strong>condition</strong>. First decide the meaning you need, then check the grammar of the words that follow.
+  </p>
+  <section class="summary-block summary-peach">
+    <h2>Conjunction, adverb or preposition</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word type</th>
+          <th class="th-rule" scope="col">What it does</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          jobs.map(([type, does, example]) => (
+            <tr>
+              <th scope="row">{type}</th>
+              <td>{does}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-yellow">
+    <h2>What comes next?</h2>
+    <p><strong>Before lunch</strong> — <em>before</em> is followed by the noun phrase <em>lunch</em>, so it is a preposition.</p>
+    <p><strong>Before we ate lunch</strong> — <em>before</em> is followed by the clause <em>we ate lunch</em>, so it is a conjunction.</p>
+    <p><strong>We ate before</strong> — nothing follows <em>before</em>. Here it is an adverb.</p>
+    <p>This is a useful first test. Not every connector fits it perfectly.</p>
+  </section>
+</div>

@@ -1,0 +1,54 @@
+---
+const times = [
+  ["Present", "Mia walks to school.", "A habit, a general truth, or a present state."],
+  ["Past", "Mia walked to school yesterday.", "An event or state in the past."],
+  ["Future", "Mia will walk to school tomorrow.", "An event expected or planned for the future."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Verb Tenses - Present, past and future</h1>
+  <p>
+    A <strong>verb</strong> tells us about an action (<em>jump, whispered</em>), an occurrence (<em>arrived, happened</em>) or a state (<em>is, seems, became</em>). Verbs can change form to show time and to agree with their subject.
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>Tense and time</h2>
+    <p>
+      English verbs can refer to the <strong>present</strong>, <strong>past</strong> or <strong>future</strong>. The verb form and the rest of the sentence work together. Words such as <em>yesterday, now, next week</em> and <em>every morning</em> are clues, but the verb still has to fit the time.
+    </p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Time</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">Typical use</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          times.map(([time, example, use]) => (
+            <tr>
+              <th scope="row">{time}</th>
+              <td set:html={example.replace(/(walks|walked|will walk)/, "<strong>$1</strong>")} />
+              <td>{use}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-yellow">
+    <h2>A habit or a general truth</h2>
+    <p>The simple present often describes a habit or a general truth, not an action happening at this exact second.</p>
+    <p>I <strong>brush</strong> my teeth every morning.</p>
+    <p>Water <strong>freezes</strong> when it is cold enough.</p>
+    <p>She <strong>knows</strong> the answer.</p>
+  </section>
+  <section class="summary-block summary-mint">
+    <h2>Simple present</h2>
+    <p>Use the base verb with <strong>I, you, we</strong> and <strong>they</strong>. Add <strong>-s</strong> or <strong>-es</strong> with <strong>he, she</strong> and <strong>it</strong>.</p>
+    <p>I <strong>walk</strong> to school. / She <strong>walks</strong> to school.</p>
+    <p>The sun <strong>rises</strong> in the east.</p>
+    <p>Trains <strong>leave</strong> at six o’clock.</p>
+  </section>
+</div>

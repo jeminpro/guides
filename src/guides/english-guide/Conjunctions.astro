@@ -1,0 +1,59 @@
+---
+const fanboys = [
+  ["F", "for", "Gives a reason", "We stayed inside, for it was raining."],
+  ["A", "and", "Adds information", "The sun was shining and the birds were singing."],
+  ["N", "nor", "Adds another negative idea", "She didn’t smile, nor did she speak."],
+  ["B", "but", "Shows contrast", "I wanted to go outside, but it was raining."],
+  ["O", "or", "Gives a choice", "Would you like tea or coffee?"],
+  ["Y", "yet", "Shows contrast", "She was tired, yet she continued working."],
+  ["S", "so", "Shows a result", "It was raining, so we stayed inside."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Conjunctions - Joining words and ideas</h1>
+  <p>
+    A <strong>conjunction</strong> connects words, phrases or clauses and shows how the ideas are related.
+    “Tom <strong>and</strong> Sam went to the park.” “I wanted to go outside, <strong>but</strong> it was
+    raining.” “We stayed inside <strong>because</strong> it was raining.”
+  </p>
+  <div class="summary-pair">
+    <section class="summary-block summary-blue">
+      <h2>Coordinating</h2>
+      <p>Joins parts that are <strong>equal</strong>.</p>
+      <p>The lights went out, <strong>but</strong> the torches still worked.</p>
+      <p>Both ideas are main ideas. <em>But</em> shows the contrast.</p>
+    </section>
+    <section class="summary-block summary-mint">
+      <h2>Subordinating</h2>
+      <p>Introduces a <strong>subordinate</strong> idea.</p>
+      <p>We used torches <strong>because</strong> it was dark.</p>
+      <p><em>Because</em> marks the reason for the main idea.</p>
+    </section>
+  </div>
+  <section class="summary-block summary-yellow">
+    <h2>FANBOYS — the seven coordinating conjunctions</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Letter</th>
+          <th class="th-rule" scope="col">Word and job</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          fanboys.map(([letter, word, job, example]) => (
+            <tr>
+              <th scope="row">{letter}</th>
+              <td>
+                <strong>{word}</strong> — {job}
+              </td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

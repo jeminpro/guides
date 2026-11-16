@@ -1,0 +1,78 @@
+---
+const rows = [
+  ["The cook tasted the soup.", "Action: the cook did the tasting."],
+  ["The soup tasted salty.", "Linking: tasted joins soup to salty."],
+  ["She looked at the clock.", "Action: she used her eyes."],
+  ["She looked tired.", "Linking: looked joins her to tired."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Verbs - Actions and states</h1>
+  <p>
+    A <strong>verb</strong> tells us about an action, occurrence or state. In “The fox <strong>jumped</strong>,”
+    it shows an action. In “The fox <strong>is</strong> hungry,” <em>is</em> links the subject to a
+    description.
+  </p>
+  <section class="summary-block summary-blue">
+    <h2>Action or linking?</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-example" scope="col">Sentence</th>
+          <th class="th-rule" scope="col">Job of the verb</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([sentence, job]) => (
+            <tr>
+              <td>{sentence}</td>
+              <td>{job}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    Action verbs include visible actions (<strong>run, lift, build</strong>) and less visible ones
+    (<strong>think, remember</strong>). Forms of <em>be</em> (<strong>am, is, are, was, were</strong>) often
+    link a subject to a description: “The soup <strong>smells</strong> delicious”; “He
+    <strong>became</strong> a doctor.”
+  </p>
+  <p>
+    A verb can contain more than one word. In “They <strong>were running</strong>,” <em>were</em> is a
+    helping verb and <em>running</em> is the main verb. Other groups include <strong>has finished</strong> and
+    <strong>might arrive</strong>. When you are asked for the whole verb, include the helping verb.
+  </p>
+  <p class="try-it">
+    <strong>Try it.</strong> Is <em>felt</em> an action or a linking verb in “I felt the rough stone” and
+    “The stone felt rough”? Find the whole verb in “The children were laughing.”
+  </p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Don’t drop the helping verb</h2>
+      <p>
+        The children running.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+      </p>
+      <p>
+        The children <strong>were running</strong>.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+    </section>
+    <section class="trap">
+      <h2>After a linking verb, use an adjective</h2>
+      <p>
+        The soup tastes wonderfully.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+      </p>
+      <p>
+        The soup tastes <strong>wonderful</strong>.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        <em>Tastes</em> links soup to a description.
+      </p>
+    </section>
+  </div>
+</div>

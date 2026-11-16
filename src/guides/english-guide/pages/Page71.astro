@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import ConnectPrepositions from "../ConnectPrepositions.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[70];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <ConnectPrepositions />
+</GuidePageShell>

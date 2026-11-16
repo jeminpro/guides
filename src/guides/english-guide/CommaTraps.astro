@@ -1,0 +1,87 @@
+---
+const traps = [
+  {
+    title: "Confusing Meaning",
+    body: "Commas can change meaning entirely:",
+    lines: [
+      { text: "Let’s eat, Grandma.", mark: "yes" },
+      { text: "Let’s eat Grandma.", mark: "no" }
+    ]
+  },
+  {
+    title: "Missing Commas in Fronted Phrases",
+    lines: [
+      { text: "Before the match the coach spoke.", mark: "no" },
+      { text: "Before the match, the coach spoke.", mark: "yes" }
+    ]
+  },
+  {
+    title: "Missing Commas in Direct Address",
+    lines: [
+      { text: "Sit down Ben.", mark: "no" },
+      { text: "Sit down, Ben.", mark: "yes" }
+    ]
+  },
+  {
+    title: "Random Commas",
+    body: "Don’t insert commas wherever you pause in speech. They must follow grammatical rules, not just breathing patterns.",
+    lines: [{ text: "The teacher, gave us homework.", mark: "no" }]
+  },
+  {
+    title: "Comma Splice",
+    body: "Two complete sentences joined only by a comma – incorrect!",
+    lines: [{ text: "It was late, we went home.", mark: "no" }],
+    fixLabel: "Fix it with:",
+    fixes: [
+      "a full stop → It was late. We went home.",
+      "a joining word → It was late, so we went home.",
+      "a semicolon → It was late; we went home."
+    ]
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Commas</h1>
+  <p class="topic-lead">Common traps</p>
+  <div class="trap-card">
+    {
+      traps.map((trap) => (
+        <section class="trap">
+          <h2>{trap.title}</h2>
+          {trap.body && <p>{trap.body}</p>}
+          {trap.lines?.map((line) => (
+            <p>
+              {line.text}
+              {line.mark === "no" && (
+                <span class="mark mark-no" aria-label="Incorrect">
+                  ✕
+                </span>
+              )}
+              {line.mark === "yes" && (
+                <span class="mark mark-yes" aria-label="Correct">
+                  ✓
+                </span>
+              )}
+            </p>
+          ))}
+          {trap.fixLabel && (
+            <p>
+              <span class="mark mark-yes" aria-hidden="true">
+                ✓
+              </span>
+              {trap.fixLabel}
+            </p>
+          )}
+          {trap.fixes && (
+            <ul>
+              {trap.fixes.map((fix) => (
+                <li>{fix}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))
+    }
+  </div>
+</div>

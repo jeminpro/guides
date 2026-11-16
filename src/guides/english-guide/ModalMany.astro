@@ -1,0 +1,45 @@
+---
+const situations = [
+  ["Weather", "It might snow.", "Possible, but uncertain."],
+  ["Weather", "It will snow.", "A confident prediction."],
+  ["House rule", "You may use the computer.", "Permission."],
+  ["House rule", "You must switch it off at eight.", "Obligation."],
+  ["Advice", "You should check your answer.", "A recommendation."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Modal Verbs - More than one meaning</h1>
+  <p>Use the whole sentence. A modal does not always have just one meaning. Ask: <strong>Is the speaker predicting, advising, allowing, or requiring?</strong></p>
+  <section class="summary-block summary-sand">
+    <h2>Must, may and should</h2>
+    <p>“You <strong>must</strong> wear a helmet.” Obligation: it is required. “You <strong>must</strong> be exhausted after that walk.” A strong inference: the speaker is almost certain.</p>
+    <p>“You <strong>may</strong> leave now.” Permission. “It <strong>may</strong> rain.” Possibility.</p>
+    <p>“You <strong>should</strong> practise.” Advice. “The train <strong>should</strong> arrive at six.” Expectation, not a guarantee.</p>
+  </section>
+  <section class="summary-block summary-blue">
+    <h2>Might is not the same as will</h2>
+    <p>“It <strong>might</strong> snow.” Snow is possible, but the speaker is unsure. “It <strong>will</strong> snow.” The speaker makes a confident prediction.</p>
+    <p><em>Should</em> and <em>must</em> are not simply steps on one certainty scale. <em>Should</em> may give advice or express an expectation. <em>Must</em> may express an obligation or a strong inference.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Situation</th>
+          <th class="th-example" scope="col">Sentence</th>
+          <th class="th-rule" scope="col">Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          situations.map(([situation, sentence, meaning]) => (
+            <tr>
+              <th scope="row">{situation}</th>
+              <td>{sentence}</td>
+              <td>{meaning}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

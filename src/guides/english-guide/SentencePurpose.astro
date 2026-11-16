@@ -1,0 +1,76 @@
+---
+const purposes = [
+  ["Statement", "The path is narrow.", "Tells us something."],
+  ["Question", "Is the path narrow?", "Asks something."],
+  ["Command", "Follow the narrow path.", "Tells someone to do something."],
+  ["Exclamation", "What a narrow path this is!", "Strong feeling. Often begins with What or How."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Sentence Structure - Purpose and repairs</h1>
+  <p>
+    Purpose is a second way to classify a sentence. Do not mix it with simple, compound and complex. A
+    sentence can be both: “Will you wait here while I fetch the map?” is a <strong>complex question</strong>.
+  </p>
+  <section class="summary-block summary-yellow">
+    <h2>By purpose</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Purpose</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">What it does</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          purposes.map(([purpose, example, job]) => (
+            <tr>
+              <th scope="row">{purpose}</th>
+              <td>{example}</td>
+              <td>{job}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="summary-stack">
+    <section class="summary-block summary-blue">
+      <h2>Change the form, keep the idea</h2>
+      <p>You are ready. → <strong>Are</strong> you ready? Move the helping verb.</p>
+      <p>You like tea. → <strong>Do</strong> you like tea? She likes tea. → <strong>Does</strong> she like tea?</p>
+      <p>You must open the door. → <strong>Open the door!</strong></p>
+      <p>It is a beautiful day. → <strong>What a beautiful day!</strong></p>
+    </section>
+    <section class="summary-block summary-green">
+      <h2>Change the focus</h2>
+      <p>Start: The children entered the hall.</p>
+      <p><strong>After lunch,</strong> the children entered the hall. Time phrase: no verb.</p>
+      <p><strong>When the bell rang,</strong> the children entered the hall. Time clause: <em>bell rang</em>.</p>
+      <p>The children <strong>who had finished lunch</strong> entered the hall. Relative clause.</p>
+    </section>
+  </div>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Fragments, run-ons and comma splices</h2>
+      <p>
+        Because the path was muddy.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        A subordinate clause left alone is a fragment.
+      </p>
+      <p>
+        The bell rang we hurried inside.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        The bell rang, <strong>and</strong> we hurried inside.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+      <p>
+        I was tired, I went to bed.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        A comma alone is a comma splice. Use <strong>so</strong>, a full stop, or a semicolon.
+      </p>
+    </section>
+  </div>
+</div>

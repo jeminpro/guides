@@ -1,0 +1,43 @@
+---
+const forms = [
+  ["Present perfect", "have/has + past participle", "She has finished her homework.", "Earlier than now, with a connection to the present."],
+  ["Past perfect", "had + past participle", "They had left when I arrived.", "Completed before another past event."],
+  ["Future perfect", "will have + past participle", "She will have finished by five.", "Expected to be complete before a future time."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Verb Tenses - Perfect forms</h1>
+  <section class="summary-block summary-mint">
+    <h2>Have plus a past participle</h2>
+    <p>A <strong>perfect</strong> form connects an earlier event or state to a later time. It uses a form of <strong>have</strong> plus a <strong>past participle</strong>, such as <em>finished, eaten</em> or <em>gone</em>.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Form</th>
+          <th class="th-rule" scope="col">Pattern</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-function" scope="col">Typical relationship</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          forms.map(([form, pattern, example, link]) => (
+            <tr>
+              <th scope="row">{form}</th>
+              <td>{pattern}</td>
+              <td set:html={example.replace(/(has finished|had left|will have finished)/, "<strong>$1</strong>")} />
+              <td>{link}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-sand">
+    <h2>Two uses of the present perfect</h2>
+    <p>It can describe experience: “I <strong>have visited</strong> London.”</p>
+    <p>It can describe a situation that began earlier and continues: “I <strong>have lived</strong> here for five years.”</p>
+    <p>The words around the verb show which meaning is intended.</p>
+  </section>
+</div>

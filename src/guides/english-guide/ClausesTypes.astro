@@ -1,0 +1,59 @@
+---
+const rows = [
+  ["We stayed indoors.", "because the wind was fierce", "Cause"],
+  ["We set off.", "when the rain stopped", "Time"],
+  ["We will play.", "if the pitch is dry", "Condition"],
+  ["She finished the race.", "although she was tired", "Contrast"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Clauses - Main and subordinate</h1>
+  <section class="summary-block summary-blue">
+    <h2>Main clause</h2>
+    <p>
+      A <strong>main clause</strong> makes sense on its own: <strong>The lights went out.</strong> Two main
+      clauses may be joined: “The lights went out, but the torches still worked.”
+    </p>
+    <p>
+      <strong>FSCE check.</strong> If you can split at the conjunction and both parts stand alone, you have
+      main clause + coordinating conjunction + main clause.
+    </p>
+  </section>
+  <section class="summary-block summary-peach">
+    <h2>Subordinate clause</h2>
+    <p>
+      A <strong>subordinate clause</strong> adds information and cannot normally stand alone. It may tell
+      when, why, or under what condition something happened.
+    </p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Main clause</th>
+          <th class="th-rule" scope="col">Subordinate clause</th>
+          <th class="th-example" scope="col">Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([main, sub, meaning]) => (
+            <tr>
+              <td>{main}</td>
+              <td>{sub}</td>
+              <td>{meaning}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    <strong>Because, when, if, although, while</strong> and <strong>before</strong> can introduce these
+    clauses. The clause can move: “When the rain stopped, we set off” / “We set off when the rain stopped.”
+    A comma usually follows an introductory subordinate clause.
+  </p>
+  <p class="try-it">
+    <strong>Try it.</strong> Would changing <em>because</em> to <em>although</em> change the story in “We
+    moved inside because it rained”? Explain the relationship, not just the word.
+  </p>
+</div>

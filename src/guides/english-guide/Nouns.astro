@@ -1,0 +1,81 @@
+---
+const types = [
+  ["Common", "A general name", "city, teacher, river"],
+  ["Proper", "A specific name, usually capitalised", "London, Aisha, River Severn"],
+  ["Collective", "A group named as one unit", "team, choir, flock"],
+  ["Abstract", "An idea, quality, feeling or state", "courage, kindness, fear"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Nouns - Naming words</h1>
+  <p>
+    A <strong>noun</strong> names a person, place, thing or idea. It can be the subject of a sentence or
+    appear elsewhere in it.
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>Types of noun</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Type</th>
+          <th class="th-rule" scope="col">Meaning</th>
+          <th class="th-example" scope="col">Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          types.map(([type, meaning, examples]) => (
+            <tr>
+              <th scope="row">{type}</th>
+              <td>{meaning}</td>
+              <td>{examples}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    In “The team of players arrived,” <strong>team</strong> is the collective noun and
+    <strong>players</strong> is an ordinary plural. <em>City</em> is common; <strong>Gloucester</strong> is
+    proper. Abstract nouns name things we can discuss but not usually hold, such as <strong>hope</strong> or
+    <strong>pride</strong>.
+  </p>
+  <p>
+    A word’s job can change. “A <strong>run</strong> around the park was fun” uses <em>run</em> as a noun.
+    “I <strong>run</strong> around the park” uses it as a verb. Decide from the sentence, not from the word
+    alone.
+  </p>
+  <p class="try-it">
+    <strong>Try it.</strong> In “Maya showed great patience,” find the proper noun and the abstract noun.
+  </p>
+  <p class="topic-lead">Tips and traps</p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Capitalise the specific name</h2>
+      <p>
+        We swam in the river.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        A common noun stays lower case.
+      </p>
+      <p>
+        We swam in the River Severn.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        The name of one river is proper.
+      </p>
+    </section>
+    <section class="trap">
+      <h2>A plural is not always collective</h2>
+      <p>
+        <strong>Players</strong> names more than one person. <strong>Team</strong> names the group as one unit.
+      </p>
+      <p>The team is ready. <span class="mark mark-yes" aria-label="Correct">✓</span> The group acts as one.</p>
+      <p>
+        The team are wearing their shirts.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        British English can use a plural verb when you mean the members.
+      </p>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+---
+const notes = [
+  {
+    tone: "summary-sand",
+    title: "And — adding",
+    lines: [
+      "Adds words, phrases or clauses: red and blue; Tom and Sarah; the sun was shining and the birds were singing.",
+      "And does not always join clauses. Its job is to connect and add."
+    ]
+  },
+  {
+    tone: "summary-blue",
+    title: "But — contrast",
+    lines: [
+      "It was raining, but we went outside.",
+      "The rain would make us expect them to stay in. But signals the surprise."
+    ]
+  },
+  {
+    tone: "summary-mint",
+    title: "Or — a choice",
+    lines: [
+      "We can walk home or we can take the bus.",
+      "The choice need not be two clauses: a red or blue pencil."
+    ]
+  },
+  {
+    tone: "summary-yellow",
+    title: "So — a result",
+    lines: [
+      "It was raining, so we stayed inside.",
+      "Read it as cause → result. So introduces what happened because of the first idea."
+    ]
+  },
+  {
+    tone: "summary-peach",
+    title: "For — a formal reason",
+    lines: [
+      "We stayed inside, for it was raining heavily. This formal for is close to because.",
+      "Everyday English uses because: We stayed inside because it was raining."
+    ]
+  },
+  {
+    tone: "summary-pink",
+    title: "Nor — another negative",
+    lines: [
+      "He didn’t apologise, nor did he explain.",
+      "Neither Tom nor Sam wanted to go. Nor joins the two negative choices."
+    ]
+  },
+  {
+    tone: "summary-lilac",
+    title: "Yet — contrast, or “up to now”",
+    lines: [
+      "She was tired, yet she continued. Yet means despite this. It is a conjunction, like but.",
+      "I haven’t finished yet. Here yet means up to now. It is an adverb, not a conjunction."
+    ]
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Conjunctions</h1>
+  <p class="topic-lead">Coordinating — FANBOYS</p>
+  <div class="summary-stack">
+    {
+      notes.map((note) => (
+        <section class:list={["summary-block", note.tone]}>
+          <h2>{note.title}</h2>
+          {note.lines.map((line) => (
+            <p>{line}</p>
+          ))}
+        </section>
+      ))
+    }
+  </div>
+</div>

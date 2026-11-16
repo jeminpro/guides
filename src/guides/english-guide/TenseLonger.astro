@@ -1,0 +1,43 @@
+---
+const forms = [
+  ["Present perfect progressive", "have/has been + verb-ing", "She has been studying for two hours."],
+  ["Past perfect progressive", "had been + verb-ing", "They had been waiting for an hour when the bus came."],
+  ["Future perfect progressive", "will have been + verb-ing", "By June, I will have been working here for ten years."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Verb Tenses - Perfect progressive</h1>
+  <section class="summary-block summary-blue">
+    <h2>Continuing up to a point in time</h2>
+    <p>Perfect progressive forms focus on an action continuing over a period up to a reference time.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Form</th>
+          <th class="th-rule" scope="col">Pattern</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          forms.map(([form, pattern, example]) => (
+            <tr>
+              <th scope="row">{form}</th>
+              <td>{pattern}</td>
+              <td set:html={example.replace(/(has been studying|had been waiting|will have been working)/, "<strong>$1</strong>")} />
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>These longer forms are useful to recognise. Focus on the pattern and the time relationship, rather than memorising a label without understanding the sentence.</p>
+  </section>
+  <section class="summary-block summary-pink">
+    <h2>Keep the time line consistent</h2>
+    <p>Connected events in the same past time normally use past forms: “Ella <strong>opened</strong> the box, <strong>found</strong> a note and <strong>read</strong> it.”</p>
+    <p>“Ella <strong>opened</strong> the box, <strong>finds</strong> a note and <strong>read</strong> it” changes tense without a reason.</p>
+    <p>A change of tense is right when the time changes: “Last year I <strong>walked</strong> to school; now I <strong>cycle</strong>.”</p>
+    <p>Quoted speech can use a different tense from its reporting verb: “Mia <strong>said</strong>, ‘I <strong>am</strong> ready.’” Do not force every verb into one tense. Check what each verb refers to.</p>
+  </section>
+</div>

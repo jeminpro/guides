@@ -1,0 +1,47 @@
+---
+const words = [
+  ["quietly", "He spoke quietly. It tells us how he spoke.", "Adverb"],
+  ["friendly", "A friendly neighbour. It describes the noun neighbour.", "Adjective"],
+  ["fast", "A fast train. It describes the train.", "Adjective"],
+  ["fast", "The train moved fast. It tells us how the train moved.", "Adverb"],
+  ["early", "An early train. It describes the train.", "Adjective"],
+  ["early", "We arrived early. It tells us when we arrived.", "Adverb"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Adverbs - Position and -ly</h1>
+  <section class="summary-block summary-yellow">
+    <h2>An adverb can move</h2>
+    <p>Do not call a word an adverb just because it sits at the end.</p>
+    <p><strong>Later</strong>, we played chess. We played chess <strong>later</strong>.</p>
+    <p>He <strong>often reads</strong>. The adverb comes before an ordinary verb.</p>
+    <p>He <strong>is often</strong> late. After <em>be</em>, the adverb follows the verb.</p>
+    <p><strong>Perhaps</strong> she left. She <strong>perhaps</strong> left. Some positions sound more natural than others.</p>
+  </section>
+  <section class="summary-block summary-mint">
+    <h2>-ly is a clue, not a rule</h2>
+    <p>Many adverbs end in <em>-ly</em>. Not every <em>-ly</em> word is an adverb, and not every adverb ends in <em>-ly</em>.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-example" scope="col">How it is used</th>
+          <th class="th-rule" scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          words.map(([word, use, type]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{use}</td>
+              <td>{type}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>In “The <strong>friendly</strong> guide spoke <strong>clearly</strong>,” <em>friendly</em> describes the noun <em>guide</em>, so it is an adjective. <em>Clearly</em> tells how the guide spoke, so it is an adverb. The job in the sentence matters more than the ending.</p>
+  </section>
+</div>

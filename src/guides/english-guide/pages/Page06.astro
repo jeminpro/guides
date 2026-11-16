@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import SentenceEndings from "../SentenceEndings.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[5];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <SentenceEndings />
+</GuidePageShell>

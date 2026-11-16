@@ -1,0 +1,66 @@
+---
+const rows = [
+  {
+    feature: "Quotation Marks",
+    rule: "Around spoken words",
+    example: "“I’m coming.”",
+    trap: "Missing opening or closing mark"
+  },
+  {
+    feature: "Capital Letter",
+    rule: "First word inside speech",
+    example: "“Can you help?”",
+    trap: "Forgetting capital after quote"
+  },
+  {
+    feature: "Comma Inside",
+    rule: "Before reporting clause",
+    example: "“I’m here,” said Jake.",
+    trap: "Comma outside"
+  },
+  {
+    feature: "New Line",
+    rule: "For each new speaker",
+    example: "“Hi,” said Ben. “Hello,” said Em.",
+    trap: "Dialogue all in one line"
+  },
+  {
+    feature: "Split Speech",
+    rule: "Inside + outside commas",
+    example: "“I know,” he said, “you’ll be fine.”",
+    trap: "Forgetting second comma"
+  },
+  {
+    feature: "Punctuation Inside",
+    rule: "?, !, . inside quotes",
+    example: "“Stop!” shouted Ella.",
+    trap: "Putting mark after quotes"
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Speech Marks - When to use</h1>
+  <table class="punct-table">
+    <thead>
+      <tr>
+        <th class="th-feature" scope="col">Feature</th>
+        <th class="th-rule" scope="col">Rule</th>
+        <th class="th-example" scope="col">Example</th>
+        <th class="th-trap" scope="col">Trap</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr>
+            <th scope="row">{row.feature}</th>
+            <td>{row.rule}</td>
+            <td>{row.example}</td>
+            <td>{row.trap}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

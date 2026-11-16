@@ -1,0 +1,89 @@
+---
+const rows = [
+  ["Subject", "Does the action: I, he, she, we, they", "She waved."],
+  ["Object", "Receives the action, or follows a preposition: me, him, her, us, them", "Sam saw her."],
+  ["Possessive", "Stands for something belonging to someone: mine, yours, hers, ours, theirs", "The red bag is hers."],
+  ["Reflexive", "Points back to the subject: myself, himself, herself, ourselves", "She taught herself."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Pronouns - Referring without repetition</h1>
+  <p>
+    A <strong>pronoun</strong> stands in for a noun or noun phrase: “<strong>Lucy</strong> found a key.
+    <strong>She</strong> kept <strong>it</strong> safe.” <em>She</em> refers to Lucy; <em>it</em> refers to the
+    key. The person or thing a pronoun refers to is its <strong>referent</strong>. The reader must be able to
+    tell what that referent is.
+  </p>
+  <section class="summary-block summary-lilac">
+    <h2>Jobs of pronouns</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Job</th>
+          <th class="th-rule" scope="col">Examples</th>
+          <th class="th-example" scope="col">Sentence</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([job, examples, sentence]) => (
+            <tr>
+              <th scope="row">{job}</th>
+              <td>{examples}</td>
+              <td>{sentence}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    To check a pair, cover the other person. “Maya and <strong>I</strong> went” still works as “<strong>I</strong>
+    went.” “Dad drove Maya and <strong>me</strong>” still works as “Dad drove <strong>me</strong>.”
+  </p>
+  <p>
+    “That coat is <strong>mine</strong>” uses a possessive pronoun. “That is <strong>my coat</strong>” uses a
+    determiner. <em>His</em> can do both jobs. <strong>Its</strong> means belonging to it; <strong>it’s</strong>
+    means <em>it is</em> or <em>it has</em>.
+  </p>
+  <p class="try-it">
+    <strong>Try it.</strong> Choose <em>He/Him</em> in “___ carried the bags,” and <em>we/us</em> in “The
+    teacher spoke to ___.” Why could “Ravi told Omar he was late” be unclear?
+  </p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>I, me and made-up reflexives</h2>
+      <p>
+        Me and Maya went.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        Maya and <strong>I</strong> went.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+      <p>
+        He taught hisself.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        He taught <strong>himself</strong>.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+      <p>
+        They hurt theirselves.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+        They hurt <strong>themselves</strong>.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+    </section>
+    <section class="trap">
+      <h2>Make the referent clear</h2>
+      <p>
+        Ava told Lily she had won.
+        <span class="mark mark-no" aria-label="Unclear">✕</span>
+        <em>She</em> could be Ava or Lily.
+      </p>
+      <p>
+        Ava told Lily, “You have won.”
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+      </p>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,814 @@
+/* English Mastery — A4 cheat sheets */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,750&family=Nunito:wght@800&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+:root {
+  --paper: #ffffff;
+  --ink: #1c2430;
+  --ink-muted: #5c6775;
+  --navy: #1c2430;
+  --ink-blue: #1f4e79;
+  --ink-blue-soft: #e8f0f7;
+  --rule: #dde3ea;
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --pad: 7.5mm;
+  --gap: 2mm;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  margin: 0 auto;
+  padding: var(--pad);
+  background: var(--paper);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 11pt;
+  line-height: 1.35;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3mm;
+  padding-bottom: 3.2mm;
+  margin-bottom: 3mm;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.page-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.6mm;
+  background: var(--ink-blue);
+}
+
+.page-header .brand {
+  font-family: var(--font-display);
+  font-weight: 750;
+  font-size: 16pt;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+.page-header .brand span {
+  color: var(--ink-blue);
+}
+
+.page-header .brand {
+  flex-shrink: 0;
+}
+
+.page-header .section-label {
+  max-width: 62%;
+  font-weight: 700;
+  font-size: 9pt;
+  line-height: 1.25;
+  color: var(--ink-blue);
+  background: var(--ink-blue-soft);
+  padding: 1.1mm 2.8mm;
+  border-radius: 999px;
+  text-align: right;
+}
+
+.page-footer {
+  margin-top: auto;
+  padding-top: 2mm;
+  border-top: 1.5px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+.page-footer span:last-child {
+  background: var(--navy);
+  color: #fff;
+  padding: 0.7mm 2.4mm;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 8.5pt;
+}
+
+.page-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.tone-comprehension {
+  --banner: #d6e0fc;
+}
+
+.tone-punctuation {
+  --banner: #d4f0e2;
+}
+
+.tone-grammar {
+  --banner: #fde7c8;
+}
+
+.tone-vocabulary {
+  --banner: #f6d5e6;
+}
+
+.section-banner {
+  margin-block: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32mm;
+  padding: 8mm 10mm;
+  border: 1.75px solid #1c2430;
+  border-radius: 5mm;
+  background: var(--banner);
+  text-align: center;
+}
+
+.section-banner h1 {
+  margin: 0;
+  max-width: 22ch;
+  font-family: "Nunito", sans-serif;
+  font-size: 20pt;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-wrap: balance;
+  color: #1c2430;
+}
+
+.punct-map {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10mm;
+  min-height: 0;
+}
+
+.punct-map h1 {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 18pt;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1c2430;
+}
+
+.hex-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5mm;
+  width: 100%;
+}
+
+.hex-row {
+  display: flex;
+  justify-content: center;
+  gap: 3.2mm;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hex {
+  --hex-fill: #7b9ef2;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 34mm;
+  aspect-ratio: 0.8660254;
+  margin: 0;
+}
+
+.hex-shape {
+  position: absolute;
+  inset: 0;
+  background: #1c2430;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hex-shape::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hex-fill);
+  clip-path: inherit;
+  transform: scale(0.93);
+}
+
+.hex-label {
+  position: relative;
+  z-index: 1;
+  max-width: 78%;
+  font-family: "Nunito", sans-serif;
+  font-size: 7.5pt;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1c2430;
+}
+
+.hex-capital {
+  --hex-fill: #6f97ef;
+}
+
+.hex-endings {
+  --hex-fill: #4ec4c0;
+}
+
+.hex-commas {
+  --hex-fill: #b5d56a;
+}
+
+.hex-apostrophes {
+  --hex-fill: #f2d34a;
+}
+
+.hex-speech {
+  --hex-fill: #f3a4cb;
+}
+
+.hex-colons {
+  --hex-fill: #c9a4e6;
+}
+
+.hex-dashes {
+  --hex-fill: #8eb4f7;
+}
+
+.hex-ellipsis {
+  --hex-fill: #7ed4d2;
+}
+
+.topic-sheet {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 2.2mm;
+}
+
+.topic-sheet h1 {
+  margin: 0 0 0.6mm;
+  color: #1c2430;
+  font-family: "Nunito", sans-serif;
+  font-size: 16pt;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.capitals-use .topic-sheet h1,
+.capitals-traps .topic-sheet h1,
+.sentence-endings .topic-sheet h1,
+.commas-use .topic-sheet h1,
+.commas-traps .topic-sheet h1,
+.apostrophes .topic-sheet h1,
+.apostrophe-traps .topic-sheet h1,
+.speech-marks .topic-sheet h1,
+.colons .topic-sheet h1,
+.dashes .topic-sheet h1,
+.ellipsis .topic-sheet h1,
+.grammar-summary .topic-sheet h1,
+.grammar-topic .topic-sheet h1 {
+  font-size: 18.5pt;
+}
+
+.topic-lead {
+  margin: -0.8mm 0 0.4mm;
+  color: #1c2430;
+  font-family: "Nunito", sans-serif;
+  font-size: 13pt;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4mm;
+  margin: 0;
+  padding: 0 0 0 4.8mm;
+  list-style: none;
+}
+
+.rule {
+  position: relative;
+  margin: 0;
+  padding: 2.2mm 3.2mm 2.2mm 6.2mm;
+  border: 1.6px solid #1c2430;
+  border-radius: 2.2mm;
+  background: var(--rule-fill);
+}
+
+.rule-num {
+  position: absolute;
+  top: 3.4mm;
+  left: 0;
+  display: grid;
+  width: 9mm;
+  height: 9mm;
+  place-items: center;
+  transform: translateX(-50%);
+  border: 1.6px solid #1c2430;
+  border-radius: 50%;
+  background: var(--rule-badge);
+  color: #1c2430;
+  font-family: "Nunito", sans-serif;
+  font-size: 13pt;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rule h2 {
+  margin: 0 0 0.4mm;
+  font-family: "Nunito", sans-serif;
+  font-size: 13pt;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.rule p,
+.rule li {
+  margin: 0;
+  font-size: 11.5pt;
+  line-height: 1.32;
+}
+
+.rule ul {
+  margin: 0.2mm 0 0;
+  padding-left: 3.6mm;
+}
+
+.rule-label {
+  font-weight: 800;
+}
+
+.rule-note {
+  margin-top: 0.6mm;
+}
+
+.rule-sentence {
+  --rule-fill: #d9e2fb;
+  --rule-badge: #7aa2ef;
+}
+
+.rule-pronoun {
+  --rule-fill: #d4f3ea;
+  --rule-badge: #5ec8c0;
+}
+
+.rule-proper {
+  --rule-fill: #e7f4c8;
+  --rule-badge: #8fce55;
+}
+
+.rule-titles {
+  --rule-fill: #f8e99a;
+  --rule-badge: #f0cc3d;
+}
+
+.rule-speech {
+  --rule-fill: #f8d5c4;
+  --rule-badge: #e89a88;
+}
+
+.rule-acronyms {
+  --rule-fill: #f6c5d2;
+  --rule-badge: #ee8aaa;
+}
+
+.rule-linking {
+  --rule-fill: #e4d8f8;
+  --rule-badge: #b794e8;
+}
+
+.sentence-endings .rule-list {
+  flex: 0 0 auto;
+  gap: 2mm;
+}
+
+.sentence-endings .topic-lead {
+  margin-top: 1mm;
+}
+
+.rule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2mm 5mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rule-grid .rule {
+  margin-left: 4.6mm;
+  padding: 1.6mm 2.2mm 1.6mm 4.4mm;
+}
+
+.rule-grid .rule-num {
+  top: 2.4mm;
+  width: 8mm;
+  height: 8mm;
+}
+
+.trap ul {
+  margin: 0.3mm 0 0;
+  padding-left: 4.2mm;
+}
+
+.trap-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3.5mm;
+  min-height: 0;
+  margin: 0;
+  padding: 4mm 3.6mm;
+  border: 1.75px solid #1c2430;
+  border-radius: 4mm;
+  background: #e7e0f8;
+}
+
+.trap h2 {
+  margin: 0 0 0.6mm;
+  font-family: "Nunito", sans-serif;
+  font-size: 13pt;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.trap p,
+.trap li {
+  margin: 0;
+  font-size: 11.5pt;
+  line-height: 1.32;
+}
+
+.trap-tip {
+  text-decoration: underline;
+  text-underline-offset: 0.4mm;
+}
+
+.mark {
+  margin-left: 1.2mm;
+  font-weight: 800;
+}
+
+.rule-label .mark {
+  margin-left: 0;
+  margin-right: 1.2mm;
+}
+
+.mark-no {
+  color: #d64545;
+}
+
+.mark-yes {
+  color: #2f9e4f;
+}
+
+.info-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 3mm;
+}
+
+.info-card {
+  margin: 0;
+  padding: 2.6mm 3.2mm;
+  border: 1.6px solid #1c2430;
+  border-radius: 2.4mm;
+  background: var(--card);
+}
+
+.info-card h2,
+.info-card h3 {
+  margin: 0 0 0.6mm;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.info-card h2 {
+  font-size: 13pt;
+}
+
+.info-card h3 {
+  margin-top: 1.6mm;
+  font-size: 12pt;
+}
+
+.info-card p,
+.info-card li {
+  margin: 0;
+  font-size: 11.5pt;
+  line-height: 1.32;
+}
+
+.info-card ul {
+  margin: 0.3mm 0 0;
+  padding-left: 4.2mm;
+}
+
+.card-contraction {
+  --card: #f8e99a;
+}
+
+.card-possession {
+  --card: #f6c5d2;
+}
+
+.card-dash {
+  --card: #d9e2fb;
+}
+
+.card-hyphen {
+  --card: #e4d8f8;
+}
+
+.card-brackets {
+  --card: #f8e99a;
+}
+
+.punct-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5pt;
+  line-height: 1.28;
+}
+
+.punct-table th,
+.punct-table td {
+  border: 1.5px solid #1c2430;
+  padding: 1.8mm 2mm;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.punct-table th {
+  font-family: "Nunito", sans-serif;
+  font-size: 12pt;
+  font-weight: 800;
+  text-align: center;
+}
+
+.punct-table td strong {
+  font-weight: 700;
+}
+
+.th-feature {
+  background: #d9e2fb;
+}
+
+.th-rule {
+  background: #d4f3ea;
+}
+
+.th-example {
+  background: #f8e99a;
+}
+
+.th-trap {
+  background: #f8d5c4;
+}
+
+.th-function {
+  background: #d4f3ea;
+}
+
+.th-colon {
+  background: #f8e99a;
+}
+
+.th-semi {
+  background: #f6c5d2;
+}
+
+.colons .punct-table {
+  background: #fff8e8;
+}
+
+.grammar-summary .summary-table,
+.grammar-topic .summary-table {
+  font-size: 11.5pt;
+  line-height: 1.28;
+}
+
+.grammar-summary .summary-table col.concept,
+.grammar-topic .summary-table col.concept {
+  width: 26%;
+}
+
+.grammar-summary .summary-table col.practise,
+.grammar-topic .summary-table col.practise {
+  width: 34%;
+}
+
+.grammar-summary .summary-table col.example,
+.grammar-topic .summary-table col.example {
+  width: 40%;
+}
+
+.grammar-summary .summary-table th,
+.grammar-summary .summary-table td,
+.grammar-topic .summary-table th,
+.grammar-topic .summary-table td {
+  padding: 1.25mm 1.7mm;
+}
+
+.grammar-summary .summary-table tbody th,
+.grammar-topic .summary-table tbody th {
+  font-size: 11.5pt;
+  text-align: left;
+  background: #fff;
+}
+
+.grammar-topic .topic-sheet p,
+.grammar-topic .topic-sheet li {
+  font-size: 11.5pt;
+  line-height: 1.32;
+}
+
+.grammar-topic .topic-sheet > p:not(.topic-lead):not(.try-it) {
+  margin: 0;
+}
+
+.summary-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.6mm;
+}
+
+.try-it {
+  margin: 0;
+  padding: 1.6mm 2.4mm;
+  border: 1.6px solid #1c2430;
+  border-radius: 2.2mm;
+  background: #f8e99a;
+}
+
+.trap-compact {
+  padding: 2.6mm 3.2mm;
+  gap: 2.2mm;
+}
+
+.conjunction-uses .summary-stack {
+  gap: 1.5mm;
+}
+
+.conjunction-uses .summary-block h2 {
+  padding: 1mm 2.2mm;
+}
+
+.conjunction-uses .summary-block > p {
+  padding-top: 0.5mm;
+}
+
+.conjunction-uses .summary-block > p:last-child {
+  padding-bottom: 1mm;
+}
+
+.drill {
+  display: flex;
+  flex-direction: column;
+  gap: 2mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.drill-q {
+  margin: 0;
+  padding: 1.4mm 2.2mm 1.6mm;
+  border: 1.5px solid #1c2430;
+  border-radius: 2.2mm;
+  background: #fff;
+}
+
+.drill-q p,
+.drill-opts li {
+  margin: 0;
+}
+
+.drill-opts {
+  margin: 0.5mm 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.summary-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6mm;
+}
+
+.summary-block {
+  border: 1.6px solid #1c2430;
+  border-radius: 2.4mm;
+  overflow: hidden;
+  background: #fff;
+}
+
+.summary-block h2 {
+  margin: 0;
+  padding: 1.3mm 2.2mm;
+  background: var(--block);
+  font-family: "Nunito", sans-serif;
+  font-size: 13pt;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.summary-block > p {
+  padding: 1mm 2.2mm 0;
+}
+
+.summary-block > p:last-child {
+  padding-bottom: 1.6mm;
+}
+
+.summary-block .summary-table {
+  border-style: hidden;
+}
+
+.summary-sand {
+  --block: #fde7c8;
+}
+
+.summary-blue {
+  --block: #d9e2fb;
+}
+
+.summary-mint {
+  --block: #d4f3ea;
+}
+
+.summary-yellow {
+  --block: #f8e99a;
+}
+
+.summary-pink {
+  --block: #f6c5d2;
+}
+
+.summary-peach {
+  --block: #f8d5c4;
+}
+
+.summary-lilac {
+  --block: #e4d8f8;
+}
+
+.summary-green {
+  --block: #e7f4c8;
+}
+
+.summary-rose {
+  --block: #f6d5e6;
+}

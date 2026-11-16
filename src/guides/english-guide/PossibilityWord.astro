@@ -1,0 +1,43 @@
+---
+const rows = [
+  ["The concert might start late.", "might", "Modal verb"],
+  ["The concert will probably start late.", "probably", "Adverb of possibility"],
+  ["The concert might possibly start late.", "might / possibly", "Modal verb / adverb"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Possibility - Modal or adverb?</h1>
+  <section class="summary-block summary-blue">
+    <h2>Look at the word and its job</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-example" scope="col">Sentence</th>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-rule" scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([sentence, word, type]) => (
+            <tr>
+              <td>{sentence}</td>
+              <td>{word}</td>
+              <td>{type}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>A sentence can contain both. “Might possibly” can sound repetitive, because both words express possibility.</p>
+    <p>If a question asks for a modal verb, do not choose <em>probably</em>. If it asks for an adverb of possibility, do not choose <em>might</em>.</p>
+  </section>
+  <section class="summary-block summary-green">
+    <h2>More than one kind of word</h2>
+    <p>“<strong>Perhaps</strong> the parcel will arrive <strong>tomorrow</strong>.”</p>
+    <p><em>Perhaps</em> is an adverb of possibility. It shows uncertainty.</p>
+    <p><em>Will arrive</em> is the verb group. <em>Will</em> is the modal verb.</p>
+    <p><em>Tomorrow</em> is a time adverb. It tells when the parcel may arrive.</p>
+  </section>
+</div>

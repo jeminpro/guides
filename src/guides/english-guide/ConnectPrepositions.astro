@@ -1,0 +1,45 @@
+---
+const places = [
+  ["before", "before breakfast", "Earlier than breakfast"],
+  ["after", "after school", "Later than school"],
+  ["during", "during the concert", "Within the time of the concert"],
+  ["beside", "beside the river", "Next to the river"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Connecting Ideas - Prepositions</h1>
+  <section class="summary-block summary-green">
+    <h2>Before a noun phrase</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          places.map(([word, example, meaning]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{example}</td>
+              <td>{meaning}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p><strong>Beside</strong> means next to: “The bag is <strong>beside</strong> the chair.” <strong>Besides</strong> can mean in addition: “<strong>Besides</strong> tea, we have juice.”</p>
+    <p>“<strong>During the concert</strong>” is followed by a noun phrase. “<strong>While we listened</strong>” is followed by a clause. Say “while we listened”, not “during we listened”.</p>
+    <p>Other place phrases: <em>above the door, beyond the bridge, across the field</em>. “We found a café <strong>nearby</strong>” uses <em>nearby</em> as a place adverb.</p>
+  </section>
+  <section class="summary-block summary-yellow">
+    <h2>The same outing, three claims</h2>
+    <p>“We left <strong>because the show ended</strong>” gives a reason. “The show ended. <strong>Afterwards</strong>, we left” shows sequence. “We left <strong>after the show</strong>” shows time with a noun phrase.</p>
+    <p>Something happening after another event does not automatically mean it happened because of that event.</p>
+    <p>To choose a connector: name the relationship, check what follows, read the sentence, then test another word.</p>
+    <p>“We stayed indoors _____ the heavy rain.” <em>The heavy rain</em> is a noun phrase. <strong>During</strong> tells when. <strong>Because of</strong> tells why. <em>Because the heavy rain</em> is incomplete. <em>Because</em> needs a clause, such as <em>because it was raining heavily</em>.</p>
+  </section>
+</div>

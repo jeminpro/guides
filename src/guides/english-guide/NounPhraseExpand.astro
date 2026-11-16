@@ -1,0 +1,60 @@
+---
+const details = [
+  ["Determiner", "the puppy; those books", "Identifies or specifies the noun."],
+  ["Adjective", "the fluffy puppy", "Describes a quality."],
+  ["Noun modifier", "the school bus; a chocolate cake", "Says what kind of noun."],
+  ["Prepositional phrase", "the puppy with a red collar", "Adds a relationship or further detail."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Noun Phrases - Expanding them</h1>
+  <section class="summary-block summary-mint">
+    <h2>Prepositional phrases</h2>
+    <p>Words such as <strong>with, under, beside, near</strong> and <strong>in</strong> can add information about a noun.</p>
+    <p>the girl <strong>with the silver backpack</strong> — which girl?</p>
+    <p>the cabin <strong>beside the lake</strong> — which cabin?</p>
+    <p>the letter <strong>in the blue envelope</strong> — which letter?</p>
+    <p>
+      <em>With a silver backpack</em> contains another noun phrase, <em>a silver backpack</em>. That nesting is
+      normal. In “The girl with the silver backpack <strong>ran quickly</strong>,” <em>ran quickly</em> is what
+      she did. It is not part of the noun phrase.
+    </p>
+  </section>
+  <section class="summary-block summary-lilac">
+    <h2>Build it in steps</h2>
+    <p><strong>1. a puppy</strong> — names a young dog.</p>
+    <p><strong>2. a fluffy puppy</strong> — adds a quality.</p>
+    <p><strong>3. the small, fluffy puppy</strong> — adds size and points to one puppy.</p>
+    <p><strong>4. the small, fluffy puppy with a red collar</strong> — one expanded noun phrase, not a sentence. It has no main verb.</p>
+    <p>In “<strong>The small, fluffy puppy with a red collar</strong> slept,” the bold group is the subject and <em>slept</em> is the verb.</p>
+  </section>
+  <section class="summary-block summary-sand">
+    <h2>What each detail does</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Added detail</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">What it does</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          details.map(([kind, example, job]) => (
+            <tr>
+              <th scope="row">{kind}</th>
+              <td>{example}</td>
+              <td>{job}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    <em>The, a, my</em> and <em>those</em> often belong in a noun phrase. Adding only <em>the</em> is not the
+    richer description meant by an <strong>expanded</strong> noun phrase. In “the fluffy puppy with a red
+    collar,” the expansion is <em>fluffy</em> and <em>with a red collar</em>.
+  </p>
+</div>

@@ -1,0 +1,49 @@
+---
+const phrases = [
+  ["the curious fox", "Names who is involved: a noun phrase."],
+  ["beside the gate", "Tells where: a prepositional phrase."],
+  ["after the storm", "Tells when."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Sentence Structure - Sentences and phrases</h1>
+  <p>
+    A <strong>sentence</strong> expresses a complete thought. It normally has a <strong>subject</strong> (who
+    or what it is about) and a <strong>verb</strong> (what happens, or what the subject is). It begins with a
+    capital letter and ends with suitable punctuation.
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>Subject and predicate</h2>
+    <p>
+      <strong>The curious fox</strong> <strong>waited</strong> beside the gate.
+    </p>
+    <p>Subject: <strong>the curious fox</strong>. Predicate: <strong>waited beside the gate</strong>.</p>
+    <p>Ask “Who or what?” then “What about it?” In <strong>Wait here!</strong> the subject <em>you</em> is understood.</p>
+  </section>
+  <section class="summary-block summary-blue">
+    <h2>A phrase is not a full statement</h2>
+    <p>
+      A <strong>phrase</strong> works as a unit, but it does not have its own subject and complete verb. A
+      noun phrase can be as short as <strong>fox</strong>. Test what the words do in the sentence.
+    </p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Phrase</th>
+          <th class="th-rule" scope="col">What it contributes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          phrases.map(([phrase, job]) => (
+            <tr>
+              <th scope="row">{phrase}</th>
+              <td>{job}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

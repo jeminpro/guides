@@ -1,0 +1,327 @@
+---
+interface Props {
+  start: number;
+  end: number;
+}
+
+type Mark = "no" | "yes";
+type Bit = string | { text: string; strong?: boolean; mark?: Mark };
+type Row = { concept: string; practise: string; example: Bit[] };
+
+const { start, end } = Astro.props;
+const blockTones = [
+  "summary-sand",
+  "summary-blue",
+  "summary-mint",
+  "summary-yellow",
+  "summary-pink",
+  "summary-peach",
+  "summary-lilac",
+  "summary-green",
+  "summary-rose"
+];
+
+const sections: { title: string; rows: Row[] }[] = [
+  {
+    title: "1. Parts of Speech",
+    rows: [
+      {
+        concept: "Nouns",
+        practise: "Common, proper, collective, abstract",
+        example: ["London, team, courage"]
+      },
+      {
+        concept: "Verbs",
+        practise: "Action, being, linking verbs",
+        example: ["run, is, become"]
+      },
+      {
+        concept: "Adjectives",
+        practise: "Descriptive and comparative forms",
+        example: ["tall, taller, tallest"]
+      },
+      {
+        concept: "Adverbs",
+        practise: "Manner, place, time, frequency",
+        example: ["quietly, often, here"]
+      },
+      {
+        concept: "Pronouns",
+        practise: "Subject, object, possessive, reflexive",
+        example: ["he, him, his, himself"]
+      },
+      {
+        concept: "Prepositions",
+        practise: "Position, direction, time",
+        example: ["under, across, before"]
+      },
+      {
+        concept: "Conjunctions",
+        practise: "Coordinating (and, but, or), subordinating (because, although)",
+        example: ["He came ", { text: "although", strong: true }, " he was tired."]
+      },
+      {
+        concept: "Determiners",
+        practise: "Articles, quantifiers, demonstratives",
+        example: ["the, some, those"]
+      },
+      {
+        concept: "Interjections",
+        practise: "Emotion words",
+        example: ["Oh! Wow! Hurray!"]
+      },
+      {
+        concept: "Articles",
+        practise: "a / an / the / no article",
+        example: ["“a whisper” vs “the whispers”"]
+      }
+    ]
+  },
+  {
+    title: "2. Verb Forms and Tenses",
+    rows: [
+      {
+        concept: "Present, past, future",
+        practise: "Simple, continuous, perfect",
+        example: ["I walk, I walked, I have walked"]
+      },
+      {
+        concept: "Consistent tense use",
+        practise: "Avoid tense shifts",
+        example: ["He ran and ", { text: "won", strong: true }, " (not “runs”)"]
+      },
+      {
+        concept: "Irregular verbs",
+        practise: "Non-standard past forms",
+        example: ["go → went, buy → bought"]
+      },
+      {
+        concept: "Active and Passive voice",
+        practise: "Identify and convert",
+        example: ["The cake ", { text: "was eaten", strong: true }, " by Tom."]
+      },
+      {
+        concept: "Subject–verb agreement",
+        practise: "Singular/plural match",
+        example: ["The boy runs / The boys run"]
+      }
+    ]
+  },
+  {
+    title: "4. Noun & Pronoun Agreement",
+    rows: [
+      {
+        concept: "Pronoun–antecedent match",
+        practise: "Singular/plural consistency",
+        example: ["Each student must bring ", { text: "his or her", strong: true }, " pen."]
+      },
+      {
+        concept: "Avoiding ambiguity",
+        practise: "Clear pronoun reference",
+        example: ["When Tom met Jack, ", { text: "Tom", strong: true }, " said hello (not “he”)"]
+      }
+    ]
+  },
+  {
+    title: "5. Adjectives & Adverbs Usage",
+    rows: [
+      {
+        concept: "Comparative/superlative forms",
+        practise: "Correct endings and use of “more/most”",
+        example: ["happier / more beautiful / most clever"]
+      },
+      {
+        concept: "Misplaced modifiers",
+        practise: "Correct placement of descriptive words",
+        example: ["She only eats chocolate → Only she eats chocolate"]
+      },
+      {
+        concept: "Adjective vs adverb distinction",
+        practise: "",
+        example: ["He runs fast (not “fastly”)"]
+      }
+    ]
+  },
+  {
+    title: "6. Voice and Mood",
+    rows: [
+      {
+        concept: "Active vs passive",
+        practise: "Identify and convert",
+        example: ["The dog chased the ball → The ball was chased by the dog"]
+      },
+      {
+        concept: "Imperative mood",
+        practise: "Commands and requests",
+        example: ["Please sit down."]
+      },
+      {
+        concept: "Conditional sentences",
+        practise: "“If” clauses, hypothetical situations",
+        example: ["If it rains, we will stay inside."]
+      }
+    ]
+  },
+  {
+    title: "7. Direct and Reported Speech (Grammar Use, not punctuation)",
+    rows: [
+      {
+        concept: "Converting between forms",
+        practise: "",
+        example: ["He said, “I am tired” → He said he was tired."]
+      },
+      {
+        concept: "Pronoun and tense changes",
+        practise: "Understand backshift in tense",
+        example: ["I eat → he said he ate"]
+      }
+    ]
+  },
+  {
+    title: "8. Word Forms and Families",
+    rows: [
+      {
+        concept: "Root words and derivations",
+        practise: "Form nouns, adjectives, verbs",
+        example: ["happy → happiness, teach → teacher"]
+      },
+      {
+        concept: "Prefixes and suffixes",
+        practise: "Meaning changes",
+        example: ["un-, dis-, pre-, -ful, -less, -able"]
+      },
+      {
+        concept: "Homophones",
+        practise: "Grammar in context (their/there/they’re)",
+        example: ["They’re going to their house over there."]
+      },
+      {
+        concept: "Word Families",
+        practise: "excite → excited → excitement → exciting",
+        example: [
+          "“listened to the excitement whispers” ",
+          { text: "", mark: "no" },
+          " “excited whispers” ",
+          { text: "", mark: "yes" }
+        ]
+      },
+      {
+        concept: "Contextual Meaning",
+        practise: "Choose the word that fits the situation",
+        example: ["“whispers from the audience” needs an adjective, not a noun"]
+      },
+      {
+        concept: "Homophones",
+        practise: "there / their / they’re",
+        example: ["Classic confusion set"]
+      },
+      {
+        concept: "Collocations",
+        practise: "Words that naturally go together",
+        example: ["“strong wind” (not “powerful wind”)"]
+      }
+    ]
+  },
+  {
+    title: "9. Sentence Combination & Transformation",
+    rows: [
+      {
+        concept: "Joining sentences correctly",
+        practise: "Use conjunctions and relative clauses",
+        example: ["She is the girl who won the prize."]
+      },
+      {
+        concept: "Changing sentence type",
+        practise: "Statement ↔ question ↔ command ↔ exclamation",
+        example: ["You are ready. → Are you ready?"]
+      }
+    ]
+  },
+  {
+    title: "10. Errors and Proofreading (Grammar in Context)",
+    rows: [
+      {
+        concept: "Finding grammatical errors",
+        practise: "One word or phrase wrong in a sentence",
+        example: ["She have a cat → She has a cat"]
+      },
+      {
+        concept: "Choosing the best correction",
+        practise: "Multiple-choice improvement",
+        example: ["Each of the boys were → Each of the boys was"]
+      },
+      {
+        concept: "Logical flow",
+        practise: "Which word makes sense in sequence",
+        example: ["“as they listened to the excited whispers” fits logically"]
+      },
+      {
+        concept: "Tone and register",
+        practise: "Formal/informal style",
+        example: ["“would consider” fits tone better than “are considering”"]
+      },
+      {
+        concept: "Inference",
+        practise: "Use clues to predict missing words",
+        example: ["What would normally happen “behind the curtain”?"]
+      }
+    ]
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Quick Summary</h1>
+  <div class="summary-stack">
+    {
+      sections.slice(start, end).map((section, index) => (
+        <section class:list={["summary-block", blockTones[(start + index) % blockTones.length]]}>
+          <h2>{section.title}</h2>
+          <table class="punct-table summary-table">
+            <colgroup>
+              <col class="concept" />
+              <col class="practise" />
+              <col class="example" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="th-feature" scope="col">Concept</th>
+                <th class="th-rule" scope="col">What to Practise</th>
+                <th class="th-example" scope="col">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              {section.rows.map((row) => (
+                <tr>
+                  <th scope="row">{row.concept}</th>
+                  <td>{row.practise}</td>
+                  <td>
+                    {row.example.map((part) =>
+                      typeof part === "string" ? (
+                        part
+                      ) : (
+                        <>
+                          {part.strong ? <strong>{part.text}</strong> : part.text}
+                          {part.mark === "no" && (
+                            <span class="mark mark-no" aria-label="Incorrect">
+                              ✕
+                            </span>
+                          )}
+                          {part.mark === "yes" && (
+                            <span class="mark mark-yes" aria-label="Correct">
+                              ✓
+                            </span>
+                          )}
+                        </>
+                      )
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      ))
+    }
+  </div>
+</div>

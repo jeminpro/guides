@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import IrregularIntro from "../IrregularIntro.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[71];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <IrregularIntro />
+</GuidePageShell>

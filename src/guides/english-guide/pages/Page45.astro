@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import NounPhraseBuild from "../NounPhraseBuild.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[44];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <NounPhraseBuild />
+</GuidePageShell>

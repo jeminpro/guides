@@ -1,0 +1,85 @@
+---
+const terms = [
+  ["Noun", "A person, place, thing or idea", "dog, city, happiness"],
+  ["Pronoun", "A word that replaces a noun", "he, she, it, they"],
+  ["Antecedent", "The noun a pronoun refers to", "Tom lost <strong>his</strong> pencil. Tom is the antecedent."],
+  ["Agreement", "The pronoun matches the noun in number and gender", "The girls took <strong>their</strong> bags."]
+];
+const examples = [
+  ["Each student must bring <strong>his or her</strong> book.", "Each student is singular, so the pronoun is singular."],
+  ["All the boys brought <strong>their</strong> lunches.", "Boys is plural, so the pronoun is their."],
+  ["The cat licked <strong>its</strong> paw.", "Cat is singular and not a person, so the pronoun is its."],
+  ["If a person wants to succeed, <strong>he or she</strong> must try hard.", "Person is singular."],
+  ["The children did <strong>their</strong> homework before <strong>they</strong> played.", "Children is plural, so the pronouns are their and they."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Noun and Pronoun Agreement - What it is</h1>
+  <p>
+    A pronoun must agree with its noun in <strong>number</strong> (singular or plural) and <strong>person</strong> (who is speaking, or who is being spoken about). The noun a pronoun refers to is its <strong>antecedent</strong>.
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>Words to know</h2>
+    <table class="punct-table summary-table">
+      <colgroup>
+        <col class="concept" />
+        <col class="practise" />
+        <col class="example" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Term</th>
+          <th class="th-rule" scope="col">Meaning</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          terms.map(([term, meaning, example]) => (
+            <tr>
+              <th scope="row">{term}</th>
+              <td>{meaning}</td>
+              <td set:html={example} />
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Match the number</h2>
+      <p>
+        The boy lost <strong>his</strong> hat.
+        <span class="mark mark-yes" aria-label="Correct">✓</span>
+        <em>Boy</em> is singular, so the pronoun is <strong>his</strong>.
+      </p>
+      <p>
+        The boy lost <strong>their</strong> hat.
+        <span class="mark mark-no" aria-label="Incorrect">✕</span>
+      </p>
+    </section>
+  </div>
+  <section class="summary-block summary-blue">
+    <h2>Match the pronoun to the noun</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">Why</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          examples.map(([example, why]) => (
+            <tr>
+              <td set:html={example} />
+              <td>{why}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

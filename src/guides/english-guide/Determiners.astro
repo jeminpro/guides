@@ -1,0 +1,75 @@
+---
+const groups = [
+  ["Articles", "a, an, the", "One unspecified thing, or a particular thing"],
+  ["Demonstratives", "this, that, these, those", "Which item is near or further away"],
+  ["Quantifiers", "some, many, few, every, several", "How many or how much"],
+  ["Possessives", "my, your, his, her, its, our, their", "Whose"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Determiners - Specifying nouns</h1>
+  <p>
+    A <strong>determiner</strong> comes before a noun, and before any adjectives, to say which one, whose, or
+    how many: <strong>the</strong> small dog; <strong>those</strong> three red balloons.
+  </p>
+  <section class="summary-block summary-rose">
+    <h2>Four groups to recognise</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Group</th>
+          <th class="th-rule" scope="col">Examples</th>
+          <th class="th-example" scope="col">What it tells us</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          groups.map(([group, examples, meaning]) => (
+            <tr>
+              <th scope="row">{group}</th>
+              <td>{examples}</td>
+              <td>{meaning}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="summary-stack">
+    <section class="summary-block summary-blue">
+      <h2>This, that, these, those</h2>
+      <p>
+        <strong>This</strong> and <strong>that</strong> are for one thing. <strong>These</strong> and
+        <strong>those</strong> are for more than one.
+      </p>
+      <p>this book, these books, that tree, those trees</p>
+      <p>
+        Near: this, these. Further away: that, those.
+      </p>
+    </section>
+    <section class="summary-block summary-mint">
+      <h2>Many, much and some</h2>
+      <p>
+        <strong>Many</strong> is for things you can count: many apples. <strong>Much</strong> is for an
+        amount: much water.
+      </p>
+      <p>
+        <strong>Some</strong> works with both: some apples, some water. <strong>Every</strong> and
+        <strong>each</strong> point to the members one at a time: every child, each book.
+      </p>
+    </section>
+    <section class="summary-block summary-yellow">
+      <h2>Determiner or pronoun?</h2>
+      <p>
+        <strong>Those books</strong> are mine. <em>Those</em> is a determiner: a noun follows.
+      </p>
+      <p>
+        <strong>Those</strong> are mine. <em>Those</em> is a pronoun: no noun follows.
+      </p>
+      <p>
+        The same test works for <em>my coat</em> (determiner) and <em>mine</em> (pronoun).
+      </p>
+    </section>
+  </div>
+</div>

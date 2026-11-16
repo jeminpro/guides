@@ -1,0 +1,55 @@
+---
+const rowOne = [
+  { tone: "hex-capital", lines: ["Capital", "letters"] },
+  { tone: "hex-endings", lines: ["Sentence", "endings"] },
+  { tone: "hex-commas", lines: ["Commas"] },
+  { tone: "hex-apostrophes", lines: ["Apostrophes"] },
+  { tone: "hex-speech", lines: ["Speech", "marks"] }
+];
+
+const rowTwo = [
+  { tone: "hex-colons", lines: ["Colons,", "semicolons"] },
+  { tone: "hex-dashes", lines: ["Dashes,", "brackets,", "hyphens"] },
+  { tone: "hex-ellipsis", lines: ["Ellipsis"] }
+];
+---
+
+<div class="punct-map">
+  <h1>All the punctuations<br />you need to know!</h1>
+  <div class="hex-board">
+    <ul class="hex-row">
+      {
+        rowOne.map((topic) => (
+          <li class:list={["hex", topic.tone]}>
+            <span class="hex-shape" aria-hidden="true" />
+            <span class="hex-label">
+              {topic.lines.map((line, index) => (
+                <>
+                  {index > 0 && <br />}
+                  {line}
+                </>
+              ))}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="hex-row">
+      {
+        rowTwo.map((topic) => (
+          <li class:list={["hex", topic.tone]}>
+            <span class="hex-shape" aria-hidden="true" />
+            <span class="hex-label">
+              {topic.lines.map((line, index) => (
+                <>
+                  {index > 0 && <br />}
+                  {line}
+                </>
+              ))}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

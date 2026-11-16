@@ -1,0 +1,46 @@
+---
+const irregular = [
+  ["go", "went", "come", "came"],
+  ["see", "saw", "say", "said"],
+  ["eat", "ate", "give", "gave"],
+  ["run", "ran", "take", "took"],
+  ["write", "wrote", "think", "thought"],
+  ["have", "had", "do", "did"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Verb Tenses - Simple past and future</h1>
+  <section class="summary-block summary-blue">
+    <h2>Simple past</h2>
+    <p>The simple past describes an event or state that happened earlier. Many verbs add <strong>-ed</strong> (<em>play → played; jump → jumped</em>). Some spellings change (<em>live → lived; try → tried; stop → stopped</em>). Other verbs are irregular.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Present</th>
+          <th class="th-example" scope="col">Past</th>
+          <th class="th-feature" scope="col">Present</th>
+          <th class="th-example" scope="col">Past</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          irregular.map(([a, b, c, d]) => (
+            <tr>
+              <td>{a}</td>
+              <td>{b}</td>
+              <td>{c}</td>
+              <td>{d}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>He <strong>played</strong> football yesterday. They <strong>went</strong> to Dubai last year.</p>
+  </section>
+  <section class="summary-block summary-green">
+    <h2>Simple future</h2>
+    <p>Use <strong>will</strong> plus the base verb for an event expected in the future.</p>
+    <p>I <strong>will visit</strong> my friend. They <strong>will study</strong> later.</p>
+  </section>
+</div>

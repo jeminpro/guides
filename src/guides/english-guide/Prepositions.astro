@@ -1,0 +1,90 @@
+---
+const relationships = [
+  ["Position", "under, beside, between, behind, above", "The ball is under the chair."],
+  ["Direction", "to, into, through, across, towards", "We walked across the bridge."],
+  ["Time", "before, after, during, until", "We ate after the match."]
+];
+const time = [
+  ["at", "A clock time, or night", "at 6 o’clock, at night"],
+  ["on", "A day or date", "on Monday, on 5th May"],
+  ["in", "A longer period", "in July, in the morning"]
+];
+const place = [
+  ["at", "A point or place you visit", "at the bus stop, at school"],
+  ["on", "A surface", "on the table, on the wall"],
+  ["in", "Inside a space or area", "in the box, in London"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Prepositions - Showing relationships</h1>
+  <p>
+    A <strong>preposition</strong> links a noun or pronoun to another part of the sentence. It often shows
+    position, direction or time, and it commonly begins a <strong>prepositional phrase</strong>:
+    <em>under the table</em>, <em>across the bridge</em>, <em>before lunch</em>. The noun or pronoun after it
+    is the object of the preposition.
+  </p>
+  <section class="summary-block summary-blue">
+    <h2>What the phrase can show</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Relationship</th>
+          <th class="th-rule" scope="col">Examples</th>
+          <th class="th-example" scope="col">Sentence</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          relationships.map(([kind, examples, sentence]) => (
+            <tr>
+              <th scope="row">{kind}</th>
+              <td>{examples}</td>
+              <td>{sentence}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="summary-pair">
+    <section class="summary-block summary-mint">
+      <h2>At, on, in: time</h2>
+      <table class="punct-table summary-table">
+        <tbody>
+          {
+            time.map(([word, use, examples]) => (
+              <tr>
+                <th scope="row">{word}</th>
+                <td>
+                  {use}. {examples}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+    <section class="summary-block summary-yellow">
+      <h2>At, on, in: place</h2>
+      <table class="punct-table summary-table">
+        <tbody>
+          {
+            place.map(([word, use, examples]) => (
+              <tr>
+                <th scope="row">{word}</th>
+                <td>
+                  {use}. {examples}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <p>
+    <strong>Tip.</strong> Use <strong>in the morning</strong> and <strong>in the afternoon</strong>, but
+    <strong>at night</strong>. A day still takes <strong>on</strong>: <em>on Monday morning</em>.
+  </p>
+</div>

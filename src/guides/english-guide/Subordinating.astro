@@ -1,0 +1,69 @@
+---
+const rows = [
+  ["Reason", "because, since, as", "We stayed inside because it was raining."],
+  ["Time", "when, while, before, after, until, whenever", "When the bell rang, the children left."],
+  ["Condition", "if, unless", "If it rains, we will stay inside."],
+  ["Contrast", "although, though, even though", "Although it was cold, we went outside."],
+  ["Purpose", "so that", "We left early so that we would be on time."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Conjunctions</h1>
+  <p class="topic-lead">Subordinating conjunctions</p>
+  <p>
+    A subordinating conjunction introduces a subordinate clause and shows how that idea relates to the main
+    idea. Group them by meaning, not as one long list.
+  </p>
+  <section class="summary-block summary-mint">
+    <h2>Useful groups</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Relationship</th>
+          <th class="th-rule" scope="col">Conjunctions</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([kind, words, example]) => (
+            <tr>
+              <th scope="row">{kind}</th>
+              <td>{words}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="summary-stack">
+    <section class="summary-block summary-yellow">
+      <h2>Unless means if…not</h2>
+      <p>We will go outside <strong>unless</strong> it rains.</p>
+      <p>We will go outside <strong>if it does not rain</strong>.</p>
+    </section>
+    <section class="summary-block summary-peach">
+      <h2>The subordinate clause can move</h2>
+      <p>
+        <strong>When the bell rang,</strong> the children left. Clause first: use a comma.
+      </p>
+      <p>
+        The children left <strong>when the bell rang</strong>. Clause second: usually no comma.
+      </p>
+      <p>
+        The same comma pattern works for <em>because</em>, <em>although</em> and <em>if</em>.
+      </p>
+    </section>
+    <section class="summary-block summary-lilac">
+      <h2>Not the same as who, which or that</h2>
+      <p>
+        The girl <strong>who won the race</strong> received a medal. <em>Who</em> starts a relative clause.
+      </p>
+      <p>
+        The girl ran home <strong>because she was tired</strong>. <em>Because</em> gives the reason.
+      </p>
+    </section>
+  </div>
+</div>

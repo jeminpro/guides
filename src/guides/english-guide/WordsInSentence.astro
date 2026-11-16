@@ -1,0 +1,54 @@
+---
+const links = [
+  ["Conjunction + clause", "We waited because the bridge was closed.", "The words after because have a subject and a verb."],
+  ["Preposition + noun phrase", "We waited after lunch.", "Lunch is a noun. There is no new clause."],
+  ["Adverb", "Later, we crossed the bridge.", "Later places the action in time."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Sentence Structure - Words in a sentence</h1>
+  <p>
+    A word’s job is decided in its sentence. The parts-of-speech sheets name each job. Here, use them to see
+    how a sentence is built.
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>After lunch, those curious children quietly explored the cave because it was cool.</h2>
+    <p><strong>After</strong> preposition + <strong>lunch</strong> noun.</p>
+    <p><strong>Those</strong> determiner, <strong>curious</strong> adjective, <strong>children</strong> noun.</p>
+    <p><strong>Quietly</strong> adverb, <strong>explored</strong> verb, <strong>the</strong> determiner, <strong>cave</strong> noun.</p>
+    <p><strong>Because</strong> conjunction, <strong>it</strong> pronoun, <strong>was</strong> verb, <strong>cool</strong> adjective.</p>
+  </section>
+  <section class="summary-block summary-blue">
+    <h2>Time, place and cause</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Form</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">Clue</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          links.map(([form, example, clue]) => (
+            <tr>
+              <th scope="row">{form}</th>
+              <td>{example}</td>
+              <td>{clue}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>The same word can change class</h2>
+      <p>We left <strong>after lunch</strong>: preposition. We left <strong>after the rain stopped</strong>: conjunction.</p>
+      <p><strong>Light</strong> is a noun in “the light shone” and an adjective in “a light bag.”</p>
+      <p><strong>This</strong> is broken: pronoun. <strong>This lantern</strong> is broken: determiner.</p>
+      <p>Not every adverb ends in -ly (<em>soon, here, often</em>), and <em>friendly</em> can be an adjective.</p>
+    </section>
+  </div>
+</div>

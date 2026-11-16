@@ -1,0 +1,43 @@
+---
+const links = [
+  ["because", "Cause or reason", "We hurried because we were late.", "Why did we hurry?"],
+  ["when", "Time", "We cheered when the race ended.", "When did we cheer?"],
+  ["while", "The same time", "She read while he cooked.", "What happened together?"],
+  ["although", "Contrast", "We played although it rained.", "What happened despite the rain?"],
+  ["if", "Condition", "We will play if it stops raining.", "What must happen first?"],
+  ["unless", "Negative condition", "We will play unless it rains.", "When will we not play?"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Connecting Ideas - Conjunctions</h1>
+  <section class="summary-block summary-blue">
+    <h2>The relationship they show</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-rule" scope="col">Relationship</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          links.map(([word, relation, example]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{relation}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-sand">
+    <h2>Do not swap them by habit</h2>
+    <p>“We went inside <strong>because</strong> the bell rang” gives a reason. “We went inside <strong>when</strong> the bell rang” gives the time. <em>When</em> itself expresses time, even if the bell was also the reason.</p>
+    <p>“You can go out <strong>if</strong> you finish your homework.” Finishing is the condition. “You can go out <strong>unless</strong> it rains.” You can go out except if it rains. Do not automatically replace <em>unless</em> with <em>if not</em>. Read the whole sentence.</p>
+    <p>“<strong>Although</strong> she was tired, she finished” shows contrast. “<strong>Because</strong> she was tired, she rested” shows the reason.</p>
+  </section>
+</div>

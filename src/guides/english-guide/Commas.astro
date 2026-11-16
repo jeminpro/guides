@@ -1,0 +1,147 @@
+---
+type ExampleGroup = {
+  kind: "yes" | "no";
+  label: string;
+  items: string[];
+};
+
+const rules: {
+  tone: string;
+  title: string;
+  body: string;
+  test?: string;
+  groups: ExampleGroup[];
+  note?: string;
+}[] = [
+  {
+    tone: "rule-sentence",
+    title: "Lists",
+    body: "Separate items in a simple list.",
+    groups: [
+      { kind: "yes", label: "Example", items: ["We bought apples, bananas, pears and grapes."] },
+      { kind: "no", label: "Wrong", items: ["We bought apples bananas pears and grapes."] }
+    ]
+  },
+  {
+    tone: "rule-pronoun",
+    title: "Co-ordinate Adjectives",
+    body: "Use commas between adjectives that equally describe a noun.",
+    test: "Test: Can you add “and” or switch order?",
+    groups: [
+      {
+        kind: "yes",
+        label: "Examples",
+        items: ["It was a long, tiring journey.", "A cold, damp morning greeted us."]
+      },
+      {
+        kind: "no",
+        label: "Wrong",
+        items: ["Three, large dogs chased us. (number + description don’t coordinate)"]
+      }
+    ]
+  },
+  {
+    tone: "rule-proper",
+    title: "Fronted Adverbial",
+    body: "Add a comma after an opening phrase or word that tells when, where, or how something happens.",
+    groups: [
+      {
+        kind: "yes",
+        label: "Examples",
+        items: [
+          "After dinner, we went for a walk.",
+          "In the distance, thunder rumbled.",
+          "Quickly, she hid the letter."
+        ]
+      },
+      {
+        kind: "no",
+        label: "Wrong",
+        items: ["After dinner we went for a walk. (missing pause for clarity)"]
+      }
+    ]
+  },
+  {
+    tone: "rule-titles",
+    title: "Direct Address",
+    body: "Use commas to separate who is being spoken to.",
+    groups: [
+      {
+        kind: "yes",
+        label: "Examples",
+        items: ["Come here, James.", "Lily, can you pass the salt?", "Be quiet, everyone!"]
+      },
+      { kind: "no", label: "Wrong", items: ["Come here James. (changes meaning!)"] }
+    ]
+  },
+  {
+    tone: "rule-acronyms",
+    title: "Extra Information",
+    body: "Commas go around extra information that could be removed without changing the main meaning.",
+    groups: [
+      {
+        kind: "yes",
+        label: "Examples",
+        items: [
+          "My brother, a brilliant swimmer, won the race.",
+          "London, the capital of England, is very busy."
+        ]
+      }
+    ],
+    note: "If the information is essential (it identifies which one), do not use commas. The boy who wore the red hat won."
+  },
+  {
+    tone: "rule-linking",
+    title: "Introductory or Linking Phrases",
+    body: "Use commas after connectors or transition words introducing sentences.",
+    groups: [
+      {
+        kind: "yes",
+        label: "Examples",
+        items: [
+          "However, we decided to stay home.",
+          "Therefore, the plan was cancelled.",
+          "In fact, nobody noticed."
+        ]
+      }
+    ]
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Commas - When to use</h1>
+  <ol class="rule-grid">
+    {
+      rules.map((rule, index) => (
+        <li class:list={["rule", rule.tone]}>
+          <span class="rule-num" aria-hidden="true">
+            {index + 1}
+          </span>
+          <h2>{rule.title}</h2>
+          <p>{rule.body}</p>
+          {rule.test && <p>{rule.test}</p>}
+          {rule.groups.map((group) => (
+            <>
+              <p class="rule-label">
+                <span
+                  class:list={["mark", group.kind === "yes" ? "mark-yes" : "mark-no"]}
+                  aria-label={group.kind === "yes" ? "Correct" : "Incorrect"}
+                >
+                  {group.kind === "yes" ? "✓" : "✕"}
+                </span>
+                {group.label}
+              </p>
+              <ul>
+                {group.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </>
+          ))}
+          {rule.note && <p class="rule-note">{rule.note}</p>}
+        </li>
+      ))
+    }
+  </ol>
+</div>

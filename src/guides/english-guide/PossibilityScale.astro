@@ -1,0 +1,47 @@
+---
+const scale = [
+  ["perhaps", "Maybe. The speaker is considering a possibility.", "Perhaps the key is in the drawer."],
+  ["possibly", "It could happen or be true.", "She could possibly arrive early."],
+  ["probably", "Likely, but not certain.", "They will probably win."],
+  ["certainly", "Strong confidence.", "I will certainly help."],
+  ["definitely", "Firm confidence or commitment.", "We will definitely attend."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Possibility - How sure is the speaker?</h1>
+  <p>
+    <strong>Perhaps, possibly, probably, certainly</strong> and <strong>definitely</strong> tell us how sure the speaker is. They are adverbs, not modal verbs. Both can change how certain a statement sounds.
+  </p>
+  <section class="summary-block summary-lilac">
+    <h2>From less certain to more confident</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Adverb</th>
+          <th class="th-rule" scope="col">Usual meaning</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          scale.map(([word, meaning, example]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{meaning}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>This is a rough guide, not a set of exact percentages. <em>Perhaps</em> and <em>possibly</em> often overlap. <em>Certainly</em> and <em>definitely</em> show confidence, but they cannot guarantee a future event.</p>
+  </section>
+  <section class="summary-block summary-sand">
+    <h2>Swap the adverb and the certainty changes</h2>
+    <p>“<strong>Perhaps</strong> the train is late.” The speaker is considering lateness as one possibility.</p>
+    <p>“The train is <strong>probably</strong> late.” The speaker thinks lateness is likely.</p>
+    <p>“The train is <strong>definitely</strong> late.” The speaker claims to be sure.</p>
+    <p>Ask what evidence would make that certainty reasonable. If the board says <em>On time</em>, “The train is definitely late” is not well supported.</p>
+  </section>
+</div>

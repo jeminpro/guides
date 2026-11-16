@@ -1,0 +1,78 @@
+---
+const structures = [
+  ["Simple", "One main clause. It may still have long phrases.", "The tall runner in the blue shirt stumbled.", "One main clause"],
+  ["Compound", "Two or more main clauses, often joined by and, but or or.", "The runner stumbled, but she recovered.", "Two main clauses"],
+  ["Complex", "A main clause plus at least one subordinate clause.", "Although the runner stumbled, she recovered.", "Main + subordinate"]
+];
+const patterns = [
+  ["The dog and the cat slept.", "One main clause with a joined subject.", "Simple"],
+  ["The dog barked and scratched the door.", "One subject with two actions.", "Simple"],
+  ["The dog barked, and the cat hid.", "Two main clauses.", "Compound"],
+  ["The cat hid because the dog barked.", "Main clause plus a reason clause.", "Complex"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Sentence Structure - Simple, compound, complex</h1>
+  <p>Classify by how the clauses are built. Count clauses, not words.</p>
+  <section class="summary-block summary-sand">
+    <h2>By clause structure</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Structure</th>
+          <th class="th-rule" scope="col">Rule</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          structures.map(([name, rule, example]) => (
+            <tr>
+              <th scope="row">{name}</th>
+              <td>{rule}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-mint">
+    <h2>Test the pattern</h2>
+    <p>Find each verb and its subject. Then test whether each part can stand alone.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-example" scope="col">Sentence</th>
+          <th class="th-rule" scope="col">Why?</th>
+          <th class="th-feature" scope="col">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          patterns.map(([sentence, why, type]) => (
+            <tr>
+              <td>{sentence}</td>
+              <td>{why}</td>
+              <td>{type}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Length, and the word and</h2>
+      <p>
+        “The tall runner in the blue shirt with muddy shoes crossed the field” is still
+        <strong>simple</strong>. The extras are phrases.
+      </p>
+      <p>
+        “Ava packed her bag and closed the door” is one clause: one subject, two actions. “Ava packed her
+        bag, and Ben closed the door” is <strong>compound</strong>: two main clauses.
+      </p>
+    </section>
+  </div>
+</div>

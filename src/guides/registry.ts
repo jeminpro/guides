@@ -12,6 +12,12 @@ import {
   GUIDE_TITLE as VOCABULARY_TITLE,
   PAGE_COUNT as VOCABULARY_PAGE_COUNT
 } from "./vocabulary/meta";
+import {
+  GUIDE_DESCRIPTION as ENGLISH_DESCRIPTION,
+  GUIDE_ID as ENGLISH_ID,
+  GUIDE_TITLE as ENGLISH_TITLE,
+  PAGE_COUNT as ENGLISH_PAGE_COUNT
+} from "./english-guide/meta";
 
 export const guides: readonly GuideMeta[] = [
   {
@@ -31,6 +37,15 @@ export const guides: readonly GuideMeta[] = [
     pageCount: VOCABULARY_PAGE_COUNT,
     status: "ready",
     icon: "Aa"
+  },
+  {
+    id: ENGLISH_ID,
+    title: ENGLISH_TITLE,
+    description: ENGLISH_DESCRIPTION,
+    href: withBase(`${ENGLISH_ID}/`),
+    pageCount: ENGLISH_PAGE_COUNT,
+    status: "draft",
+    icon: "Ab"
   }
 ];
 

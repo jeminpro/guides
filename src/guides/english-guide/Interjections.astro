@@ -1,0 +1,61 @@
+---
+const jobs = [
+  ["run", "Noun: A run around the park was fun.", "Verb: I run around the park."],
+  ["before", "Preposition: before the show", "Conjunction: before the show began"],
+  ["yet", "Conjunction: tired, yet she worked", "Adverb: I haven’t finished yet."],
+  ["those", "Determiner: those books", "Pronoun: Those are mine."],
+  ["outside", "Adverb: waited outside", "Preposition: outside the shop"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Interjections - Expressing a reaction</h1>
+  <p>
+    An <strong>interjection</strong> is a short expression of a reaction or feeling:
+    <strong>Oh! Wow! Hurray! Ouch! Alas!</strong> The punctuation changes the tone. “Oh!” can show surprise.
+    “Oh.” can show a quieter realisation.
+  </p>
+  <div class="summary-stack">
+    <section class="summary-block summary-peach">
+      <h2>It is extra to the sentence</h2>
+      <p>
+        <strong>Wow!</strong> The rainbow is bright. The sentence “The rainbow is bright” is still complete
+        without <em>Wow!</em>
+      </p>
+    </section>
+    <section class="summary-block summary-pink">
+      <h2>An exclamation mark does not make an interjection</h2>
+      <p>
+        In “<strong>Stop!</strong> The road is busy,” <em>Stop</em> is a command verb, not a feeling word.
+        <strong>Ouch!</strong> is an interjection. <strong>Hurray!</strong> is an interjection.
+      </p>
+    </section>
+  </div>
+  <p class="try-it">
+    <strong>Try it.</strong> Find the interjection in “Hurray! Our team won.” Is “Stop!” an interjection or a
+    command in “Stop! The road is busy”?
+  </p>
+  <section class="summary-block summary-sand">
+    <h2>A word’s job can change</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-rule" scope="col">One job</th>
+          <th class="th-example" scope="col">Another job</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          jobs.map(([word, one, another]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{one}</td>
+              <td>{another}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

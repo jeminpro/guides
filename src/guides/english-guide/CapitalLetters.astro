@@ -1,0 +1,83 @@
+---
+const rules = [
+  {
+    tone: "rule-sentence",
+    title: "Beginning of a Sentence",
+    body: "Every complete sentence must start with a capital letter.",
+    examplesLabel: "Examples:",
+    examples: ["The train left early.", "She smiled at the camera."]
+  },
+  {
+    tone: "rule-pronoun",
+    title: "The Pronoun “I”",
+    body: "“I” is always capitalised, even in the middle of a sentence.",
+    examplesLabel: "Example:",
+    examples: ["My brother and I went swimming."]
+  },
+  {
+    tone: "rule-proper",
+    title: "Proper Nouns (Names of People, Places, etc.)",
+    body: "Capitalise all specific names.",
+    examplesLabel: "Examples:",
+    examples: [
+      "People: Harry Potter, Dr Singh",
+      "Places: London, River Thames, Mount Everest",
+      "Organisations: NASA, National Trust",
+      "Days/Months/Festivals: Monday, December, Christmas",
+      "Languages/Nationalities: French, Indian, English"
+    ]
+  },
+  {
+    tone: "rule-titles",
+    title: "Titles of Works",
+    body: "Capitalise main words in book, film, poem, or story titles.",
+    examplesLabel: "Example:",
+    examples: ["The Lion, the Witch and the Wardrobe"],
+    noteLabel: "Rule of thumb:",
+    note: "Capitalise nouns, verbs, adjectives, adverbs, and pronouns, not small joining words unless they start the title."
+  },
+  {
+    tone: "rule-speech",
+    title: "First Word in Direct Speech",
+    body: "Whenever a character speaks, the first word inside the quotation marks starts with a capital.",
+    examplesLabel: "Example:",
+    examples: ["The teacher said, “Everyone must be seated.”"]
+  },
+  {
+    tone: "rule-acronyms",
+    title: "Acronyms and Initialisms",
+    body: "Each letter stands for a full word → capitalise all letters.",
+    examplesLabel: "Examples:",
+    examples: ["BBC, UNICEF, FIFA"]
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Capital Letters - When to use</h1>
+  <ol class="rule-list">
+    {
+      rules.map((rule, index) => (
+        <li class:list={["rule", rule.tone]}>
+          <span class="rule-num" aria-hidden="true">
+            {index + 1}
+          </span>
+          <h2>{rule.title}</h2>
+          <p>{rule.body}</p>
+          <p class="rule-label">{rule.examplesLabel}</p>
+          <ul>
+            {rule.examples.map((example) => (
+              <li>{example}</li>
+            ))}
+          </ul>
+          {rule.note && (
+            <p class="rule-note">
+              <span class="rule-label">{rule.noteLabel}</span>{" "}
+              {rule.note}
+            </p>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</div>

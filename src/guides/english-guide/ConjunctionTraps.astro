@@ -1,0 +1,66 @@
+---
+const rows = [
+  ["and", "Adds", "It was raining and we stayed inside."],
+  ["so", "Result", "It was raining, so we stayed inside."],
+  ["because", "Reason", "We stayed inside because it was raining."],
+  ["but", "Contrast, coordinating", "It was raining, but we went outside."],
+  ["although", "Contrast, subordinating", "Although it was raining, we went outside."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Conjunctions</h1>
+  <p class="topic-lead">Compare them</p>
+  <section class="summary-block summary-sand">
+    <h2>Same ideas, different relationship</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-rule" scope="col">It shows</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([word, job, example]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{job}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    <strong>So</strong> presents the result. <strong>Because</strong> presents the reason. Both can connect
+    rain with staying inside, but they organise the sentence differently. Ask: what relationship does this
+    conjunction show?
+  </p>
+  <div class="trap-card trap-compact">
+    <section class="trap">
+      <h2>Common mistakes</h2>
+      <p>
+        <strong>And</strong> does not always join clauses. In “Tom and Sarah went shopping,” it joins two
+        nouns.
+      </p>
+      <p>
+        <strong>So</strong> answers “What happened as a result?” <strong>Because</strong> answers “Why?”
+      </p>
+      <p>
+        <strong>But</strong> is coordinating: “I was tired, but I continued.” <strong>Although</strong> is
+        subordinating: “Although I was tired, I continued.” Both show contrast.
+      </p>
+      <p>
+        “I haven’t finished <strong>yet</strong>” means up to now. “She was tired, <strong>yet</strong> she
+        continued” is the conjunction.
+      </p>
+      <p>
+        <em>As</em> and <em>since</em> can show reason, but they can also show time: “as she walked,” “since
+        Monday.” Read the whole sentence.
+      </p>
+    </section>
+  </div>
+</div>

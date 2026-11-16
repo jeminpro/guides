@@ -1,0 +1,49 @@
+---
+const forms = [
+  ["Present progressive", "am/is/are + verb-ing", "She is reading."],
+  ["Past progressive", "was/were + verb-ing", "He was cooking when the phone rang."],
+  ["Future progressive", "will be + verb-ing", "They will be studying at seven."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Verb Tenses - Progressive forms</h1>
+  <p>
+    A <strong>progressive</strong> form presents an action as in progress at a particular time. It uses a form of <strong>be</strong> plus a verb ending in <strong>-ing</strong>.
+  </p>
+  <section class="summary-block summary-peach">
+    <h2>The three progressive forms</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Form</th>
+          <th class="th-rule" scope="col">Pattern</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          forms.map(([form, pattern, example]) => (
+            <tr>
+              <th scope="row">{form}</th>
+              <td>{pattern}</td>
+              <td set:html={example.replace(/(is reading|was cooking|will be studying)/, "<strong>$1</strong>")} />
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <section class="summary-block summary-lilac">
+    <h2>Both parts belong to the verb</h2>
+    <p>In “The players <strong>were running</strong>,” the progressive form is <strong>were running</strong>, not just <em>running</em>.</p>
+    <p>An <em>-ing</em> word by itself is not a progressive verb. In “The boy <strong>running</strong> down the road waved,” the main verb is <strong>waved</strong>.</p>
+    <p>“Sasha <strong>reads</strong> after dinner” is a habit. “Sasha <strong>is reading</strong> after dinner” is an action in progress.</p>
+    <p>In “I <strong>was cooking</strong> when the doorbell rang,” the cooking was already in progress when the shorter event happened. A progressive form does not, by itself, say whether the action was finished.</p>
+  </section>
+  <section class="summary-block summary-yellow">
+    <h2>Agreement and spelling</h2>
+    <p>The helping verb must match the subject: “She <strong>is reading</strong>”; “They <strong>are reading</strong>”; “He <strong>was reading</strong>”; “We <strong>were reading</strong>.”</p>
+    <p>Use <em>making</em> (drop the final <em>e</em>), <em>running</em> (double the final consonant) and <em>lying</em> (change <em>ie</em> to <em>y</em>).</p>
+  </section>
+</div>

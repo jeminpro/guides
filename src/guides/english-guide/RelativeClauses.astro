@@ -1,0 +1,53 @@
+---
+const rows = [
+  ["who", "The girl who found the map smiled.", "Which girl."],
+  ["which", "The map, which was torn, showed a lake.", "More about the map."],
+  ["that", "The book that I borrowed is excellent.", "Which book."],
+  ["whose", "The boy whose bike broke walked home.", "Which boy, and whose bike."],
+  ["where", "The village where we stayed was quiet.", "Which village."],
+  ["when", "The day when we met was sunny.", "Which day."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Clauses - Relative clauses</h1>
+  <p>
+    A <strong>relative clause</strong> is a subordinate clause that gives information about a noun. The noun
+    it describes is its <strong>antecedent</strong>.
+  </p>
+  <section class="summary-block summary-lilac">
+    <h2>It tells us which one</h2>
+    <p>The cyclist <strong>who wore a yellow helmet</strong> waved.</p>
+    <p>
+      <em>Who wore a yellow helmet</em> tells us which cyclist. Its verb is <strong>wore</strong>. It belongs
+      next to <em>the cyclist</em>. The main clause is “The cyclist waved.”
+    </p>
+  </section>
+  <section class="summary-block summary-sand">
+    <h2>Common openings</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Opening</th>
+          <th class="th-example" scope="col">Example</th>
+          <th class="th-rule" scope="col">It explains</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map(([word, example, explains]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{example}</td>
+              <td>{explains}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p>
+    The boy <strong>with a red scarf</strong> is a phrase. The boy <strong>who wore a red scarf</strong> is a
+    relative clause, because it has the verb <strong>wore</strong>.
+  </p>
+</div>

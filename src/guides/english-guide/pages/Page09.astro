@@ -1,0 +1,16 @@
+---
+import GuidePageShell from "../GuidePageShell.astro";
+import Apostrophes from "../Apostrophes.astro";
+import { PAGE_COUNT, pages } from "../meta";
+
+const page = pages[8];
+---
+
+<GuidePageShell
+  page={page.number}
+  total={PAGE_COUNT}
+  label={page.label}
+  bodyClass={page.bodyClass}
+>
+  <Apostrophes />
+</GuidePageShell>
