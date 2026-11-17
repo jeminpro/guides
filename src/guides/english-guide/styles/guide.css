@@ -437,6 +437,13 @@
 
 .sentence-endings .topic-lead {
   margin-top: 1mm;
+  margin-left: 4.8mm;
+}
+
+.sentence-endings .trap-card {
+  margin-left: 4.8mm;
+  border-width: 1.6px;
+  border-radius: 2.2mm;
 }
 
 .rule-grid {
