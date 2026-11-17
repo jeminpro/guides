@@ -1,6 +1,6 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
-import Verbs from "../Verbs.astro";
+import SectionDivider from "../SectionDivider.astro";
 import { PAGE_COUNT, pages } from "../meta";
 
 const page = pages[20];
@@ -12,5 +12,5 @@ const page = pages[20];
   label={page.label}
   bodyClass={page.bodyClass}
 >
-  <Verbs />
+  <SectionDivider title={page.title} />
 </GuidePageShell>

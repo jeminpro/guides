@@ -1,0 +1,46 @@
+---
+const figures = [
+  ["Alliteration", "Does it repeat the same starting sound?", "Silent shadows slipped softly."],
+  ["Repetition", "Does it repeat key words or phrases for effect?", "Work hard, dream big, shine bright."],
+  ["Simile", "Does it use like or as to compare two things?", "As brave as a lion."],
+  ["Metaphor", "Does it say one thing is another, without like or as?", "The world is a stage."],
+  ["Personification", "Is something non-human doing a human action?", "The wind whispered through the trees."],
+  ["Onomatopoeia", "Does it describe a sound with a sound word?", "Bang! Buzz! Whoosh!"],
+  ["Hyperbole", "Is it an exaggeration that cannot really happen?", "I’ve told you a million times!"],
+  ["Oxymoron", "Do two opposite words appear together?", "Deafening silence."],
+  ["Imagery", "Does it create a vivid picture for the senses?", "The golden sunlight danced on the calm sea."],
+  ["Idiom", "Is it a common saying that is not literal?", "It’s raining cats and dogs."],
+  ["Allusion", "Does it refer to someone or something famous?", "He’s a real Einstein in maths."]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Figures of Speech - What are they?</h1>
+  <section class="summary-block summary-yellow">
+    <h2>A way to remember them</h2>
+    <p>A Rude Snake Makes People Often Hide on Icy Islands Alone.</p>
+  </section>
+  <section class="summary-block summary-blue">
+    <h2>Spot the technique</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Technique</th>
+          <th class="th-rule" scope="col">Ask</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          figures.map(([name, ask, example]) => (
+            <tr>
+              <th scope="row">{name}</th>
+              <td>{ask}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+</div>

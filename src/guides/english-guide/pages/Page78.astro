@@ -1,6 +1,6 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
-import SectionDivider from "../SectionDivider.astro";
+import IrregularIntro from "../IrregularIntro.astro";
 import { PAGE_COUNT, pages } from "../meta";
 
 const page = pages[77];
@@ -12,5 +12,5 @@ const page = pages[77];
   label={page.label}
   bodyClass={page.bodyClass}
 >
-  <SectionDivider title={page.title} />
+  <IrregularIntro />
 </GuidePageShell>

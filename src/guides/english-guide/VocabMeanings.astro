@@ -1,0 +1,47 @@
+---
+const meanings = [
+  ["fair", "an event, just, or light in colour"],
+  ["right", "a direction, correct, or an entitlement"],
+  ["bark", "the covering of a tree, or the sound a dog makes"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Meaning in Context - The sentence decides</h1>
+  <section class="summary-block summary-yellow">
+    <h2>One word, this sentence</h2>
+    <p>“He broke the record.” Here <em>record</em> means an achievement.</p>
+    <p>“He played the record.” Here <em>record</em> means a music disc.</p>
+    <p>“Choose the meaning of <em>present</em> in this sentence.” She received a <em>present</em> from her friend, so <em>present</em> means a <strong>gift</strong>.</p>
+    <p>Reread the sentence. The meaning depends on this context, not on the first meaning you remember.</p>
+  </section>
+  <section class="summary-block summary-lilac">
+    <h2>Several meanings</h2>
+    <p>Some words have more than one meaning. The sentence shows which one is in use.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-example" scope="col">Meanings</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          meanings.map(([word, senses]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{senses}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>“Which sentence uses <em>bark</em> to mean a sound?” Read the whole sentence before you decide.</p>
+  </section>
+  <section class="summary-block summary-green">
+    <h2>Clues beside an unfamiliar word</h2>
+    <p>“The tiny kitten trembled in the cold breeze.” <em>Trembled</em> means <strong>shook</strong> or <strong>shivered</strong>.</p>
+    <p>“Which word means the same as <em>trembled</em> in this sentence?”</p>
+    <p>Look for a synonym near the word, an opposite after <em>but</em> or <em>although</em>, or an example or definition inside the sentence.</p>
+  </section>
+</div>

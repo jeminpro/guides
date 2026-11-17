@@ -1,0 +1,113 @@
+---
+const types = [
+  {
+    name: "Retrieval",
+    clues: [
+      "“According to the text…”",
+      "“Where, when, who or what…”",
+      "“Which word or phrase tells you…”",
+      "“Find and copy one word or phrase…”"
+    ],
+    spot: "Who, what, where or when means retrieval."
+  },
+  {
+    name: "Vocabulary in context",
+    clues: [
+      "“What does the word ___ mean in this passage?”",
+      "“Which word is closest in meaning to ___?”",
+      "“Choose the synonym or antonym for ___.”"
+    ],
+    spot: "A single word in bold or italics."
+  },
+  {
+    name: "Inference",
+    clues: [
+      "“What does this suggest about…?”",
+      "“How do you know…?”",
+      "“Why do you think…?”",
+      "“What can we tell about the character?”"
+    ],
+    spot: "Feelings, thoughts or reasons that are not stated."
+  },
+  {
+    name: "Writer’s technique",
+    clues: [
+      "“How does the writer make this seem scary, funny or exciting?”",
+      "“What technique is used in this phrase?”",
+      "“How does the author create an effect?”"
+    ],
+    spot: "It asks how the writer does something."
+  },
+  {
+    name: "Main idea",
+    clues: [
+      "“Which of these best sums up the paragraph?”",
+      "“What is the main idea of this section?”",
+      "“What would be the best title?”"
+    ],
+    spot: "The main point, or the best summary."
+  },
+  {
+    name: "True, false or not given",
+    clues: [
+      "“Decide if these are true, false or not given.”",
+      "“Is this statement supported by the text?”"
+    ],
+    spot: "You must label true, false or not given."
+  },
+  {
+    name: "Sequencing",
+    clues: [
+      "“Put these events in the correct order.”",
+      "“What happened first, next or last?”",
+      "“Arrange the sentences to match the passage.”"
+    ],
+    spot: "It is about time order."
+  },
+  {
+    name: "Comparison",
+    clues: [
+      "“How is Extract A similar to, or different from, Extract B?”",
+      "“What is the difference between the two descriptions?”",
+      "“Compare the way the two characters are shown.”"
+    ],
+    spot: "Two extracts, two characters, or similarities and differences."
+  }
+];
+---
+
+<div class="topic-sheet">
+  <h1>Question Types - What to look for</h1>
+  <p>Read the question before you hunt through the passage. Its wording tells you which job to do.</p>
+  <section class="summary-block summary-sand">
+    <h2>Match the wording to the job</h2>
+    <table class="punct-table summary-table">
+      <colgroup>
+        <col class="qt-type" />
+        <col class="qt-clues" />
+        <col class="qt-spot" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Type</th>
+          <th class="th-example" scope="col">Clues in the question</th>
+          <th class="th-rule" scope="col">Spot it</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          types.map((type) => (
+            <tr>
+              <th scope="row">{type.name}</th>
+              <td set:html={type.clues.join("<br>")} />
+              <td>{type.spot}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p class="try-it">
+    <strong>Name it first.</strong> Write the type in the margin, then answer in that style. R retrieval, V vocabulary, I inference, T technique, M main idea, TF true or false, S sequencing, C comparison.
+  </p>
+</div>

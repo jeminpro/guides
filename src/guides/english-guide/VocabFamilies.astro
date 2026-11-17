@@ -1,0 +1,135 @@
+---
+const parts = [
+  ["Root", "The base meaning", "act → actor, react, action"],
+  ["Prefix", "Changes the meaning, at the start", "unhappy, preview, disappear"],
+  ["Suffix", "Changes the form, at the end", "kindness, hopeful, careless"]
+];
+
+const prefixes = [
+  ["un-", "not", "unhappy"],
+  ["dis-", "opposite", "dislike"],
+  ["re-", "again", "rewrite"],
+  ["pre-", "before", "preview"],
+  ["mis-", "wrongly", "misunderstand"],
+  ["in- / im- / ir- / il-", "not", "incorrect, impossible"]
+];
+
+const suffixes = [
+  ["-ness", "a state or quality", "kindness"],
+  ["-ful", "full of", "careful"],
+  ["-less", "without", "hopeless"],
+  ["-able / -ible", "can be", "readable, possible"],
+  ["-er / -or", "a person who", "teacher, actor"]
+];
+
+const forms = [
+  ["decide", "decision", "decide", "decisive", "decisively"],
+  ["beauty", "beauty", "beautify", "beautiful", "beautifully"],
+  ["create", "creation", "create", "creative", "creatively"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Word Families - Roots, prefixes and suffixes</h1>
+  <p>A root is the main part of a word. A prefix or a suffix changes its meaning or its type.</p>
+  <section class="summary-block summary-sand">
+    <h2>The three parts</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Part</th>
+          <th class="th-rule" scope="col">Job</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          parts.map(([part, job, example]) => (
+            <tr>
+              <th scope="row">{part}</th>
+              <td>{job}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <div class="summary-pair">
+    <section class="summary-block summary-blue">
+      <h2>Prefixes</h2>
+      <table class="punct-table summary-table">
+        <thead>
+          <tr>
+            <th class="th-feature" scope="col">Prefix</th>
+            <th class="th-rule" scope="col">Meaning</th>
+            <th class="th-example" scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            prefixes.map(([prefix, meaning, example]) => (
+              <tr>
+                <th scope="row">{prefix}</th>
+                <td>{meaning}</td>
+                <td>{example}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+    <section class="summary-block summary-mint">
+      <h2>Suffixes</h2>
+      <table class="punct-table summary-table">
+        <thead>
+          <tr>
+            <th class="th-feature" scope="col">Suffix</th>
+            <th class="th-rule" scope="col">Meaning</th>
+            <th class="th-example" scope="col">Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            suffixes.map(([suffix, meaning, example]) => (
+              <tr>
+                <th scope="row">{suffix}</th>
+                <td>{meaning}</td>
+                <td>{example}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <section class="summary-block summary-lilac">
+    <h2>Word forms</h2>
+    <p>The same idea can be a noun, a verb, an adjective or an adverb. The sentence tells you which form it needs.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Root</th>
+          <th class="th-rule" scope="col">Noun</th>
+          <th class="th-example" scope="col">Verb</th>
+          <th class="th-trap" scope="col">Adjective</th>
+          <th class="th-function" scope="col">Adverb</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          forms.map(([root, noun, verb, adjective, adverb]) => (
+            <tr>
+              <th scope="row">{root}</th>
+              <td>{noun}</td>
+              <td>{verb}</td>
+              <td>{adjective}</td>
+              <td>{adverb}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>“Choose the correct form.” He spoke very <strong>politely</strong>. “Which word is related to <em>construct</em>?” <strong>Construction</strong>, <strong>reconstruct</strong> and <strong>destructive</strong>.</p>
+  </section>
+</div>

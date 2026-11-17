@@ -1,0 +1,66 @@
+---
+const synonyms = [
+  ["happy", "joyful, glad, content, cheerful"],
+  ["brave", "courageous, bold, fearless"],
+  ["big", "large, huge, enormous, gigantic"]
+];
+
+const antonyms = [
+  ["tidy", "messy"],
+  ["generous", "mean"],
+  ["scarce", "plentiful"],
+  ["agree", "disagree"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Synonyms and Antonyms - Similar and opposite</h1>
+  <section class="summary-block summary-sand">
+    <h2>Synonyms</h2>
+    <p>A synonym has the same meaning, or nearly the same meaning.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-example" scope="col">Synonyms</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          synonyms.map(([word, matches]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{matches}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>“Which word means the same as <em>brave</em>?” In “He was a <em>valiant</em> soldier”, <em>valiant</em> means <strong>brave</strong>.</p>
+    <p>Learn the shade of meaning. <em>Angry</em> is not <em>furious</em>: furious is the stronger feeling.</p>
+  </section>
+  <section class="summary-block summary-mint">
+    <h2>Antonyms</h2>
+    <p>An antonym has the opposite meaning.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-example" scope="col">Antonym</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          antonyms.map(([word, opposite]) => (
+            <tr>
+              <th scope="row">{word}</th>
+              <td>{opposite}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>“Which word is the opposite of <em>honest</em>?”</p>
+    <p>A prefix can flip the meaning: <em>un-</em> (happy → unhappy), <em>dis-</em> (agree → disagree), and <em>in-</em>, <em>im-</em>, <em>il-</em> or <em>ir-</em> (possible → impossible).</p>
+  </section>
+</div>

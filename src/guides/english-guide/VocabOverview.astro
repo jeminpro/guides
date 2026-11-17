@@ -1,0 +1,55 @@
+---
+const topics = [
+  ["Synonyms", "Similar meaning", "happy → joyful"],
+  ["Antonyms", "Opposite meaning", "brave → cowardly"],
+  ["Homophones", "Same sound, different meaning", "there / their"],
+  ["Spelling", "Accuracy and word choice", "accept / except"],
+  ["Meaning in context", "Meaning from the sentence", "broke the record"],
+  ["Word families", "Prefixes, suffixes and roots", "replay, kindness"],
+  ["Cloze", "A word that fits the sentence", "She was so generous"],
+  ["Analogies", "The link between two pairs", "hot : cold :: tall : short"],
+  ["Word forms", "Noun, verb, adjective, adverb", "decide → decision"],
+  ["Several meanings", "The sentence picks the meaning", "fair, bark"],
+  ["Context clues", "An unfamiliar word from nearby words", "trembled → shivered"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Vocabulary - What it tests</h1>
+  <p>
+    In the Gloucestershire GL 11+, vocabulary checks how well you understand, compare and use words in context. It is more than a list of meanings to memorise.
+  </p>
+  <section class="summary-block summary-blue">
+    <h2>The four jobs</h2>
+    <p>Know word meanings, including synonyms and antonyms.</p>
+    <p>Spot the relationship between words.</p>
+    <p>Understand word formation: prefixes, suffixes and roots.</p>
+    <p>Recognise spelling, usage and homophone traps.</p>
+  </section>
+  <section class="summary-block summary-sand">
+    <h2>The topics</h2>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Topic</th>
+          <th class="th-rule" scope="col">What it tests</th>
+          <th class="th-example" scope="col">Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          topics.map(([topic, test, example]) => (
+            <tr>
+              <th scope="row">{topic}</th>
+              <td>{test}</td>
+              <td>{example}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+  <p class="try-it">
+    <strong>Build the habit.</strong> Read fiction, news and non-fiction. A word map puts the root in the middle, with synonyms and antonyms around it. On a word card, write the meaning and use the word in a sentence. Guess from the context before you check a dictionary, and keep reviewing confusing pairs.
+  </p>
+</div>

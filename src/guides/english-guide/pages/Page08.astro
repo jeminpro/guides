@@ -1,6 +1,6 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
-import CommaTraps from "../CommaTraps.astro";
+import SectionDivider from "../SectionDivider.astro";
 import { PAGE_COUNT, pages } from "../meta";
 
 const page = pages[7];
@@ -12,5 +12,5 @@ const page = pages[7];
   label={page.label}
   bodyClass={page.bodyClass}
 >
-  <CommaTraps />
+  <SectionDivider title={page.title} />
 </GuidePageShell>

@@ -1,0 +1,42 @@
+---
+const links = [
+  ["hot : cold", "opposites"],
+  ["kitten : cat", "young → adult"],
+  ["carpenter : wood", "person → material"],
+  ["foot : walk", "hand : hold, a body part and its action"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Cloze and Analogies - Fit and connect</h1>
+  <section class="summary-block summary-peach">
+    <h2>Cloze</h2>
+    <p>A cloze blank needs the word that makes the sentence make sense. It tests meaning and grammar together.</p>
+    <p>She was so <strong>generous</strong> that everyone liked her. Generous fits, because people liked her. Fierce, clumsy and angry do not match that idea.</p>
+    <p>Read the sentence again with your word in place. It must sound natural and match the tone.</p>
+  </section>
+  <section class="summary-block summary-yellow">
+    <h2>Analogies</h2>
+    <p>An analogy is a link between one pair of words that you apply to a second pair.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Pair</th>
+          <th class="th-example" scope="col">Relationship</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          links.map(([pair, relationship]) => (
+            <tr>
+              <th scope="row">{pair}</th>
+              <td>{relationship}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>“Pencil is to write as brush is to ___?” The answer is <strong>paint</strong>.</p>
+    <p>Ask how the first two words are connected. Then use that same link for the second pair.</p>
+  </section>
+</div>

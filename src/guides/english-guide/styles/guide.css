@@ -312,7 +312,9 @@
 .dashes .topic-sheet h1,
 .ellipsis .topic-sheet h1,
 .grammar-summary .topic-sheet h1,
-.grammar-topic .topic-sheet h1 {
+.grammar-topic .topic-sheet h1,
+.comprehension-topic .topic-sheet h1,
+.vocabulary-topic .topic-sheet h1 {
   font-size: 18.5pt;
 }
 
@@ -635,7 +637,8 @@
 }
 
 .grammar-summary .summary-table,
-.grammar-topic .summary-table {
+.grammar-topic .summary-table,
+.vocabulary-topic .summary-table {
   font-size: 11.5pt;
   line-height: 1.28;
 }
@@ -658,25 +661,58 @@
 .grammar-summary .summary-table th,
 .grammar-summary .summary-table td,
 .grammar-topic .summary-table th,
-.grammar-topic .summary-table td {
+.grammar-topic .summary-table td,
+.vocabulary-topic .summary-table th,
+.vocabulary-topic .summary-table td {
   padding: 1.25mm 1.7mm;
 }
 
 .grammar-summary .summary-table tbody th,
-.grammar-topic .summary-table tbody th {
+.grammar-topic .summary-table tbody th,
+.vocabulary-topic .summary-table tbody th {
   font-size: 11.5pt;
   text-align: left;
   background: #fff;
 }
 
 .grammar-topic .topic-sheet p,
-.grammar-topic .topic-sheet li {
+.grammar-topic .topic-sheet li,
+.comprehension-topic .topic-sheet p,
+.comprehension-topic .topic-sheet li,
+.vocabulary-topic .topic-sheet p,
+.vocabulary-topic .topic-sheet li {
   font-size: 11.5pt;
   line-height: 1.32;
 }
 
-.grammar-topic .topic-sheet > p:not(.topic-lead):not(.try-it) {
+.grammar-topic .topic-sheet > p:not(.topic-lead):not(.try-it),
+.comprehension-topic .topic-sheet > p:not(.topic-lead):not(.try-it),
+.vocabulary-topic .topic-sheet > p:not(.topic-lead):not(.try-it) {
   margin: 0;
+}
+
+.question-types .summary-table col.qt-type {
+  width: 22%;
+}
+
+.question-types .summary-table col.qt-clues {
+  width: 46%;
+}
+
+.question-types .summary-table col.qt-spot {
+  width: 32%;
+}
+
+.question-types .summary-table th,
+.question-types .summary-table td {
+  padding: 1.05mm 1.5mm;
+  vertical-align: top;
+}
+
+.question-types .summary-table tbody th {
+  font-size: 11.5pt;
+  text-align: left;
+  background: #fff;
 }
 
 .summary-pair {

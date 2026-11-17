@@ -1,0 +1,69 @@
+---
+const homophones = [
+  ["there", "their", "place / belonging to them"],
+  ["your", "you’re", "possession / you are"],
+  ["to", "too", "direction / also"],
+  ["allowed", "aloud", "permitted / out loud"]
+];
+
+const confusing = [
+  ["accept / except", "accept = agree to; except = excluding"],
+  ["affect / effect", "affect = influence; effect = result"],
+  ["practice / practise", "practice is the noun; practise is the verb"],
+  ["principle / principal", "principle = a rule; principal = the headteacher"],
+  ["stationary / stationery", "stationary = still; stationery = writing paper"]
+];
+---
+
+<div class="topic-sheet">
+  <h1>Homophones - Sound and spelling</h1>
+  <section class="summary-block summary-blue">
+    <h2>Homophones</h2>
+    <p>Homophones sound the same, but the meaning and the spelling are different.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Word</th>
+          <th class="th-rule" scope="col">Sounds the same</th>
+          <th class="th-example" scope="col">Meanings</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          homophones.map(([first, second, meaning]) => (
+            <tr>
+              <th scope="row">{first}</th>
+              <td>{second}</td>
+              <td>{meaning}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>“Which word correctly completes the sentence?” They forgot to take <strong>their</strong> coats.</p>
+  </section>
+  <section class="summary-block summary-pink">
+    <h2>Confusing words</h2>
+    <p>Some words look or sound similar, but the meaning or the spelling is different.</p>
+    <table class="punct-table summary-table">
+      <thead>
+        <tr>
+          <th class="th-feature" scope="col">Pair</th>
+          <th class="th-example" scope="col">Difference</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          confusing.map(([pair, difference]) => (
+            <tr>
+              <th scope="row">{pair}</th>
+              <td>{difference}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+    <p>In proofreading, spot the word that is spelled wrongly or used wrongly.</p>
+    <p>Practise word families from the same root: decide → decision → decisive.</p>
+  </section>
+</div>
