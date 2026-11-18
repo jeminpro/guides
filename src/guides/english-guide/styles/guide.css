@@ -288,6 +288,10 @@
   gap: 2.2mm;
 }
 
+.sentences-phrases .topic-sheet {
+  gap: 1.1mm;
+}
+
 .topic-sheet h1 {
   margin: 0 0 0.6mm;
   color: #1c2430;
@@ -316,6 +320,10 @@
 .comprehension-topic .topic-sheet h1,
 .vocabulary-topic .topic-sheet h1 {
   font-size: 18.5pt;
+}
+
+.speech-marks .topic-sheet h1 + table + h1 {
+  margin-top: 4mm;
 }
 
 .topic-lead {
@@ -639,7 +647,8 @@
   background: #f6c5d2;
 }
 
-.colons .punct-table {
+.colons .punct-table,
+.colon-table {
   background: #fff8e8;
 }
 

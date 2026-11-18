@@ -1,6 +1,6 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
-import GrammarSummary from "../GrammarSummary.astro";
+import Verbs from "../Verbs.astro";
 import { PAGE_COUNT, pages } from "../meta";
 
 const page = pages[23];
@@ -12,5 +12,5 @@ const page = pages[23];
   label={page.label}
   bodyClass={page.bodyClass}
 >
-  <GrammarSummary start={6} end={9} />
+  <Verbs />
 </GuidePageShell>

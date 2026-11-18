@@ -1,4 +1,32 @@
 ---
+const colonRows = [
+  {
+    fn: "To explain or give reason",
+    colon: "I was scared: the room was dark.",
+    semi: ""
+  },
+  {
+    fn: "To join related sentences",
+    colon: "",
+    semi: "It was dark; I was scared."
+  },
+  {
+    fn: "Before a list",
+    colon: "Bring the following: pens, pencils, rulers.",
+    semi: ""
+  },
+  {
+    fn: "Between equal ideas",
+    colon: "",
+    semi: "She laughed; he didn’t."
+  },
+  {
+    fn: "In complex lists",
+    colon: "",
+    semi: "Apples, red; bananas, yellow; grapes, green."
+  }
+];
+
 const rows = [
   {
     feature: "Quotation Marks",
@@ -58,6 +86,27 @@ const rows = [
             <td>{row.rule}</td>
             <td>{row.example}</td>
             <td>{row.trap}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  <h1>Colons and Semicolons - When to use</h1>
+  <table class="punct-table colon-table">
+    <thead>
+      <tr>
+        <th class="th-function" scope="col">Function</th>
+        <th class="th-colon" scope="col">Use a Colon (:)</th>
+        <th class="th-semi" scope="col">Use a Semicolon (;)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        colonRows.map((row) => (
+          <tr>
+            <th scope="row">{row.fn}</th>
+            <td>{row.colon}</td>
+            <td>{row.semi}</td>
           </tr>
         ))
       }

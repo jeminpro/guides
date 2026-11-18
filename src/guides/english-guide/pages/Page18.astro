@@ -1,6 +1,6 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
-import Colons from "../Colons.astro";
+import SectionDivider from "../SectionDivider.astro";
 import { PAGE_COUNT, pages } from "../meta";
 
 const page = pages[17];
@@ -12,5 +12,5 @@ const page = pages[17];
   label={page.label}
   bodyClass={page.bodyClass}
 >
-  <Colons />
+  <SectionDivider title={page.title} />
 </GuidePageShell>

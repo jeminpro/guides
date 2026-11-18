@@ -1,6 +1,6 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
-import SectionDivider from "../SectionDivider.astro";
+import VocabMeanings from "../VocabMeanings.astro";
 import { PAGE_COUNT, pages } from "../meta";
 
 const page = pages[83];
@@ -12,5 +12,5 @@ const page = pages[83];
   label={page.label}
   bodyClass={page.bodyClass}
 >
-  <SectionDivider title={page.title} />
+  <VocabMeanings />
 </GuidePageShell>

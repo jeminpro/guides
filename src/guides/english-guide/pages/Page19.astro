@@ -1,6 +1,6 @@
 ---
 import GuidePageShell from "../GuidePageShell.astro";
-import Dashes from "../Dashes.astro";
+import GrammarSummary from "../GrammarSummary.astro";
 import { PAGE_COUNT, pages } from "../meta";
 
 const page = pages[18];
@@ -12,5 +12,5 @@ const page = pages[18];
   label={page.label}
   bodyClass={page.bodyClass}
 >
-  <Dashes />
+  <GrammarSummary start={0} end={3} />
 </GuidePageShell>
